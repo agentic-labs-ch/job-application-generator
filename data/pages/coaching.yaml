@@ -1,0 +1,195 @@
+# Coaching overview page (kind: article). Public once merged, unlisted and noindex.
+# Facts about the owner come only from ../cv.yaml. Role order, fit rule, weekly goals and
+# learning options are proposals for the coaching session, not past results.
+
+kind: article
+base: ../cv.yaml
+id: coaching
+languages: [de]
+title: "Bewerbungscoaching: Positionierung, Unterlagen und Suchstrategie"
+lead: >-
+  Diese Seite bündelt meine Unterlagen für die nächste Coaching-Sitzung (Stand 09.2026):
+  Lebenslauf-Versionen für die drei Zielrollen ICT-Architekt, Product Manager und IT Business
+  Service Manager, eine konkrete Bewerbung mit Anschreiben nach AIDA, die Stichwortanalysen und
+  die Reflexion meiner Suchstrategie.
+
+sections:
+  - heading: "Unterlagen"
+    blocks:
+      - >-
+        Alle Versionen beruhen auf demselben Gesamtprofil, und alle Stationen bleiben sichtbar.
+        Je nach Rolle ändern sich Headline, Kurzprofil, Schwerpunkte der Erfahrung und die
+        Kompetenzliste.
+      - links:
+          - { label: "Lebenslauf (Gesamtprofil)", page: cv }
+          - { label: "Lebenslauf ICT-Architekt", page: ict-architect }
+          - { label: "Lebenslauf Product Manager", page: product-manager }
+          - { label: "Lebenslauf IT Business Service Manager", page: it-business-service-manager }
+          - { label: "Bewerbung Beispiel Automobile: Lebenslauf", page: beispiel-automobile }
+          - { label: "Bewerbung Beispiel Automobile: Anschreiben", page: beispiel-automobile/letter }
+          - { label: "Inserat Beispiel Automobile (jobs.example.com)", url: "https://example.com/jobs/BA-5501" }
+      - >-
+        Die Stichwortanalysen gleichen Anforderungen aus Inseraten mit meinen Nachweisen ab.
+        Daraus entstehen die Kompetenzlisten nach Kategorien mit Selbsteinschätzung in vier
+        Stufen (Grundkenntnisse, Erste Erfahrung, Erfahren, Spezialist).
+      - links:
+          - { label: "Stichwortanalyse ICT-Architekt", page: stichwortanalyse-ict-architect }
+          - { label: "Stichwortanalyse Product Manager", page: stichwortanalyse-product-manager }
+          - { label: "Stichwortanalyse IT Business Service Manager", page: stichwortanalyse-it-business-service-manager }
+          - { label: "Stichwortanalyse Inserat Beispiel Automobile", page: stichwortanalyse-beispiel-automobile }
+
+  - heading: "Positionierung"
+    blocks:
+      - >-
+        Mein gemeinsamer Kern für alle drei Rollen: Ich bin die Brücke zwischen Business und IT.
+        Ich verbinde Architekturtiefe mit Cloud-Praxis (Azure) und Erfahrung in Beratung und
+        Delivery, gesammelt in Banken, Beratungsunternehmen und einem Technologiekonzern. Die
+        Rollen unterscheiden sich darin, welcher Teil dieser Geschichte vorne steht.
+      - table:
+          columns: ["Rolle", "Kernbotschaft", "Stärkste Nachweise", "Grösste Lücke"]
+          rows:
+            - ["ICT-Architekt", "Umsetzbare Zielarchitekturen und Cloud-Strategien", "Enterprise-Architektur BKB, Azure-Zielarchitekturen Globex Consulting, AZ-305", "Kein TOGAF-Zertifikat"]
+            - ["Product Manager", "Kundennutzen, Business Case und Machbarkeit zusammenbringen", "Business Cases, Value Stream Cloud (SAFe), Pre-Sales und PoCs Helix", "Kein PM/PO-Titel, keine Produkt-KPI-Verantwortung"]
+            - ["IT Business Service Manager", "Business-Bedürfnisse in verlässliche IT-Services übersetzen", "Operating Models mit RACI, Anbieterevaluation BKB, Azure-Servicekatalog", "Kein ITIL-Zertifikat"]
+      - >-
+        Jede Rollen-Version hat einen Claim (USP in einem Satz), ein Kurzprofil und drei USP-Aussagen:
+        wofür ich stehe, wie die Zusammenarbeit mit mir aussieht und was man von mir erwarten
+        kann.
+
+  - heading: "Markenstrategie"
+    blocks:
+      - >-
+        Lebenslauf, Anschreiben und LinkedIn erzählen eine Geschichte: Wer vom einen zum anderen
+        wechselt, findet dasselbe Bild wieder.
+      - list:
+          - "Ein Design: Alle Seiten nutzen mein Designsystem «Granat» – warmes Greige als Grund, Granatrot als einzige Akzentfarbe, Serifenschrift für Titel."
+          - "Ein Kopfbereich: Name, Foto, Headline und Kontakt stehen auf Lebenslauf und Anschreiben gleich."
+          - "Ein Claim pro Bewerbung: Der USP-Satz aus dem Profil prägt auch Anschreiben und LinkedIn-«Info»."
+          - "Eine Headline pro Rolle: Sie wechselt mit der Zielrolle; Design, Kopfbereich und Kern bleiben gleich."
+          - "Dateinamen für PDFs: Name, Dokument, Rolle, ohne Leerzeichen und Umlaute, z. B. «Alex-Muster_Lebenslauf_IT-Business-Service-Manager.pdf» und «Alex-Muster_Anschreiben_IT-Business-Service-Manager.pdf»."
+          - "LinkedIn: ein Profil für alle Rollen. Die Headline trägt den gemeinsamen Kern und die gewählte Hauptrolle, die «Info» nennt die Zielrollen und meine stärksten Nachweise. Die Kompetenzen übernehme ich aus den Stichwortanalysen."
+          - "Schweizer Konventionen: Foto im Lebenslauf; Anschreiben auf einer Seite mit Ort, Datum, Betreff und «Freundliche Grüsse»; Beilagen am Schluss aufgeführt (Lebenslauf, Arbeitszeugnisse, Diplome) und als PDF beigelegt."
+
+  - heading: "Anschreiben nach AIDA"
+    blocks:
+      - >-
+        AIDA führt die Leserin oder den Leser in vier Stufen vom ersten Satz bis zur Handlung. So
+        setze ich das Modell im Anschreiben an Beispiel Automobile Schweiz AG um:
+      - list:
+          - "Attention (Aufmerksamkeit): ein Einstieg mit direktem Bezug zur Aufgabe im Inserat statt «Hiermit bewerbe ich mich»."
+          - "Interest (Interesse): warum dieses Unternehmen und diese Rolle, und was mich mit der Aufgabe verbindet."
+          - "Desire (Verlangen): Nachweise aus dem Lebenslauf, die direkt auf die Muss-Kriterien aus der Stichwortanalyse antworten, wo möglich mit Zahlen."
+          - "Action (Handlung): ein klarer Abschluss mit dem Wunsch nach einem persönlichen Gespräch."
+      - >-
+        Das Anschreiben bleibt bei einer Seite, nutzt denselben Kopfbereich wie der Lebenslauf und
+        wiederholt ihn nicht, sondern wählt die stärksten Belege aus.
+
+  - heading: "Reflexion der Suchstrategie"
+    blocks:
+      - >-
+        Ausgangslage: Die Nachfrage ist grundsätzlich da. ICT-Berufsbildung Schweiz rechnet bis
+        2033 mit einem Bedarf von rund 128'600 zusätzlichen ICT-Fachkräften und einer Lücke von
+        54'400 (Bedarfsprognose 2033, Medienmitteilung vom 18.09.2025). Bei Senior-Rollen
+        entscheidet trotzdem die Passung zum einzelnen Inserat.
+      - links:
+          - { label: "Quelle: ICT-Berufsbildung Schweiz, Bedarfsprognose 2033", url: "https://www.ict-berufsbildung.ch/bis-2033-muessen-54400-zusaetzliche-ict-fachkraefte-ausgebildet-werden" }
+      - >-
+        Mein Profil ist dort am stärksten, wo Architektur, Cloud und Beratung zusammenkommen. Pro
+        Rolle sehe ich es so:
+      - list:
+          - "ICT-Architekt: stärkste Passung, denn ich habe Architekturrollen in Bank und Beratung ausgeübt. Risiko: Wo ein TOGAF-Zertifikat verlangt ist, fehlt mir der formale Nachweis."
+          - "IT Business Service Manager: gute Passung, wenn die Rolle Architektur, Integration und Anbietersteuerung verbindet, wie bei Beispiel Automobile. Risiko: kein ITIL-Zertifikat und bisher keine formale Rolle im Service Management."
+          - "Product Manager: Quereinstieg mit guten Argumenten (Business Cases, Stakeholder, Pre-Sales, SAFe). Risiko: kein PM/PO-Titel und keine Produkt-KPIs; hier wiegen Empfehlungen aus dem Netzwerk mehr als Inserate."
+      - >-
+        Daraus folgt meine Reihenfolge, die ich im Coaching prüfen will: zuerst ICT-Architekt,
+        dann IT Business Service Manager; Product Manager nur gezielt bei technischen Produkten
+        wie Cloud-Plattformen.
+      - "Was funktioniert, behalte ich bei:"
+      - list:
+          - "Jobsuchmaschinen und Job-Alerts liefern passende Inserate: Die Stelle bei Beispiel Automobile habe ich über jobagent.ch gefunden (Inserat auf jobs.example.com)."
+          - "Die Stichwortanalyse zeigt schnell, ob ein Inserat passt, und liefert die Begriffe für Lebenslauf und Anschreiben."
+          - "Meine Nachweise sind konkret: Migration von über 1000 Servern in über 50 Ländern, Projektteam bis 12 Personen, Beratung bis in CIO-Gremien."
+          - "Meine Unterlagen sind Webseiten im gleichen Design: Ein Link genügt, und jede Version bleibt aktuell."
+      - >-
+        Was ich ändere: Jobportale und Job-Alerts bleiben ein Kanal, aber allein machen sie mich reaktiv. Ich
+        sehe nur ausgeschriebene Stellen, und das gleichzeitig mit allen anderen. Deshalb setze
+        ich auf einen Mix:
+      - list:
+          - "Gezielte Bewerbungen: nur mit Stichwortanalyse und angepasstem Lebenslauf."
+          - "Direktansprache und Initiativbewerbung: eine Liste von Zielorganisationen; ich spreche IT- und Architekturverantwortliche direkt an, mit einem konkreten Thema wie Cloud-Migration, Cloud-Kosten oder Architektur-Governance."
+          - "Netzwerk: ehemalige Kolleginnen und Kollegen aus Bank, Beratung und Technologie sowie Beispiel-Hochschule-Alumni. Ich frage nach Einschätzungen und Kontakten, nicht nach Stellen."
+          - "LinkedIn-Sichtbarkeit: Profil auf die Positionierung ausrichten und regelmässig Beiträge zu Cloud, Architektur und IT-Services teilen oder kommentieren."
+          - "IT-spezialisierte Personalvermittlungen: wenige, gezielt ausgewählt. Ich halte fest, wer mich wo vorschlägt, damit keine Doppelbewerbungen entstehen."
+          - "Fachanlässe: Veranstaltungen zu Cloud, Architektur und IT-Service-Management sowie Alumni-Anlässe, um Kontakte persönlich zu knüpfen."
+      - "Zielsegmente, in dieser Reihenfolge:"
+      - list:
+          - "Banken und Versicherungen – Priorität 1: direkte Erfahrung aus Bank, Zentralbank und einem Projekt bei einer Krankenversicherung."
+          - "Öffentliche Hand – Priorität 2: IT-Transformation eines Bundesamts."
+          - "Beratung – Priorität 2: Erfahrung aus zwei Beratungsunternehmen, als Architekt und Teilprojektleiter."
+          - "Technologieanbieter – Priorität 2: Pre-Sales und Proofs of Concept; passt vor allem zu Product Management."
+          - "Industrie und Handel inkl. Automotive – gezielt: kein direkter Branchennachweis, aber übertragbare Erfahrung aus einer globalen Cloud-Transformation; bei hohem Fit wie bei Beispiel Automobile."
+      - >-
+        Entscheidungsregel, Qualität vor Menge: Ich bewerbe mich, wenn ich mindestens 70 % der
+        Muss-Kriterien mit Nachweisen belege (Fit-Score aus der Stichwortanalyse). Darunter nur
+        mit einer Empfehlung aus dem Netzwerk. Lieber drei sorgfältige Bewerbungen als zehn
+        Standardschreiben.
+      - "Meine Wochenroutine mit messbaren Zielen:"
+      - table:
+          columns: ["Aktivität", "Ziel"]
+          rows:
+            - ["Gezielte Bewerbungen (Fit ≥ 70 %)", "2–3 pro Woche"]
+            - ["Direktansprache oder Initiativbewerbung", "1 pro Woche"]
+            - ["Gespräche im Netzwerk", "2 pro Woche"]
+            - ["LinkedIn-Beitrag und Kommentare", "1 Beitrag, 3 Kommentare pro Woche"]
+            - ["Nachfassen und Pipeline pflegen", "1 fester Termin pro Woche"]
+            - ["Weiterbildung zu den Lücken", "4 Stunden pro Woche"]
+            - ["Fachanlass", "1 pro Monat"]
+      - >-
+        Erscheinen weniger passende Inserate, verschiebe ich die Zeit auf Direktansprache und
+        Netzwerk. Bringen 10 gezielte Bewerbungen keine Einladung, überprüfe ich Positionierung und
+        Unterlagen im Coaching.
+      - >-
+        Tracking: Ich führe eine Pipeline mit Inserat (Link und Quelle), Fit in Prozent, Status,
+        nächstem Schritt und Datum. Jedes Inserat sichere ich als PDF, weil Inserate nach Ablauf
+        verschwinden.
+      - "Regeln fürs Nachfassen:"
+      - list:
+          - "Keine Eingangsbestätigung nach 5 Arbeitstagen: kurz nachfragen, ob die Unterlagen angekommen sind."
+          - "Keine Rückmeldung nach 2 Wochen: telefonisch nachfassen, mit einer konkreten Frage zur Stelle."
+          - "Nach jedem Gespräch: innert 24 Stunden eine kurze Dankesnachricht mit inhaltlichem Bezug."
+          - "Nach einer Absage: um kurzes Feedback bitten und die Erkenntnis in der Pipeline festhalten."
+      - "Interviewvorbereitung: vier STAR-Geschichten (Situation, Task, Action, Result) aus meinem Lebenslauf, jede mit einem messbaren Resultat, wo es belegt ist:"
+      - list:
+          - "Globale Azure-Migration (Globex Consulting): über 1000 Server in über 50 Ländern; Zielarchitekturen, Security-Services und Monitoring."
+          - "Cloud-Strategie und Sourcing-Modell (BKB): Business Cases, TCO- und CapEx/OpEx-Analysen, Beratung von CIO-Gremien."
+          - "Teamführung (initech, Globex Consulting): Team Lead für die IT-Transformation eines Bundesamts; Projektteam bis 12 Personen mit Termin- und Budgetverantwortung."
+          - "Proofs of Concept (Helix): Watson-KI auf einem Pepper-Roboter, sicheres Access Management mit OAuth 2.0 – Kundennutzen früh sichtbar machen."
+      - >-
+        Dazu bereite ich ehrliche Antworten zu meinen Lücken vor (TOGAF, ITIL,
+        Produktverantwortung): benennen, übertragbare Erfahrung zeigen, nächsten Lernschritt
+        nennen. Ich übe die Gespräche auf Deutsch und Englisch.
+      - "Lernziele für die Lücken – Optionen, die ich prüfe, noch keine Entscheide:"
+      - list:
+          - "ITIL 4 Foundation: schliesst die Lücke für IT Business Service Manager am direktesten."
+          - "TOGAF-Zertifizierung (Foundation): macht mein Architekturwissen aus Studium und Praxis formal sichtbar."
+          - "PSPO (Scrum.org) oder SAFe POPM: für Product Manager; SAFe kenne ich aus der Praxis."
+      - >-
+        Ich entscheide nach zwei Kriterien: Wie oft verlangen die Inserate in meinen
+        Stichwortanalysen das Zertifikat als Muss-Kriterium, und wie gross ist der Aufwand?
+
+  - heading: "Nächste Schritte"
+    blocks:
+      - steps:
+          - "Texte und Kompetenzstufen in allen Versionen prüfen und freigeben; die Stufen sind Vorschläge."
+          - "Inserat von Beispiel Automobile als PDF sichern."
+          - "Lebenslauf und Anschreiben über den Druckdialog des Browsers als PDF speichern, nach dem Schema oben benennen und die Seitenumbrüche prüfen."
+          - "Lebenslauf, Anschreiben und Inserat vor der nächsten Coaching-Sitzung auf die Coaching-Plattform hochladen."
+          - "LinkedIn-Headline, «Info» und Kompetenzen auf die Positionierung ausrichten."
+          - "Arbeitszeugnisse, Diplome und Zertifikate als PDF-Beilagen bereitstellen."
+          - "Bewerbung bei Beispiel Automobile Schweiz AG über das Online-Formular einreichen und in der Pipeline erfassen."
+          - "Im Coaching besprechen: Reihenfolge der Rollen, Wochenziele und Weiterbildungsoptionen."
+
+note: >-
+  Statistik am 2026-09-23 an der Primärquelle geprüft (ICT-Berufsbildung Schweiz,
+  Medienmitteilung vom 18.09.2025). Keine Angaben zu bisherigen Bewerbungen; Rollen-Reihenfolge,
+  Fit-Regel, Wochenziele und Weiterbildungsoptionen sind Vorschläge für das Coaching.

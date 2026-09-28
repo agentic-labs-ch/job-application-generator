@@ -1,0 +1,51 @@
+name: check
+
+# Checks only: validate, build, test. This workflow never deploys or publishes.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Validate
+        run: node scripts/validate.mjs data/cv.yaml data/cv.example.yaml data/profiles data/pages data/applications tests/fixtures/cv.long-text.yaml tests/fixtures/cv.sentinel-comment.yaml tests/fixtures/profiles tests/fixtures/pages tests/fixtures/applications
+      - name: Build
+        run: npm run build
+      # Private repo only (public/export.yaml is never exported): the public export must hold no
+      # personal data. Fails the PR before anything could be synchronised.
+      - name: Public export leak check
+        if: hashFiles('public/export.yaml') != ''
+        run: npm run public:export
+      - name: Unit tests
+        run: npm run test:unit
+      - name: Browser checks
+        run: npm run test:e2e
+      - name: Upload report on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7

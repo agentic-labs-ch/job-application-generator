@@ -1,0 +1,2825 @@
+/* Site styles following the Granat design system. Mobile first; all values come from
+   design/tokens.css. Project rules (DESIGN.md) take precedence where they differ from
+   Granat: text at least 16 px, touch targets at least 44 px.
+   CV typography (DESIGN.md): a few fixed levels, the same for every CV, screen and print.
+   H1 name · headline (sans, muted) · claim · H2 section (also in the print sidebar) ·
+   H3 role/degree (.entry-title, serif) · subtitle (h3 default, .entry-org: sans 600, ink) ·
+   text (sans 400) · meta (mono: dates, labels, running head). No italics, no bold skills. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Date column of the timeline and the entry lists, and the label column of the further skills
+   and contact rows (from 768 px): wide enough for a mono period on one line (17 characters at
+   16 px). Print sets its own width. */
+:root {
+  --date-column: 11rem;
+  /* Page width: one reading column below 1024 px, the 1120 px wrap from 1024 px */
+  --page-max-width: 44rem;
+  /* Reading measure of running text: about 65–70 characters per line (brief, phase B). In em,
+     not ch: ch is the width of the digit 0, much wider than an average letter in these faces,
+     so 64ch came to about 90 characters. Headlines and the letter keep their own widths. */
+  --measure: 32em;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-text);
+  font-weight: 400;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: anywhere;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* One family in Regular 400 (design system rule 1): headings inherit it and set only a size
+   token; hierarchy comes from size, colour and space. */
+h1,
+h2,
+h3 {
+  margin: 0;
+  font: inherit;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+  hyphens: manual;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+  margin-bottom: var(--space-4);
+}
+
+/* Subtitle level (skill group, company): ink, never the accent colour */
+h3 {
+  font-size: var(--font-size-subtitle);
+  line-height: var(--line-height-subtitle);
+}
+
+p {
+  margin: 0 0 var(--space-3);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration-color: color-mix(in srgb, var(--color-accent) 45%, transparent);
+  text-underline-offset: 3px;
+  transition:
+    color var(--duration-fast) var(--easing-standard),
+    background-color var(--duration-fast) var(--easing-standard),
+    border-color var(--duration-fast) var(--easing-standard);
+}
+
+a:hover {
+  color: var(--color-accent-strong);
+}
+
+a:focus-visible,
+main:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-3);
+}
+
+/* Skip link: visible only when focused */
+.skip-link {
+  position: absolute;
+  left: var(--space-3);
+  top: -100px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target-min);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-pill);
+}
+
+.skip-link:focus {
+  top: var(--space-2);
+}
+
+/* Header. Phones: the language switch sits beside the portrait, so name, target role or
+   headline, place and the way to PDF and contact fit the first screen (brief, phase A).
+   Without a portrait beside it, the switch keeps a row of its own; from 768 px it stands on
+   its own row above the header, as before PR 2 (tablet and desktop follow in phase B). */
+.site-header {
+  padding-block: var(--space-4) var(--space-5);
+}
+
+.site-header .container {
+  position: relative;
+}
+
+.lang-switch {
+  position: absolute;
+  top: 0;
+  right: calc(var(--space-3) - 4px);
+}
+
+@media screen and (max-width: 767px) {
+  .lang-switch ~ .header-body:not(.has-portrait) {
+    padding-top: calc(var(--touch-target-min) + var(--space-3));
+  }
+}
+
+@media (min-width: 768px) {
+  .lang-switch {
+    position: static;
+    margin-right: -4px;
+    margin-bottom: var(--space-2);
+  }
+}
+
+/* Siblings spaced with gap (screen); print keeps its own compact letterhead until the print
+   part of PR 2 */
+@media screen {
+  .header-body.has-portrait {
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .header-text {
+    display: grid;
+    justify-items: start;
+    gap: var(--space-2);
+  }
+
+  .header-text > * {
+    margin: 0;
+  }
+
+  .header-text > .link-list {
+    margin-inline-start: -4px;
+  }
+}
+
+/* The smallest phones (iPhone SE, 320 px): a smaller portrait and tighter header spacing keep
+   the way to PDF and contact on the first screen */
+@media screen and (max-width: 359px) {
+  .site-header {
+    padding-top: var(--space-3);
+  }
+
+  .header-body.has-portrait .portrait {
+    width: 64px;
+  }
+
+  /* Below an application bar the portrait gives way: the first screen keeps name, role, place,
+     PDF and contact (docs/brief.md, Abnahme Phase A) */
+  .dossier-nav ~ .site-header .portrait {
+    display: none;
+  }
+
+  .dossier-nav ~ .site-header .lang-switch ~ .header-body {
+    padding-top: calc(var(--touch-target-min) + var(--space-3));
+  }
+}
+
+/* Portrait: left of the name so the gaze points into the page (Granat dossier rule); on phones
+   above the name, no larger than needed */
+.portrait {
+  display: block;
+  width: 88px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-sunk);
+}
+
+/* Headline: the positioning line under the name (sans, muted), so the claim stays the only
+   serif statement below the name */
+.headline {
+  font-size: var(--font-size-headline);
+  line-height: var(--line-height-subtitle);
+  color: var(--color-text-muted);
+  max-width: 64ch;
+  text-wrap: balance;
+}
+
+/* Target role of a role version or application: under the name, subtitle level (level 4), in
+   the accent colour (design system, rule 2) */
+.target-role {
+  margin: var(--space-2) 0 0;
+  font-size: var(--font-size-target);
+  line-height: var(--line-height-subtitle);
+  color: var(--color-accent);
+}
+
+.location {
+  color: var(--color-text-muted);
+}
+
+/* Contact and PDF: the buttons' transparent borders make the gaps */
+.link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  list-style: none;
+  padding: 0;
+}
+
+/* Buttons (owner 2026-09-26: smaller): a 36 px pill with 16 px text inside a 44 px click area
+   (design system: Klickfläche mindestens 44 × 44 px). The transparent border belongs to the
+   click area; background and outline line are painted inside it only. */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  padding: 0 10px;
+  border: 4px solid transparent;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface) padding-box;
+  box-shadow: inset 0 0 0 1px var(--color-border-strong);
+  color: var(--color-text);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+  text-decoration: none;
+}
+
+.button:hover {
+  color: var(--color-text);
+  box-shadow: inset 0 0 0 1px var(--color-text-faint);
+}
+
+.link-list li:first-child .button {
+  background: var(--color-accent) padding-box;
+  box-shadow: inset 0 0 0 1px var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.link-list li:first-child .button:hover {
+  background: var(--color-accent-strong) padding-box;
+  box-shadow: inset 0 0 0 1px var(--color-accent-strong);
+}
+
+/* Section navigation (not sticky, so it never covers focused content). Compact (owner
+   2026-09-26): meta size, the links side by side without gaps; each keeps a 44 px click area. */
+.section-nav {
+  border-block: 1px solid var(--color-border);
+}
+
+.section-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  list-style: none;
+  margin: 0 auto;
+  padding-block: 2px;
+}
+
+.section-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  padding-inline: 8px;
+  border-radius: var(--radius-pill);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+  text-decoration: none;
+}
+
+.section-nav a:hover {
+  color: var(--color-text);
+  background: var(--color-surface-sunk);
+}
+
+/* Phones: one row that scrolls sideways inside the bar (the page itself never scrolls
+   sideways); the cut-off last link shows that more follow. The row starts flush with the text
+   and has no padding on the right, so a link is almost always cut off (design system,
+   decision 3 of 2026-09-26). */
+@media (max-width: 767px) {
+  .section-nav ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-inline: calc(var(--space-3) - 8px) 0;
+    scrollbar-width: none;
+  }
+
+  .section-nav ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  .section-nav li {
+    flex: none;
+  }
+}
+
+/* Sections: separated by hairlines, not cards */
+main {
+  padding-block: 0 var(--space-6);
+}
+
+.section {
+  padding-block: var(--space-section) 0;
+}
+
+.section > h2 {
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-accent);
+}
+
+/* H3 level: role, degree, activity, certificate (display serif), in every section */
+.entry-title {
+  font-size: var(--font-size-role);
+  line-height: var(--line-height-role);
+}
+
+/* Subtitle level: organisation and place in ink, the period in muted (design system,
+   typography) */
+.entry-org {
+  margin: var(--space-1) 0 0;
+  color: var(--color-text);
+  font-size: var(--font-size-subtitle);
+  line-height: var(--line-height-subtitle);
+}
+
+/* Short sentence per station: text level, secondary colour, never italic */
+.entry-summary {
+  color: var(--color-text-muted);
+}
+
+/* The period of every entry: a line of its own under "organisation, place" (positions,
+   education, certificates, activities) or under a project's text, always in the same style:
+   text size, muted, table figures (design system, decision 1 of 2026-09-26: title 21 →
+   organisation 18 → period 17 → text 17, rule 2 without an exception; the code before the
+   period takes its size). Each date stays whole; only page zoom may break the line at the dash. */
+.entry-period,
+.project-period {
+  display: block;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.entry-period {
+  margin-top: 2px;
+}
+
+.entry-period time,
+.project-period time {
+  white-space: nowrap;
+}
+
+.summary {
+  max-width: var(--measure);
+}
+
+/* Running text outside the lists above keeps the reading measure at every width (phones are
+   narrower than the measure, so only tablet and desktop change): education and activity text,
+   paragraphs of a section, and the project boxes. */
+.section > p:not(.claim),
+.timeline-body > p,
+.entry > .entry-summary,
+.activity-text,
+.projects {
+  max-width: var(--measure);
+}
+
+/* Timeline: a rail with one dot per station; each station shows the years of its period at the
+   role's level (owner 2026-09-24), the exact months follow on the organisation's line. */
+.timeline {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 0.75rem;
+  bottom: 0.75rem;
+  width: 1px;
+  background: var(--color-border-strong);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 30px;
+  padding-bottom: var(--space-5);
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  background: var(--color-bg);
+}
+
+.timeline-item:first-child::before {
+  background: var(--color-accent);
+}
+
+.timeline-when {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  margin: 0 0 var(--space-2);
+}
+
+/* The years of the period at the role's size (level 3), muted, so years and role read as one
+   row without a size step. One line on every phone; only page zoom may wrap them. */
+.timeline-span {
+  font-size: var(--font-size-role);
+  line-height: var(--line-height-role);
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Career band (owner 2026-09-26): the positions first, the education below in the same list,
+   without group titles, on one time axis. Phones:
+   each row is the entry's name and period, the bar below on the full width; from 768 px and on
+   paper the names stand left of the bars. Every row is a link to its entry (at least 44 px
+   high). The series colours carry no meaning of their own: the legend at the end names them
+   with words. */
+.career {
+  margin: 0;
+}
+
+.career-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.career-link {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px var(--space-3);
+  min-height: var(--touch-target-min);
+  padding-block: var(--space-1);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.career-link:hover .career-label {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.career-link:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.career-label {
+  min-width: 0;
+}
+
+.career-period {
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.career-period time,
+.career-years {
+  white-space: nowrap;
+}
+
+/* Phones: the years of the period, so the names keep one line; the exact months follow in the
+   entry below and stay for screen readers. From 768 px the months. */
+.career-months {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.career-track {
+  position: relative;
+  grid-column: 1 / -1;
+  height: 10px;
+  background: linear-gradient(var(--color-border), var(--color-border)) center / 100% 1px no-repeat;
+}
+
+.career-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--from) * 1%);
+  width: calc((var(--to) - var(--from)) * 1%);
+  min-width: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--data-1);
+}
+
+.career-bar.kind-dev,
+.career-swatch.kind-dev {
+  background: var(--data-2);
+}
+
+.career-bar.kind-edu,
+.career-swatch.kind-edu {
+  background: var(--data-3);
+}
+
+
+.career-axis {
+  position: relative;
+  height: 1.6em;
+  margin-top: var(--space-2);
+  border-top: 1px solid var(--color-border-strong);
+  font-size: var(--font-size-small);
+  color: var(--color-text-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.career-tick {
+  position: absolute;
+  top: var(--space-1);
+  left: calc(var(--at) * 1%);
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.career-tick.is-first {
+  transform: none;
+}
+
+/* Every fourth year on phones, every second from 768 px */
+.career-tick.is-minor,
+.career-tick:nth-child(4n + 3) {
+  display: none;
+}
+
+.career-caption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+  margin-top: var(--space-3);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+  color: var(--color-text-faint);
+}
+
+.career-key {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.career-swatch {
+  flex: none;
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-pill);
+  background: var(--data-1);
+}
+
+@media (min-width: 768px) {
+  .career-link {
+    grid-template-columns: 16rem minmax(0, 1fr);
+    grid-template-areas:
+      "label track"
+      "period track";
+    column-gap: var(--space-4);
+    row-gap: 0;
+    align-items: center;
+  }
+
+  .career-label {
+    grid-area: label;
+  }
+
+  .career-period {
+    grid-area: period;
+  }
+
+  .career-track {
+    grid-area: track;
+    grid-column: auto;
+  }
+
+  .career-axis {
+    margin-left: calc(16rem + var(--space-4));
+  }
+
+  .career-years {
+    display: none;
+  }
+
+  .career-months {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+  }
+
+  .career-tick:nth-child(4n + 3) {
+    display: block;
+  }
+
+  /* The first year is left-aligned; the second visible year would run into it (design system,
+     decision 2 of 2026-09-26) */
+  .career-tick:nth-child(3) {
+    display: none;
+  }
+}
+
+/* Highlights: text level in ink, a short dash in the accent colour */
+.highlights {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: var(--measure);
+}
+
+.highlights li {
+  position: relative;
+  padding-left: 20px;
+}
+
+/* A real en dash (the alt text keeps it silent for screen readers) stays crisp at every size */
+.highlights li::before {
+  content: "–";
+  content: "–" / "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-accent);
+}
+
+.highlights li + li {
+  margin-top: var(--space-2);
+}
+
+/* A station without a short sentence: the highlights keep a little air below the organisation */
+.entry-org + .highlights {
+  margin-top: var(--space-2);
+}
+
+/* Projects inside a timeline entry */
+.projects {
+  list-style: none;
+  margin: var(--space-3) 0;
+  padding: 0;
+}
+
+.projects li {
+  padding: 12px var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.projects li p {
+  margin: 0;
+}
+
+.projects li + li {
+  margin-top: var(--space-2);
+}
+
+.projects .project-period {
+  margin: var(--space-1) 0 0;
+}
+
+/* Plain entry lists */
+.entry-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Activities at the text level like the sections around them (owner 2026-09-26): what was
+   done in ink, organisation muted, the period as in every entry */
+.activity-text {
+  margin: 0;
+}
+
+.activity .entry-org {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-muted);
+}
+
+.entry {
+  padding-block: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+.entry:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.entry p:last-child {
+  margin-bottom: 0;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+}
+
+/* Skills */
+.skill-groups {
+  display: grid;
+  gap: var(--space-5);
+}
+
+/* Group title (competency group, top ten, languages): subtitle level on a strong hairline */
+.group-title {
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--color-border-strong);
+}
+
+.skill-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skill-list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: baseline;
+  gap: var(--space-1) var(--space-3);
+  padding-block: 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+@media (min-width: 560px) {
+  .skill-list li {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+}
+
+.skill-name {
+  min-width: 0;
+}
+
+/* Dots and word on one line; only at 200 % zoom the word may move under the dots */
+.skill-level {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--space-2);
+  color: var(--color-text-muted);
+}
+
+.level-dots {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.level-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--color-level-empty);
+}
+
+.level-dots .dot.is-on {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* Languages: name left (may wrap), level right on the same baseline (never wraps) */
+.language-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section > .language-list {
+  border-top: 1px solid var(--color-border);
+}
+
+.language-list li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2px var(--space-3);
+  padding-block: 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.language-name {
+  min-width: 0;
+}
+
+.language-level {
+  flex: none;
+  white-space: nowrap;
+  color: var(--color-text-muted);
+}
+
+/* How the language is used: a short line under name and level, at the meta size */
+.language-detail {
+  flex-basis: 100%;
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+  color: var(--color-text-muted);
+}
+
+/* Language switch */
+.lang-switch ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Visually hidden text for screen readers (1 px box, nothing extends past the viewport) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Competency profile (role versions): top ten with dots and word, board, legend at the end */
+.top-skills {
+  list-style: none;
+  margin: 0 0 var(--space-5);
+  padding: 0;
+}
+
+.top-skill {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-1) var(--space-3);
+  align-items: baseline;
+  padding-block: 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.top-skill-name {
+  min-width: 0;
+}
+
+.top-skill-name small {
+  display: block;
+  font-size: var(--font-size-small);
+  color: var(--color-text-faint);
+}
+
+/* Board: stacked by category on narrow screens (level labels from data-label), a table from
+   768 px with the levels that occur as columns */
+.skill-board {
+  display: block;
+  width: 100%;
+  margin: 0 0 var(--space-5);
+  border-collapse: collapse;
+}
+
+.skill-board thead,
+.skill-board thead tr,
+.skill-board thead th {
+  display: block;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.skill-board thead {
+  position: absolute;
+  clip-path: inset(50%);
+}
+
+.skill-board tbody,
+.skill-board tr,
+.skill-board tbody th,
+.skill-board td {
+  display: block;
+}
+
+.skill-board tbody tr {
+  padding-block: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+.skill-board tbody th {
+  margin-bottom: var(--space-2);
+  text-align: left;
+}
+
+.skill-board td {
+  padding-block: var(--space-1);
+}
+
+.skill-board td.is-empty {
+  display: none;
+}
+
+.skill-board td::before {
+  content: attr(data-label);
+  display: block;
+  margin-bottom: 4px;
+  font-size: var(--font-size-small);
+  color: var(--color-text-faint);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Chips use the text level. Key skills are marked by a small filled square (a shape, so never
+   colour only), fill and ink colour; the hidden word names it for screen readers. */
+.chip {
+  max-width: 100%;
+  padding: 6px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  line-height: 1.3;
+}
+
+.chip.is-key {
+  border-color: color-mix(in srgb, var(--color-accent) 45%, transparent);
+  background: var(--color-accent-soft);
+  color: var(--color-text);
+}
+
+.chip.is-key::before,
+.key-note::before {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin-right: 0.45em;
+  vertical-align: 0.1em;
+  background: var(--color-accent);
+}
+
+/* Entry moment (site/entry.js sets data-entry on the root element on a visitor's first page
+   only): the header fades in once, the rest of the page is static. Opacity only, 220 ms
+   (design system, motion), so layout and measurements never change. Screen only; off for
+   reduced motion and in print. */
+@media screen and (prefers-reduced-motion: no-preference) {
+  [data-entry] .site-header :is(.portrait, h1, .article-owner) {
+    animation: entry-fade var(--duration-base) var(--easing-standard) backwards;
+  }
+
+  [data-entry] .site-header :is(.target-role, .headline, .article-title, .article-lead) {
+    animation: entry-fade var(--duration-base) var(--easing-standard) 60ms backwards;
+  }
+
+  [data-entry] .site-header :is(.location, .link-list) {
+    animation: entry-fade var(--duration-base) var(--easing-standard) 120ms backwards;
+  }
+}
+
+@keyframes entry-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Screen/print alternates: contact links show their address on paper */
+.print-only {
+  display: none;
+}
+
+/* Role versions: claim, short profile and three USP statements */
+.claim {
+  font-size: var(--font-size-claim);
+  line-height: var(--line-height-claim);
+  max-width: 34ch;
+  margin-bottom: var(--space-4);
+  text-wrap: balance;
+}
+
+.usp-list {
+  list-style: none;
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.usp-list li {
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.usp-list p {
+  margin: var(--space-1) 0 0;
+  max-width: var(--measure);
+  color: var(--color-text-muted);
+}
+
+/* Scale legend under the section title: the real shapes (dots, or the top ten's bars) and the
+   word, highest level first. One level per line on narrow screens, two per line from 768 px,
+   four in a row from 1024 px (and on paper). */
+/* Cross references (owner 2026-09-26): every position, degree and certificate carries a short
+   code in the accent colour (B1, A1, Z1; English W1, E1, C1), before its period and in the career
+   band; a skill links to the entries it comes from. Each link keeps a 44 px click area without
+   making its line taller (negative block margins inside the row's padding). */
+.entry-code {
+  color: var(--color-accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.skill-refs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.ref {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--touch-target-min);
+  min-height: var(--touch-target-min);
+  margin-block: -9px;
+  color: var(--color-accent);
+  font-size: var(--font-size-small);
+  font-variant-numeric: tabular-nums;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.ref:hover {
+  color: var(--color-accent-strong);
+}
+
+.skill-legend .ref-legend {
+  flex-basis: 100%;
+  margin: 0;
+}
+
+/* Scale legend: opens the competency block (owner 2026-09-26), compact, the four levels in one
+   line that wraps on phones */
+.skill-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-3);
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+  color: var(--color-text-faint);
+}
+
+.skill-legend p {
+  margin: 0;
+}
+
+.skill-legend ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skill-legend li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.skill-legend .skill-level {
+  margin-left: 0;
+}
+
+.skill-legend .key-note {
+  flex-basis: 100%;
+  margin: 0;
+}
+
+/* Print-only sidebar of the role versions (see the print rules at the end) */
+.print-side {
+  display: none;
+}
+
+/* Application bar: CV, cover letter, job ad, PDF and contact of one application. On phones one
+   line of text and one row of buttons: the job title shows from 768 px (the target role under
+   the name repeats it). */
+.dossier-nav {
+  background: var(--color-surface-sunk);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.dossier-nav .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-3);
+  padding-block: var(--space-2);
+}
+
+.dossier-title {
+  margin: 0;
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+.dossier-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  list-style: none;
+  margin: 0 0 0 -4px;
+  padding: 0;
+}
+
+.dossier-job {
+  display: none;
+}
+
+/* On phones the bar leaves out the document being read: one row of buttons */
+@media (max-width: 767px) {
+  .dossier-nav .is-current {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .dossier-job {
+    display: inline;
+  }
+}
+
+.dossier-nav a[aria-current="page"],
+.dossier-nav a[aria-current="page"]:hover {
+  background: var(--color-text) padding-box;
+  box-shadow: inset 0 0 0 1px var(--color-text);
+  color: var(--color-bg);
+}
+
+/* Cover letter (Swiss business letter in the CV's layout) */
+.letter {
+  max-width: 40rem;
+  padding-block: var(--space-4) var(--space-6);
+}
+
+.letter-meta {
+  display: grid;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.letter-recipient {
+  margin: 0;
+}
+
+.letter-date {
+  margin: 0;
+  font-size: var(--font-size-small);
+  color: var(--color-text-faint);
+}
+
+.letter-subject {
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-role);
+  line-height: var(--line-height-role);
+}
+
+.letter p {
+  max-width: 64ch;
+}
+
+.letter-points {
+  margin: 0 0 var(--space-3);
+  padding: 0;
+  list-style: none;
+  max-width: 64ch;
+}
+
+.letter-points li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.letter-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  width: 9px;
+  height: 1px;
+  background: var(--color-accent);
+}
+
+.letter-points li + li {
+  margin-top: var(--space-1);
+}
+
+.letter-closing {
+  margin-top: var(--space-4);
+}
+
+.letter-signature {
+}
+
+.letter-enclosures {
+  margin-top: var(--space-5);
+  color: var(--color-text-muted);
+}
+
+.letter-enclosures-label {
+  display: block;
+  color: var(--color-text);
+}
+
+/* Text pages (keyword analyses, coaching notes) */
+.article-owner {
+  margin: 0;
+}
+
+.site-header h1.article-title {
+  margin-top: var(--space-3);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+  max-width: 24ch;
+}
+
+.article-lead {
+  margin: var(--space-4) 0 0;
+  max-width: var(--measure);
+  font-size: var(--font-size-subtitle);
+  color: var(--color-text-muted);
+}
+
+.bullets,
+.steps {
+  margin: 0 0 var(--space-3);
+  padding-left: 1.4em;
+  max-width: var(--measure);
+}
+
+.bullets li + li,
+.steps li + li {
+  margin-top: var(--space-2);
+}
+
+.page-links {
+  list-style: none;
+  margin: 0 0 var(--space-4);
+  padding: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.page-links li {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-links .text-link {
+  display: flex;
+}
+
+/* Tables: stacked label/value rows on narrow screens, a real table from 768 px */
+.data-table {
+  display: block;
+  width: 100%;
+  margin: 0 0 var(--space-4);
+  border-collapse: collapse;
+  border-top: 1px solid var(--color-border-strong);
+}
+
+/* Header row visually hidden (cells carry their labels); every box stays 1 px wide so
+   nothing extends past the viewport. */
+.data-table thead,
+.data-table thead tr,
+.data-table thead th {
+  display: block;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.data-table thead {
+  position: absolute;
+  clip-path: inset(50%);
+}
+
+.data-table tbody,
+.data-table tr,
+.data-table td {
+  display: block;
+}
+
+.data-table tr {
+  padding-block: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.data-table td {
+  padding-block: 2px;
+}
+
+.data-table td::before {
+  content: attr(data-label);
+  display: block;
+  font-size: var(--font-size-small);
+  color: var(--color-text-faint);
+}
+
+
+@media (min-width: 768px) {
+  .site-header {
+    padding-block: var(--space-6) var(--space-5);
+  }
+
+  .header-body.has-portrait {
+    display: grid;
+    grid-template-columns: 176px minmax(0, 1fr);
+    gap: var(--space-5);
+    align-items: start;
+  }
+
+  .header-body.has-portrait .portrait {
+    width: 176px;
+    margin-top: var(--space-3);
+  }
+
+  .skill-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-5) var(--space-6);
+  }
+
+  .usp-list li {
+    display: grid;
+    grid-template-columns: 11rem minmax(0, 1fr);
+    gap: var(--space-4);
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: var(--date-column) minmax(0, 1fr);
+    column-gap: var(--space-4);
+  }
+
+  .timeline-when {
+    margin: 0;
+  }
+
+  .top-skill {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .skill-board {
+    display: table;
+    table-layout: fixed;
+  }
+
+  .skill-board thead {
+    position: static;
+    clip-path: none;
+    display: table-header-group;
+  }
+
+  .skill-board thead,
+  .skill-board thead tr,
+  .skill-board thead th {
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  .skill-board tbody {
+    display: table-row-group;
+  }
+
+  .skill-board tr,
+  .skill-board thead tr {
+    display: table-row;
+  }
+
+  .skill-board th,
+  .skill-board td,
+  .skill-board thead th,
+  .skill-board tbody th {
+    display: table-cell;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .skill-board thead th {
+    padding: 0 var(--space-2) var(--space-2) 0;
+    font-size: var(--font-size-small);
+    color: var(--color-text-faint);
+    border-bottom: 1px solid var(--color-border-strong);
+  }
+
+  .skill-board thead th:first-child {
+    width: 11rem;
+  }
+
+  .skill-board tbody th,
+  .skill-board td {
+    padding: var(--space-3) var(--space-2) var(--space-3) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .skill-board tbody th {
+    margin: 0;
+  }
+
+  .skill-board td.is-empty {
+    display: table-cell;
+  }
+
+  .skill-board td::before {
+    content: none;
+  }
+
+  /* Long skill names wrap in their own column; the level stays on the first line */
+  .skill-list li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .usp-list p {
+    margin: 0;
+  }
+
+  .letter-meta {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+  }
+
+  .data-table {
+    display: table;
+  }
+
+  .data-table thead {
+    position: static;
+    clip-path: none;
+    display: table-header-group;
+  }
+
+  .data-table thead,
+  .data-table thead tr,
+  .data-table thead th {
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  .data-table tbody {
+    display: table-row-group;
+  }
+
+  .data-table tr,
+  .data-table thead tr {
+    display: table-row;
+  }
+
+  .data-table th,
+  .data-table td,
+  .data-table thead th {
+    display: table-cell;
+    padding: 10px var(--space-3) 10px 0;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .data-table th {
+    border-bottom-color: var(--color-border-strong);
+  }
+
+  .data-table td::before {
+    content: none;
+  }
+}
+
+/* The name reaches 48 px from 1024 px (brief, acceptance phase B); the fluid token reaches it only
+   at 1440 px. Screen only: print sets its own name size. */
+@media screen and (min-width: 1024px) {
+  :root {
+    --font-size-h1: 3rem;
+  }
+}
+
+/* Desktop (from 1024 px): Granat page wrap of 1120 px with multi-column components. The page
+   stays one column of sections read top to bottom; paragraphs keep a 62–68 character measure. */
+@media (min-width: 1024px) {
+  :root {
+    --page-max-width: 70rem;
+  }
+
+  /* Anchored sections land below the sticky section navigation */
+  html {
+    scroll-padding-top: 5rem;
+  }
+
+  .site-header {
+    padding-block: var(--space-6);
+  }
+
+  .header-body.has-portrait {
+    grid-template-columns: 15rem minmax(0, 1fr);
+    gap: var(--space-6);
+    align-items: center;
+  }
+
+  .header-body.has-portrait .portrait {
+    width: 15rem;
+    margin-top: 0;
+  }
+
+  .headline {
+    max-width: 30ch;
+  }
+
+  /* Section navigation stays in reach on long pages; it never overlaps content sideways */
+  .section-nav {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: var(--color-bg);
+  }
+
+  .section > p:not(.claim),
+  .summary,
+  .timeline-body > p,
+  .highlights,
+  .bullets,
+  .steps {
+    max-width: var(--measure);
+  }
+
+  /* Profile: claim beside the Kurzprofil, the three USP statements in a row */
+  .section:has(> .claim) {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    column-gap: var(--space-6);
+    align-items: start;
+  }
+
+  .section:has(> .claim) > h2,
+  .section:has(> .claim) > .usp-list {
+    grid-column: 1 / -1;
+  }
+
+  .usp-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-5);
+    margin-top: var(--space-5);
+    border-top: 0;
+  }
+
+  .usp-list li {
+    display: block;
+    padding: var(--space-3) 0 0;
+    border-top: 1px solid var(--color-border-strong);
+    border-bottom: 0;
+  }
+
+  .usp-list p {
+    margin-top: var(--space-2);
+  }
+
+  /* Education, certifications, activities: aligned with the text column of the timeline, which
+     starts after the rail (30 px, .timeline-item), the date column and the gap */
+  .entry {
+    padding-left: calc(30px + var(--date-column) + var(--space-4));
+  }
+
+  .top-skills {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--space-6);
+  }
+
+  .section > .language-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--space-6);
+  }
+
+  .skill-groups {
+    gap: var(--space-5) var(--space-6);
+  }
+
+  /* Cover letter: a sheet in the page, as it will be printed */
+  .page-letter .container {
+    max-width: 54rem;
+  }
+
+  .letter {
+    max-width: none;
+    margin-block: var(--space-4) var(--space-6);
+    padding: var(--space-6) 4.5rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+}
+
+/* Applications (docs/applications.md): CV and motivation letter for one job ad on one page,
+   in the company's colours. The colour tokens come from the application's brand (a style
+   attribute on the root element, DESIGN.md "Company colours"); type, spacing and components stay Granat.
+   The stripe and the rules of the three key strengths may use the brand's decorative marks
+   (e.g. a logo's colours); they never carry meaning on their own. */
+.brand-stripe {
+  height: 4px;
+  background: var(--brand-stripe, var(--color-accent));
+}
+
+.strengths {
+  display: grid;
+  gap: var(--space-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.strength {
+  padding-top: var(--space-3);
+  border-top: 3px solid var(--mark-1, var(--brand-mark, var(--color-accent)));
+}
+
+.strength:nth-child(2) {
+  border-top-color: var(--mark-2, var(--mark-1, var(--brand-mark, var(--color-accent))));
+}
+
+.strength:nth-child(3) {
+  border-top-color: var(--mark-3, var(--mark-1, var(--brand-mark, var(--color-accent))));
+}
+
+.strength p {
+  max-width: var(--measure);
+  margin: var(--space-2) 0 0;
+}
+
+/* Older positions: date, role and organisation only */
+.timeline-item.is-compact {
+  padding-bottom: var(--space-4);
+}
+
+/* Further skills and contact details: label and value rows with hairlines, like languages */
+.knowledge,
+.contact-list {
+  margin: 0;
+}
+
+.knowledge-group,
+.contact-list > div {
+  padding-block: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* The section's own rule follows; no double line at the end of a list */
+.knowledge-group:last-child,
+.contact-list > div:last-child {
+  border-bottom: 0;
+}
+
+/* Labels in muted ink: the difference to the value is colour and space, not weight */
+.knowledge dt,
+.contact-list dt {
+  color: var(--color-text-muted);
+}
+
+.knowledge dd,
+.contact-list dd {
+  margin: 0;
+}
+
+.knowledge dd,
+.contact-list dd {
+  max-width: var(--measure);
+}
+
+/* One flow from profile to letter: tighter section rhythm than the main CV */
+@media screen {
+  .page-application {
+    --space-section: clamp(48px, 6vw, 80px);
+  }
+}
+
+/* Motivation letter at the end of the page: sender above the letter (Swiss business letter) */
+.letter-sender {
+  margin-bottom: var(--space-5);
+  color: var(--color-text-muted);
+}
+
+.letter-sender-name {
+  color: var(--color-text);
+}
+
+@media (min-width: 768px) {
+  .knowledge-group,
+  .contact-list > div {
+    display: grid;
+    grid-template-columns: var(--date-column) minmax(0, 1fr);
+    column-gap: var(--space-4);
+  }
+}
+
+@media (min-width: 1024px) {
+  .strengths {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-5);
+  }
+
+}
+
+/* Current section in the navigation (Chromium 140+; other browsers show the plain list) */
+@supports (scroll-target-group: auto) {
+  .section-nav ul {
+    scroll-target-group: auto;
+  }
+
+  .section-nav a:target-current {
+    color: var(--color-text);
+    background: var(--color-surface-sunk);
+  }
+}
+
+/* Print (A4): CVs, cover letters and text pages as documents. Screen-only rules (16 px text,
+   44 px targets) do not apply on paper; sizes follow the CV type scale in pt (DESIGN.md, CV
+   typography). Colours stay Papier (see tokens.css). The main CV prints in one column; role
+   versions print in the sidebar layout "1a" (named page `dossier`, rules at the end). From
+   page 2 on, CVs carry a running head (name · CV, from --running-head) and the page number. */
+@page {
+  size: A4;
+  margin: 14mm 16mm 14mm 18mm;
+}
+
+@page cv {
+  @top-left {
+    content: var(--running-head, "");
+    vertical-align: bottom;
+    padding-bottom: 3mm;
+    font: 400 7.5pt/1.3 var(--font-text);
+    color: var(--color-text-faint);
+  }
+
+  @top-right {
+    content: counter(page) " / " counter(pages);
+    vertical-align: bottom;
+    padding-bottom: 3mm;
+    font: 400 7.5pt/1.3 var(--font-text);
+    color: var(--color-text-faint);
+  }
+}
+
+@page cv:first {
+  @top-left {
+    content: none;
+  }
+
+  @top-right {
+    content: none;
+  }
+}
+
+/* Role versions ("1a"): the sidebar in surface-sunk runs from edge to edge of every sheet (the
+   margin boxes continue the fixed strip drawn in the page area), the rest is surface-page. */
+@page dossier {
+  margin: 12mm 0 11mm;
+  background: var(--color-bg);
+
+  @top-left {
+    content: "";
+    width: 65mm;
+    background: var(--color-surface-sunk);
+  }
+
+  @bottom-left {
+    content: "";
+    width: 65mm;
+    background: var(--color-surface-sunk);
+  }
+
+  @top-right {
+    content: var(--running-head, "") "\2002·\2002" counter(page) " / " counter(pages);
+    padding: 0 0 3mm 10.5mm;
+    text-align: left;
+    vertical-align: bottom;
+    font: 400 7.5pt/1.3 var(--font-text);
+    color: var(--color-text-faint);
+  }
+}
+
+@page dossier:first {
+  @top-right {
+    content: none;
+  }
+}
+
+/* Applications: the company's paper colour on every sheet; running head from page 2 on. */
+@page application {
+  background: var(--color-bg);
+
+  @top-left {
+    content: var(--running-head, "");
+    vertical-align: bottom;
+    padding-bottom: 3mm;
+    font: 400 7.5pt/1.3 var(--font-text);
+    color: var(--color-text-faint);
+  }
+
+  @top-right {
+    content: counter(page) " / " counter(pages);
+    vertical-align: bottom;
+    padding-bottom: 3mm;
+    font: 400 7.5pt/1.3 var(--font-text);
+    color: var(--color-text-faint);
+  }
+}
+
+@page application:first {
+  @top-left {
+    content: none;
+  }
+
+  @top-right {
+    content: none;
+  }
+}
+
+@media print {
+  :root {
+    /* CV type scale on paper: text and subtitle 9 pt, meta 7.5 pt, H3 12 pt, H2 16.5 pt */
+    --font-size-body: 9pt;
+    --font-size-subtitle: 9pt;
+    --font-size-small: 7.5pt;
+    --font-size-h1: 40pt;
+    --font-size-h2: 16.5pt;
+    --font-size-role: 12pt;
+    --font-size-headline: 10pt;
+    --font-size-claim: 14pt;
+    --line-height-body: 1.45;
+    --space-1: 0.8mm;
+    --space-2: 1.2mm;
+    --space-3: 2.5mm;
+    --space-4: 3.5mm;
+    --space-5: 5mm;
+    --space-6: 7mm;
+    --space-section: 3mm;
+    --touch-target-min: 0px;
+    --content-max-width: none;
+    --page-max-width: none;
+  }
+
+  body {
+    background: none;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page-cv {
+    page: cv;
+  }
+
+  .skip-link,
+  .section-nav,
+  .lang-switch,
+  .dossier-nav,
+  .screen-only {
+    display: none !important;
+  }
+
+  .print-only {
+    display: inline;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .container {
+    max-width: none;
+    padding-inline: 0;
+  }
+
+  .site-header {
+    padding-block: 0 var(--space-4);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .site-header h1 {
+    margin-top: 0;
+    line-height: 0.98;
+  }
+
+  .header-body.has-portrait {
+    display: grid;
+    grid-template-columns: 25mm minmax(0, 1fr);
+    gap: 6mm;
+    align-items: start;
+  }
+
+  .header-body.has-portrait .portrait {
+    width: 25mm;
+    margin-top: 0;
+  }
+
+  .headline {
+    max-width: none;
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-1);
+  }
+
+  .target-role {
+    margin: var(--space-1) 0 0;
+    font-size: 8.25pt;
+  }
+
+  .location {
+    margin: 0;
+    font-size: var(--font-size-small);
+  }
+
+  .link-list {
+    margin-top: var(--space-2);
+    gap: 1mm 5mm;
+  }
+
+  .link-list .button,
+  .link-list li:first-child .button {
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    color: var(--color-text);
+    font-size: var(--font-size-small);
+  }
+
+  main {
+    padding-block: 0;
+  }
+
+  h2 {
+    margin-bottom: var(--space-3);
+    line-height: 1.1;
+  }
+
+  .entry-title {
+    line-height: 1.25;
+  }
+
+  /* Stations are never split (break-inside below); inside them, break-after: avoid on the
+     date column of a grid station would push whole timelines to the next page (Chromium). */
+  h2,
+  h3,
+  .entry-title,
+  .entry-org,
+  .timeline-when {
+    break-after: avoid;
+  }
+
+  /* Cross references join the print part of PR 2 (they pushed the main CV to a 5th page) */
+  .entry-ref,
+  .skill-refs,
+  .ref-legend {
+    display: none;
+  }
+
+  /* Organisation and period on one line on paper until the print part of PR 2 (page counts);
+     the middle dot stays with the preceding word */
+  .entry-period {
+    display: inline;
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  /* A project's period stays at meta size on paper until the print part (page counts) */
+  .project-period {
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+  }
+
+  .entry-period::before {
+    content: "\00a0· ";
+    content: "\00a0· " / "";
+  }
+
+  /* The years of a station on one line */
+  :root {
+    --date-column: 28mm;
+  }
+
+  .timeline-span {
+    white-space: nowrap;
+  }
+
+  .timeline-item {
+    grid-template-columns: var(--date-column) minmax(0, 1fr);
+    column-gap: 4mm;
+    padding-left: 6mm;
+    padding-bottom: var(--space-3);
+  }
+
+  .timeline-item::before {
+    top: 1.2mm;
+    width: 2.8mm;
+    height: 2.8mm;
+    border-width: 0.5mm;
+  }
+
+  .timeline::before {
+    left: 1.35mm;
+  }
+
+  .timeline-when {
+    gap: 0.5mm;
+  }
+
+  .entry {
+    padding-left: calc(var(--date-column) + 4mm);
+  }
+
+  /* The lead of a text page keeps its paper width from before the reading measure */
+  .article-lead {
+    max-width: 60ch;
+  }
+
+  /* Full measure on paper: screen line lengths (--measure, ch limits) would waste A4 width */
+  .summary,
+  .claim,
+  .highlights,
+  .bullets,
+  .steps,
+  .letter-points,
+  .usp-list p,
+  .knowledge dd,
+  .section > p:not(.claim),
+  .timeline-body > p,
+  .entry > .entry-summary,
+  .activity-text,
+  .projects {
+    max-width: none;
+  }
+
+  .claim {
+    margin-bottom: var(--space-3);
+    line-height: 1.3;
+  }
+
+  .summary {
+    line-height: 1.55;
+  }
+
+  /* Highlights: the accent dash in its own 2.6 mm column, 1 mm gap */
+  .highlights li {
+    padding-left: 3.6mm;
+  }
+
+  .highlights li + li {
+    margin-top: 0.5mm;
+  }
+
+  /* Projects: raised cards with a hairline, as on screen */
+  .projects {
+    margin: var(--space-2) 0;
+  }
+
+  .projects li {
+    padding: 1.6mm 2.6mm;
+    border-radius: var(--radius);
+  }
+
+  .projects li + li {
+    margin-top: var(--space-2);
+  }
+
+  /* Skill rows: name and dots (the legend names the levels); dots aligned to the first line */
+  .skill-list li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 2.4mm;
+    align-items: start;
+    padding-block: 0.6mm;
+  }
+
+  .skill-list .level-label {
+    display: none;
+  }
+
+  .skill-list .level-dots {
+    padding-top: 0.9mm;
+  }
+
+  .level-dots {
+    gap: 0.8mm;
+  }
+
+  .level-dots .dot {
+    width: 5.25pt;
+    height: 5.25pt;
+    border-width: 0.75pt;
+  }
+
+  .skill-legend {
+    margin-bottom: var(--space-4);
+    font-size: 8pt;
+  }
+
+  .skill-legend p {
+    margin-bottom: 1mm;
+  }
+
+  .skill-legend ul {
+    gap: 1mm 5mm;
+  }
+
+  .skill-legend .level-dots .dot {
+    width: 4.5pt;
+    height: 4.5pt;
+  }
+
+  .group-title {
+    padding-bottom: 1mm;
+    margin-bottom: 0.5mm;
+  }
+
+  .skill-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4) 8mm;
+  }
+
+  .language-list li {
+    padding-block: 0.6mm 1.5mm;
+  }
+
+  /* Career band on paper: decided (owner 2026-09-26), but it joins the print part of PR 2,
+     after phase B. A first attempt pushed 3 of 13 PDFs to a 5th page; the print sizes of
+     cv-ruhig and the new station layout come first. The compact rows below are the start. */
+  .career,
+  #career {
+    display: none;
+    break-inside: avoid;
+  }
+
+  .career-link {
+    grid-template-columns: minmax(0, 34%) 21mm minmax(0, 1fr);
+    grid-template-areas: "label period track";
+    column-gap: 3mm;
+    min-height: 0;
+    padding-block: 0.2mm;
+    font-size: var(--font-size-small);
+    line-height: 1.35;
+  }
+
+  .career-track {
+    height: 2.2mm;
+  }
+
+  .career-axis {
+    height: 1.4em;
+    margin-top: var(--space-1);
+    margin-left: calc(34% + 21mm + 6mm);
+  }
+
+  .career-label {
+    grid-area: label;
+  }
+
+  .career-period {
+    grid-area: period;
+  }
+
+  .career-track {
+    grid-area: track;
+    grid-column: auto;
+  }
+
+  .career-tick:nth-child(4n + 3) {
+    display: block;
+  }
+
+  .career-caption {
+    margin-top: var(--space-2);
+  }
+
+  .projects li,
+  .entry,
+  .timeline-item,
+  .skill-list li,
+  .language-list li,
+  .letter-points li {
+    break-inside: avoid;
+  }
+
+  /* Cover letter: one A4 page; recipient in the right-hand window (Swiss letter) */
+  .page-letter {
+    --font-size-body: 10pt;
+    --line-height-body: 1.36;
+  }
+
+  .page-letter .site-header h1 {
+    font-size: 22pt;
+  }
+
+  .page-letter .header-body.has-portrait {
+    grid-template-columns: 18mm minmax(0, 1fr);
+    gap: 5mm;
+  }
+
+  .page-letter .header-body.has-portrait .portrait {
+    width: 18mm;
+  }
+
+  .page-letter .headline {
+    font-size: 11pt;
+    margin-top: 1mm;
+  }
+
+  .page-letter .link-list {
+    margin-top: 1mm;
+  }
+
+  .letter {
+    max-width: none;
+    padding-block: 0;
+  }
+
+  .letter-meta {
+    display: block;
+    margin: 5mm 0 0;
+  }
+
+  .letter-recipient {
+    margin-left: 88mm;
+  }
+
+  .letter-date {
+    margin-top: 5mm;
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+  }
+
+  .letter-subject {
+    margin: 4mm 0 3mm;
+    font-size: 10.5pt;
+  }
+
+  .letter p {
+    max-width: none;
+    margin-bottom: 2mm;
+  }
+
+  .letter-points {
+    margin-bottom: 2mm;
+  }
+
+  .letter-closing {
+    margin-top: 3mm;
+  }
+
+  .letter-signature {
+    margin-top: 3mm;
+    margin-bottom: 0;
+    font-size: 15pt;
+  }
+
+  .letter-enclosures {
+    margin-top: 3mm;
+    font-size: var(--font-size-small);
+  }
+
+  /* Text pages print as documents with real tables */
+  .data-table {
+    display: table;
+  }
+
+  .data-table thead {
+    position: static;
+    clip-path: none;
+    display: table-header-group;
+  }
+
+  .data-table thead,
+  .data-table thead tr,
+  .data-table thead th {
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  .data-table tbody {
+    display: table-row-group;
+  }
+
+  .data-table tr,
+  .data-table thead tr {
+    display: table-row;
+    break-inside: avoid;
+  }
+
+  .data-table th,
+  .data-table td,
+  .data-table thead th {
+    display: table-cell;
+    padding: 1.5mm 3mm 1.5mm 0;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .data-table td::before {
+    content: none;
+  }
+
+  /* Role versions: layout "1a" of the design hand-off. A 65 mm sidebar (portrait, contact, the
+     competency groups with dots, languages, interests) beside the main column (target role,
+     name, headline, claim, profile, experience, education). Breaks run on @page and
+     break-inside: avoid per station, never on fixed pages. The screen-only competency profile,
+     the USP statements and the header's contact are replaced by the sidebar. */
+  .page-profile {
+    page: dossier;
+    display: grid;
+    grid-template-columns: 65mm minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    background: var(--color-bg);
+  }
+
+  /* The sidebar's ground on every sheet: fixed boxes repeat on each printed page */
+  .page-profile::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 65mm;
+    background: var(--color-surface-sunk);
+  }
+
+  .page-profile .site-header {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 0 10.5mm;
+    border-bottom: 0;
+  }
+
+  .page-profile .header-body.has-portrait {
+    display: block;
+  }
+
+  .page-profile .site-header .portrait,
+  .page-profile .site-header .location,
+  .page-profile .site-header .link-list,
+  .page-profile .usp-list,
+  .page-profile #skills,
+  .page-profile #interests {
+    display: none;
+  }
+
+  .page-profile .headline {
+    margin: 2.1mm 0 0;
+  }
+
+  .page-profile main {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 0 10.5mm;
+  }
+
+  .page-profile .section {
+    padding-top: 0;
+  }
+
+  .page-profile .section + .section {
+    margin-top: 5.8mm;
+    border-top: 0;
+  }
+
+  /* The claim follows the headline, before the profile title */
+  .page-profile #about {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5.8mm;
+  }
+
+  .page-profile #about .claim {
+    order: -1;
+    margin: 0 0 5.8mm;
+  }
+
+  .page-profile #about h2 {
+    margin-bottom: 1.6mm;
+  }
+
+  .page-profile .summary {
+    margin: 0;
+  }
+
+  .page-profile #experience h2,
+  .page-profile #education h2,
+  .page-profile #activities h2,
+  .page-profile #certifications h2 {
+    margin-bottom: 1mm;
+  }
+
+  /* Stations: hairline, then date → role → organisation, place → summary → projects →
+     highlights; no rail and no year column in the narrow main column */
+  .page-profile .timeline::before,
+  .page-profile .timeline-item::before,
+  .page-profile .timeline-span {
+    display: none;
+  }
+
+  .page-profile .timeline-item,
+  .page-profile .entry,
+  .page-profile .entry:first-child {
+    display: block;
+    padding: 2.6mm 0;
+    padding-left: 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .page-profile .timeline-when {
+    display: block;
+    margin: 0 0 1.3mm;
+  }
+
+  .page-profile .timeline-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3mm;
+  }
+
+  .page-profile .timeline-body > *,
+  .page-profile .entry > * {
+    margin: 0;
+  }
+
+  .page-profile .entry > * + * {
+    margin-top: 1.3mm;
+  }
+
+  .page-profile .timeline-body .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3mm;
+  }
+
+  .page-profile .projects li + li {
+    margin-top: 0;
+  }
+
+  .page-profile .print-side {
+    display: block;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    padding: 0 6.9mm;
+  }
+
+  .side-portrait {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    margin-bottom: 6.9mm;
+  }
+
+  .side-block + .side-block {
+    margin-top: 6.9mm;
+  }
+
+  /* Section titles keep the H2 level in the sidebar */
+  .print-side .side-title {
+    margin: 0 0 2.6mm;
+  }
+
+  .side-contact {
+    display: grid;
+    gap: 2.1mm;
+    margin: 0;
+  }
+
+  .side-contact div {
+    display: grid;
+    gap: 0.3mm;
+  }
+
+  .side-contact dt {
+    font-size: var(--font-size-small);
+    line-height: 1.3;
+    color: var(--color-text-faint);
+  }
+
+  .side-contact dd {
+    margin: 0;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  /* Legend: one level per line in the narrow column */
+  .side-legend {
+    display: grid;
+    gap: 1.3mm;
+    list-style: none;
+    margin: 0 0 1mm;
+    padding: 0;
+    font-size: 8pt;
+    line-height: 1.3;
+  }
+
+  .side-legend .skill-level {
+    margin-left: 0;
+    gap: 1.6mm;
+  }
+
+  .side-legend .level-dots .dot {
+    width: 4.5pt;
+    height: 4.5pt;
+  }
+
+  .side-group {
+    margin-top: 3.2mm;
+  }
+
+  .side-group .group-title {
+    break-after: avoid;
+  }
+
+  .side-group .skill-list {
+    display: grid;
+    gap: 1.6mm;
+    margin-top: 1.6mm;
+  }
+
+  .side-group .skill-list li {
+    padding: 0;
+    border-bottom: 0;
+    line-height: 1.35;
+  }
+
+  .print-side .language-list {
+    display: grid;
+    gap: 1.6mm;
+  }
+
+  .print-side .language-list li {
+    padding: 0 0 1.6mm;
+  }
+
+  .print-side p {
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* Applications: one document in the company's colours. The CV runs in one column (three key
+     strengths in a row); the motivation letter starts on its own sheet and reads as a letter,
+     so its section title is left to screen readers. */
+  body.page-application {
+    page: application;
+    background: var(--color-bg);
+  }
+
+  .brand-stripe {
+    height: 1mm;
+    margin-bottom: 5mm;
+  }
+
+  .strengths {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5mm;
+  }
+
+  .strength {
+    padding-top: 2mm;
+    border-top-width: 0.8mm;
+    break-inside: avoid;
+  }
+
+  .strength p {
+    max-width: none;
+    margin-top: 1mm;
+  }
+
+  .timeline-item.is-compact {
+    padding-bottom: var(--space-2);
+  }
+
+  /* Short sections move to the next sheet as a whole. The last line of an entry keeps no
+     break-after: avoid, which would pass on to the gap before the next section (css-break)
+     and leave Chromium no choice but to split the section */
+  .page-application :is(#strengths, #training, #education, #languages, #knowledge, #contact) {
+    break-inside: avoid;
+  }
+
+  .page-application :is(.entry, .timeline-body) > :last-child {
+    break-after: auto;
+  }
+
+  .knowledge-group,
+  .contact-list > div {
+    display: grid;
+    grid-template-columns: var(--date-column) minmax(0, 1fr);
+    column-gap: 4mm;
+    padding-block: 1mm 1.5mm;
+    break-inside: avoid;
+  }
+
+  .contact-list dd,
+  .page-application .letter {
+    max-width: none;
+  }
+
+  #motivation {
+    break-before: page;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+    font-size: 10pt;
+    line-height: 1.36;
+  }
+
+  #motivation > h2 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .letter-sender {
+    margin-bottom: 8mm;
+    font-size: 9pt;
+  }
+}
+
+/* Applications: the designer's refresh "Bewerbung «Dossier»" (draft 2026-09-27, v2, from the
+   artifact "Bewerbungen aufgefrischt", taken over unchanged by the owner's request). It joins the
+   strengths of the first application pages (quiet company colour, letter as a sheet, claim beside
+   the profile) with phase A (mobile first, buttons, career band, entries). Rule 1 holds per page:
+   one family in 400, chosen by the Branche (BRANCHEN in site/templates.mjs). Hierarchy only
+   through size, colour, space and lines; sizes only from the cv-ruhig scale. */
+
+/* Firmenfarbe dezent: oben ein Strich, sonst nur Akzente */
+.page-application .brand-stripe { height: 3px; }
+.page-application .section > h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.page-application main > .section + .section {
+  border-top: 1px solid var(--color-border);
+}
+
+/* Kopf: Zielrolle als kleine Zeile in der Firmenfarbe über dem Namen */
+.page-application .site-header { padding-block: var(--space-5) var(--space-5); }
+.page-application .target-role {
+  order: -1;
+  margin: 0;
+  font-size: var(--font-size-small);
+  color: var(--color-accent);
+}
+.page-application h1 { line-height: 1.05; letter-spacing: -0.01em; }
+.page-application .headline { color: var(--color-text-muted); }
+.page-application .header-text { display: flex; flex-direction: column; gap: var(--space-2); }
+.page-application .portrait { border-radius: 4px; border: 0; }
+
+/* Claim: feine Linie in der Firmenfarbe */
+.page-application .claim {
+  max-width: 32ch;
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--brand-mark, var(--color-accent));
+  color: var(--color-text);
+}
+
+/* Stärken: dünne Linie in der Firmenfarbe (bei Nimbus Software die vier Farben) */
+.page-application .strength { border-top-width: 2px; padding-top: var(--space-3); }
+.page-application .strength p { color: var(--color-text-muted); }
+
+/* Werdegang: nur die Firmenfarbe und Grau */
+.page-application .career-bar.kind-dev,
+.page-application .career-swatch.kind-dev { background: var(--color-border-strong); }
+
+/* Zeitstrahl: Punkt der aktuellen Stelle in der Firmenfarbe, Linie neutral */
+.page-application .timeline::before { background: var(--color-border); }
+.page-application .timeline-item::before { border-color: var(--color-border-strong); border-width: 1.5px; }
+.page-application .timeline-item:first-child::before {
+  background: var(--brand-mark, var(--color-accent));
+  border-color: var(--brand-mark, var(--color-accent));
+}
+
+/* Brief als Blatt */
+.page-application .letter {
+  margin-top: var(--space-4);
+  padding: var(--space-5) var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.page-application .letter::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--brand-stripe, var(--color-accent));
+}
+.page-application .letter-subject { color: var(--color-text); }
+.page-application .letter-points li::before {
+  height: 1px;
+  background: var(--brand-mark, var(--color-accent));
+}
+
+@media (min-width: 768px) {
+  .page-application .header-body.has-portrait {
+    grid-template-columns: 160px minmax(0, 1fr);
+    align-items: end;
+    column-gap: var(--space-5);
+  }
+  .page-application .header-body.has-portrait .portrait { width: 160px; }
+  .page-application .letter { padding: var(--space-6) var(--space-6); }
+}
+
+@media (min-width: 1024px) {
+  /* Profil: Claim links, Text rechts, wie im ersten Entwurf */
+  .page-application #about:has(> .claim) {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    column-gap: var(--space-6);
+    align-items: start;
+  }
+  .page-application #about:has(> .claim) > h2 { grid-column: 1 / -1; }
+  .page-application #about:has(> .claim) > .claim { grid-column: 1; }
+  .page-application #about:has(> .claim) > :not(h2):not(.claim) { grid-column: 2; }
+  .page-application .letter { max-width: 48rem; }
+}
+
+@media print {
+  .page-application .letter { border: 0; padding: 0; }
+  .page-application .letter::before { display: none; }
+}

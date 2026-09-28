@@ -1,0 +1,119 @@
+# FICTIONAL example dataset. Every person, organisation, date and link below is invented.
+# Used for development and tests only. Do not replace with real content in this file.
+
+meta:
+  languages: [en]
+
+profile:
+  name: Robin Muster
+  headline: Fictional Systems Engineer
+  location: Exampleton
+  summary: >-
+    Robin Muster is an invented person used to test this CV generator. The profile combines
+    plausible-sounding but entirely made-up roles, schools and certificates so that layout,
+    validation and accessibility checks run against realistic text lengths.
+  interests: Hiking, chess and imaginary gardening
+  links:
+    - label: Website
+      url: https://example.com/
+    - label: Email
+      url: mailto:robin.muster@example.com
+    - label: Code
+      url: https://example.org/robin-muster
+
+experience:
+  - id: lumen-labs-lead
+    organization: Lumen Labs (fictional)
+    role: Lead Systems Engineer
+    location: Exampleton
+    start: 2022-04
+    summary: Leads a small invented team that builds imaginary monitoring tools.
+    highlights:
+      - Replaced a fictional nightly batch job with an event-driven pipeline.
+      - Mentored three invented colleagues through their first on-call rotations.
+  - id: harbor-works-engineer
+    organization: Harbor Works GmbH (fictional)
+    role: Systems Engineer
+    location: Sampleville
+    start: 2018-09
+    end: 2022-03
+    projects:
+      - start: 2019-02
+        end: 2020-06
+        description: Led the fictional migration of an imaginary ticketing system to a made-up cloud platform.
+    highlights:
+      - Automated provisioning for a made-up fleet of 40 test machines.
+      - Wrote the internal handbook for an imaginary incident process.
+  - id: north-point-intern
+    organization: North Point Studio (fictional)
+    role: Engineering Intern
+    start: 2017-06
+    end: 2017-12
+
+education:
+  - id: example-university-msc
+    institution: University of Exampleton (fictional)
+    degree: MSc
+    field: Imaginary Computer Science
+    start: 2015-09
+    end: 2018-06
+  - id: example-college-bsc
+    institution: Sampleville College (fictional)
+    degree: BSc
+    field: Placeholder Engineering
+    start: 2012-09
+    end: 2015-06
+
+certifications:
+  - id: cert-cloud-foundations
+    name: Placeholder Cloud Foundations
+    issuer: Example Certification Board (fictional)
+    date: 2021-05
+    expires: 2024-05
+    url: https://example.net/certificates/placeholder
+  - id: cert-accessibility-basics
+    name: Invented Accessibility Basics
+    issuer: Sample Academy (fictional)
+    date: 2023-11
+
+skills:
+  - id: skills-engineering
+    name: Engineering
+    items:
+      - { name: Linux, level: 4, refs: [harbor-works-engineer] }
+      - { name: Networking, level: 2, refs: [cert-cloud-foundations] }
+      - { name: Automation, level: 3, refs: [lumen-labs-lead, harbor-works-engineer] }
+      - { name: Observability, level: 1, refs: [lumen-labs-lead] }
+  - id: skills-languages
+    name: Programming
+    items:
+      - { name: Python, level: 3, refs: [lumen-labs-lead, example-university-msc] }
+      - { name: Go, level: 2, refs: [lumen-labs-lead] }
+      - { name: TypeScript, level: 2 }
+      - { name: SQL, level: 2, refs: [example-college-bsc] }
+  - id: skills-practice
+    name: Practice
+    items:
+      - { name: Technical writing, level: 3, refs: [harbor-works-engineer] }
+      - { name: Mentoring, level: 2, refs: [lumen-labs-lead] }
+      - { name: Incident review, level: 3, refs: [harbor-works-engineer, cert-accessibility-basics] }
+
+activities:
+  - id: meetup-host
+    organization: Exampleton Tech Meetup (fictional)
+    start: 2019-01
+    end: 2021-12
+    description: Organised a monthly meetup for an invented local community
+
+languages:
+  - id: lang-english
+    name: English
+    level: Fluent (C2)
+    detail: Writes and presents at work every day (fictional)
+  - id: lang-german
+    name: German
+    level: Native
+    detail: Grew up with it, speaks it at home (fictional)
+  - id: lang-french
+    name: French
+    level: Intermediate (B1)

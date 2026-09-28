@@ -1,0 +1,64 @@
+name: pages
+
+# Publishes dist/ (built from data/cv.yaml) to GitHub Pages. Release approved by the owner on
+# 2026-09-23. Runs only for main; every check must pass before anything is deployed.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# configure-pages reads the Pages site in the build job, so pages access is needed there too.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Validate, build and test
+        run: npm run check
+      # Every PDF a download link of the site names (data-pdf): the A4 dossiers of the main CV and
+      # the role versions (owner 2026-09-26), the application exports on one long page (owner
+      # 2026-09-24). Printed from the checked build with the same Chromium.
+      - name: Print the linked PDFs
+        run: node scripts/pdf.mjs --site dist --out dist/pdf --linked
+      # Hand-made pages published as they are (owner decision 2026-09-23), outside the generator.
+      # A static page replaces the generated page at its address, and that page's PDF is removed
+      # (owner 2026-09-27: the designer's four applications replace the old versions).
+      - name: Add static pages
+        run: |
+          [ -d static ] || exit 0
+          for page in $(cd static && find . -name index.html | sed 's|^\./||; s|/\?index\.html$||'); do
+            rm -f "dist/pdf/${page//\//-}.pdf"
+          done
+          cp -R static/. dist/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

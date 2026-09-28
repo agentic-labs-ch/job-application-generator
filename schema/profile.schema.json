@@ -1,0 +1,338 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.invalid/schema/profile.schema.json",
+  "title": "CV role version (profile)",
+  "description": "A tailored version of a base CV dataset: positioning, USP, tailored highlights, a self-assessed competency profile and an optional cover letter. Public once merged, except `note` and `evidence` (never rendered). Cross-field rules (base ids, languages, word limits) are enforced in scripts/lib/validate.mjs. See docs/profiles.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "base",
+    "id",
+    "target",
+    "headline",
+    "claim",
+    "summary",
+    "usp",
+    "skills"
+  ],
+  "properties": {
+    "kind": {
+      "type": "string",
+      "const": "profile"
+    },
+    "base": {
+      "$ref": "#/definitions/relPath"
+    },
+    "id": {
+      "$ref": "cv.schema.json#/definitions/id"
+    },
+    "languages": {
+      "$ref": "#/definitions/languages"
+    },
+    "omit": {
+      "description": "Base sections left out on this page (e.g. certifications).",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "certifications",
+          "activities",
+          "interests"
+        ]
+      }
+    },
+    "photo": {
+      "description": "Own portrait for this role version (owner's choice), a file next to the base dataset; replaces the base photo on the page, and in print.",
+      "allOf": [{ "$ref": "cv.schema.json#/definitions/photo" }]
+    },
+    "target": {
+      "$ref": "cv.schema.json#/definitions/text"
+    },
+    "headline": {
+      "$ref": "cv.schema.json#/definitions/text"
+    },
+    "claim": {
+      "$ref": "cv.schema.json#/definitions/longText"
+    },
+    "summary": {
+      "$ref": "cv.schema.json#/definitions/longText"
+    },
+    "usp": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "text"
+        ],
+        "properties": {
+          "title": {
+            "$ref": "cv.schema.json#/definitions/text"
+          },
+          "text": {
+            "$ref": "cv.schema.json#/definitions/longText"
+          }
+        }
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "cv.schema.json#/definitions/id"
+          },
+          "summary": {
+            "$ref": "cv.schema.json#/definitions/longText"
+          },
+          "highlights": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "$ref": "cv.schema.json#/definitions/longText"
+            }
+          },
+          "projects": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "start",
+                "description"
+              ],
+              "properties": {
+                "start": {
+                  "$ref": "cv.schema.json#/definitions/yearMonth"
+                },
+                "end": {
+                  "$ref": "cv.schema.json#/definitions/yearMonth"
+                },
+                "description": {
+                  "$ref": "cv.schema.json#/definitions/longText"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "area",
+          "name",
+          "items"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "cv.schema.json#/definitions/id"
+          },
+          "area": {
+            "description": "Competency area: domain (Fachkompetenz), technology, method, personal (persönliche und soziale Kompetenzen).",
+            "type": "string",
+            "enum": [
+              "domain",
+              "technology",
+              "method",
+              "personal"
+            ]
+          },
+          "name": {
+            "$ref": "cv.schema.json#/definitions/text"
+          },
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "name",
+                "level",
+                "evidence"
+              ],
+              "properties": {
+                "name": {
+                  "$ref": "cv.schema.json#/definitions/text"
+                },
+                "level": {
+                  "description": "Self-assessment, four steps: 1 Grundkenntnisse, 2 Erste Erfahrung, 3 Erfahren, 4 Spezialist.",
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 4
+                },
+                "level_proposed": {
+                  "type": "boolean"
+                },
+                "evidence": {
+                  "description": "Base entry ids (or \"letter\") that support this skill. Never rendered.",
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": {
+                    "$ref": "cv.schema.json#/definitions/id"
+                  }
+                },
+                "key": {
+                  "description": "Especially relevant for the target role: highlighted in the competency board; the first ten (by level) form the top list.",
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "job": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "company",
+        "url"
+      ],
+      "properties": {
+        "title": {
+          "$ref": "cv.schema.json#/definitions/shortText"
+        },
+        "company": {
+          "$ref": "cv.schema.json#/definitions/shortText"
+        },
+        "location": {
+          "$ref": "cv.schema.json#/definitions/shortText"
+        },
+        "url": {
+          "$ref": "cv.schema.json#/definitions/url"
+        },
+        "published": {
+          "$ref": "#/definitions/date"
+        }
+      }
+    },
+    "letter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "date",
+        "place",
+        "recipient",
+        "subject",
+        "salutation",
+        "attention",
+        "interest",
+        "desire",
+        "action",
+        "closing"
+      ],
+      "properties": {
+        "date": {
+          "$ref": "#/definitions/date"
+        },
+        "place": {
+          "$ref": "cv.schema.json#/definitions/text"
+        },
+        "recipient": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 6,
+          "items": {
+            "$ref": "cv.schema.json#/definitions/text"
+          }
+        },
+        "subject": {
+          "$ref": "cv.schema.json#/definitions/text"
+        },
+        "salutation": {
+          "$ref": "cv.schema.json#/definitions/text"
+        },
+        "attention": {
+          "$ref": "#/definitions/letterBlocks"
+        },
+        "interest": {
+          "$ref": "#/definitions/letterBlocks"
+        },
+        "desire": {
+          "$ref": "#/definitions/letterBlocks"
+        },
+        "action": {
+          "$ref": "#/definitions/letterBlocks"
+        },
+        "closing": {
+          "$ref": "cv.schema.json#/definitions/text"
+        },
+        "enclosures": {
+          "$ref": "cv.schema.json#/definitions/text"
+        }
+      }
+    },
+    "note": {
+      "$ref": "cv.schema.json#/definitions/note"
+    }
+  },
+  "definitions": {
+    "relPath": {
+      "description": "Path to the base CV dataset, relative to this file.",
+      "type": "string",
+      "maxLength": 200,
+      "pattern": "^(?!/)[A-Za-z0-9._/-]+\\.ya?ml$"
+    },
+    "languages": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "cv.schema.json#/definitions/lang"
+      }
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+    },
+    "letterBlocks": {
+      "description": "Paragraphs; an entry { points: [...] } renders a bullet list.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "cv.schema.json#/definitions/longText"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "points"
+            ],
+            "properties": {
+              "points": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "$ref": "cv.schema.json#/definitions/longText"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+<!-- @dsCard group="Steuerelemente" height=420 subtitle="36-px-Pille in 44 × 44 px Klickfläche · Kontakt, PDF, Sprache, Bewerbungsleiste" -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans&display=swap">
+<style>
+  /* Skala cv-ruhig (Bildschirm). Nur rem: die Wahl «Gross» skaliert die Wurzel. */
+  :root {
+    --font-size-h1: clamp(2.5rem, 2.3239rem + 0.7512vw, 3rem);
+    --font-size-h2: clamp(1.625rem, 1.537rem + 0.3756vw, 1.875rem);
+    --font-size-claim: clamp(1.375rem, 1.331rem + 0.1878vw, 1.5rem);
+    --font-size-role: 1.3125rem;
+    --font-size-subtitle: 1.125rem;
+    --font-size-body: 1.0625rem;
+    --font-size-small: 1rem;
+    --touch: 44px; /* Klickfläche, Schutzregel */
+  }
+  html { font-size: 100%; }
+  html[data-size="gross"] { font-size: 112.5%; }
+  body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-text); font-weight: 400; }
+  .cq { container-type: inline-size; font-family: var(--font-text); font-weight: 400; font-size: var(--font-size-body); line-height: 1.6; background: var(--color-bg); color: var(--color-text); hyphens: auto; overflow-wrap: break-word; }
+  .cq :where(h1, h2, h3, p, ul, ol, figure) { margin: 0; font: inherit; }
+  .cq *, .cq *::before, .cq *::after { box-sizing: border-box; }
+  .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .pad { padding-inline: var(--space-3); }
+  .frames { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: start; padding: var(--space-3); }
+  .frame { border: 1px solid var(--color-border-strong); border-radius: var(--radius-md); overflow: hidden; background: var(--color-bg); }
+  .frame-label { font-family: var(--font-text); font-size: var(--font-size-small); color: var(--color-text-faint); margin: 0 0 var(--space-2); }
+  .cq a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+
+  /* Knopf: 36-px-Pille in einer Klickfläche von 44 × 44 px */
+  .kn-list { display: flex; flex-wrap: wrap; gap: 0; list-style: none; padding: 0; margin: 0 0 0 -4px; }
+  .kn { display: inline-flex; align-items: center; justify-content: center; min-height: var(--touch); min-width: var(--touch); padding: 0 10px;
+    border: 4px solid transparent; border-radius: var(--radius-pill); background: var(--color-surface) padding-box;
+    box-shadow: inset 0 0 0 1px var(--color-border-strong); color: var(--color-text); font-size: var(--font-size-small); line-height: 1.4; text-decoration: none; }
+  .kn:hover { box-shadow: inset 0 0 0 1px var(--color-text-faint); }
+  .kn.is-primary { background: var(--color-accent) padding-box; box-shadow: inset 0 0 0 1px var(--color-accent); color: var(--color-on-accent); }
+  .kn.is-primary:hover { background: var(--color-accent-strong) padding-box; box-shadow: inset 0 0 0 1px var(--color-accent-strong); }
+  .kn[aria-current="page"] { background: var(--color-text) padding-box; box-shadow: inset 0 0 0 1px var(--color-text); color: var(--color-bg); }
+
+  /* Abschnittsnavigation */
+  .an { border-block: 1px solid var(--color-border); }
+  .an ul { display: flex; flex-wrap: wrap; gap: 0; list-style: none; margin: 0; padding: 2px calc(var(--space-3) - 8px); }
+  .an a { display: inline-flex; align-items: center; min-height: var(--touch); min-width: var(--touch); padding-inline: 8px; border-radius: var(--radius-pill);
+    color: var(--color-text-muted); font-size: var(--font-size-small); text-decoration: none; white-space: nowrap; }
+  .an a:hover { color: var(--color-text); background: var(--color-surface-sunk); }
+  @container (max-width: 767px) {
+    .an ul { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-inline-end: 0; }
+    .an ul::-webkit-scrollbar { display: none; }
+    .an li { flex: none; }
+  }
+
+  /* Querverweise: Kürzel pro Eintrag (B/A/Z), Quellen-Links an den Kompetenzen */
+  .code { color: var(--color-accent); font-variant-numeric: tabular-nums; }
+  .refs { display: inline-flex; flex-wrap: wrap; margin-left: auto; }
+  .ref { display: inline-flex; align-items: center; justify-content: center; min-width: var(--touch); min-height: var(--touch); margin-block: -9px;
+    color: var(--color-accent); font-size: var(--font-size-small); font-variant-numeric: tabular-nums; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .ref:hover { color: var(--color-accent-strong); }
+
+  /* Werdegang (Zeitband) */
+  .wg-rows { list-style: none; margin: 0; padding: 0; }
+  .wg-link { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 2px var(--space-3); min-height: var(--touch);
+    padding-block: var(--space-1); color: var(--color-text); text-decoration: none; }
+  .wg-link:hover .wg-label { text-decoration: underline; text-underline-offset: 3px; }
+  .wg-label { min-width: 0; }
+  .wg-period { font-size: var(--font-size-small); color: var(--color-text-muted); font-variant-numeric: tabular-nums; }
+  .wg-years, .wg-period time { white-space: nowrap; }
+  .wg-months { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .wg-track { position: relative; grid-column: 1 / -1; height: 10px; background: linear-gradient(var(--color-border), var(--color-border)) center / 100% 1px no-repeat; }
+  .wg-bar { position: absolute; top: 0; bottom: 0; left: calc(var(--from) * 1%); width: calc((var(--to) - var(--from)) * 1%); min-width: 4px; border-radius: var(--radius-pill); background: var(--data-1); }
+  .wg-axis { position: relative; height: 1.6em; margin-top: var(--space-2); border-top: 1px solid var(--color-border-strong); font-size: var(--font-size-small); color: var(--color-text-faint); font-variant-numeric: tabular-nums; }
+  .wg-tick { position: absolute; top: var(--space-1); left: calc(var(--at) * 1%); transform: translateX(-50%); white-space: nowrap; }
+  .wg-tick.is-first { transform: none; }
+  .wg-tick.is-minor, .wg-tick:nth-child(4n + 3) { display: none; }
+  .wg-caption { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-3); margin-top: var(--space-3); font-size: var(--font-size-small); line-height: 1.4; color: var(--color-text-faint); }
+  .wg-key { display: inline-flex; align-items: center; gap: var(--space-2); }
+  .wg-swatch { flex: none; width: 12px; height: 12px; border-radius: var(--radius-pill); background: var(--data-1); }
+  :is(.wg-bar, .wg-swatch).k-dev { background: var(--data-2); }
+  :is(.wg-bar, .wg-swatch).k-edu { background: var(--data-3); }
+  @container (min-width: 768px) {
+    .wg-link { grid-template-columns: 16rem minmax(0, 1fr); grid-template-areas: "label track" "period track"; column-gap: var(--space-4); row-gap: 0; align-items: center; }
+    .wg-label { grid-area: label; }
+    .wg-period { grid-area: period; }
+    .wg-track { grid-area: track; grid-column: auto; }
+    .wg-axis { margin-left: calc(16rem + var(--space-4)); }
+    .wg-years { display: none; }
+    .wg-months { position: static; width: auto; height: auto; overflow: visible; clip-path: none; }
+    .wg-tick:nth-child(4n + 3) { display: block; }
+    .wg-tick:nth-child(3) { display: none; }
+  }
+
+
+  .demo { display: grid; gap: var(--space-4); padding: var(--space-3); }
+  .demo h2 { font-size: var(--font-size-small); color: var(--color-text-faint); }
+  .bar { background: var(--color-surface-sunk); border-bottom: 1px solid var(--color-border); padding: var(--space-2) var(--space-3); display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-3); }
+  .show-hit .kn { outline: 1px dashed var(--color-text-faint); outline-offset: 0; }
+  .lang { display: flex; justify-content: flex-end; }
+
+</style>
+<div class="frames">
+ <div>
+  <p class="frame-label">375 px · Kopf und Sprachknopf</p>
+  <div class="frame" style="width:375px"><div class="cq"><div class="demo">
+    <div class="lang"><ul class="kn-list"><li><a class="kn" href="#" hreflang="en" lang="en">English</a></li></ul></div>
+    <ul class="kn-list" aria-label="Kontakt">
+      <li><a class="kn is-primary" href="#">E-Mail</a></li><li><a class="kn" href="#">LinkedIn</a></li><li><a class="kn" href="#">PDF</a></li>
+    </ul>
+  </div></div></div>
+ </div>
+ <div>
+  <p class="frame-label">375 px · Bewerbungsleiste (aktuelles Dokument am Handy ausgeblendet)</p>
+  <div class="frame" style="width:375px"><div class="cq">
+    <nav class="bar" aria-label="Bewerbung"><ul class="kn-list"><li><a class="kn" href="#">Brief</a></li><li><a class="kn" href="#">Inserat</a></li><li><a class="kn" href="#">PDF</a></li><li><a class="kn" href="#">Kontakt</a></li></ul></nav>
+  </div></div>
+  <p class="frame-label" style="margin-top:var(--space-3)">ab 768 px · mit aktuellem Dokument</p>
+  <div class="frame" style="width:375px"><div class="cq">
+    <nav class="bar" aria-label="Bewerbung, breit"><ul class="kn-list"><li><a class="kn" href="#" aria-current="page">Lebenslauf</a></li><li><a class="kn" href="#">Brief</a></li><li><a class="kn" href="#">Inserat</a></li></ul></nav>
+  </div></div>
+ </div>
+ <div>
+  <p class="frame-label">Klickfläche sichtbar gemacht (gestrichelt = 44 px)</p>
+  <div class="frame show-hit" style="width:375px"><div class="cq"><div class="demo">
+    <ul class="kn-list"><li><a class="kn is-primary" href="#">E-Mail</a></li><li><a class="kn" href="#">PDF</a></li><li><a class="kn" href="#">DE</a></li></ul>
+  </div></div></div>
+ </div>
+</div>

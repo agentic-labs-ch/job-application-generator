@@ -1,0 +1,204 @@
+# Keyword analysis for the application "IT Business Service Manager 100% (m/w/d)" at
+# Beispiel Automobile Schweiz AG (jobs.example.com, published 2026-09-09). Public once merged into `main`
+# (`note` is never rendered, but not confidential either). Self-assessment levels mirror
+# data/profiles/beispiel-automobile.yaml and are proposals pending owner review.
+
+kind: article
+base: ../cv.yaml
+id: stichwortanalyse-beispiel-automobile
+languages: [de]
+title: "Stichwortanalyse: IT Business Service Manager bei Beispiel Automobile Schweiz AG"
+lead: >-
+  Abgleich des Inserats mit dem Lebenslauf: welche Anforderungen belegt sind, wo Lücken
+  bestehen und wie Lebenslauf und Anschreiben damit umgehen. Die Stufen sind eine
+  Selbsteinschätzung: 1 Grundkenntnisse, 2 Erste Erfahrung, 3 Erfahren, 4 Spezialist.
+sections:
+  - heading: Stellenbeschreibung
+    blocks:
+      - >-
+        Die Beispiel Automobile Schweiz AG importiert und vertreibt Personenwagen in der Schweiz und beschäftigt einige hundert Mitarbeitende:
+        ein lokales Unternehmen mit der Technologie eines globalen Konzerns. Das IT-Team ist
+        klein und agil, Homeoffice ist möglich.
+      - >-
+        Gesucht ist ein IT Business Service Manager (100 %), der technisches Verständnis,
+        Projektleitung und Business-Nähe verbindet und die regionale sowie internationale
+        Applikationslandschaft aktiv mitgestaltet. Das Inserat erschien am 09.09.2026.
+      - links:
+          - { label: "Inserat auf jobs.example.com", url: "https://example.com/jobs/BA-5501" }
+
+  - heading: Anforderungen und Nachweise
+    blocks:
+      - "Alle Aufgaben und Profilpunkte des Inserats, jeweils mit dem stärksten Nachweis."
+      - table:
+          columns: ["Anforderung", "Nachweis im Lebenslauf", "Selbsteinschätzung"]
+          rows:
+            - - >-
+                Aufgabe: konzernweite IT-Lösungen vor Ort einführen; lokale Digitalisierungs-,
+                Automatisierungs- und Integrationsprojekte umsetzen
+              - >-
+                Globale Cloud-Transformation in über 50 Ländern, Azure Services in Operating
+                Models integriert (Globex Consulting); Integrationsprojekte (initech); Automatisierung in
+                Office 365 mit Claude Code
+              - "Erfahren (3); Automatisierung: Erste Erfahrung (2)"
+            - - >-
+                Aufgabe: Business-Anforderungen analysieren, Lösungsoptionen bewerten, Konzepte,
+                Spezifikationen und Zielarchitekturen erarbeiten
+              - >-
+                Vorhaben geprüft, Lösungsvorschläge auf Basis des Azure-Servicekatalogs (BKB);
+                Zielarchitekturen mit Business- und IT-Stakeholdern (Globex Consulting); Konzept und
+                Architektur einer Datenintegration (initech)
+              - "Spezialist (4)"
+            - - >-
+                Aufgabe: Schnittstellen und APIs, Datenintegration, Prozessautomatisierung,
+                Cloud-Lösungen, Modernisierung der Applikationslandschaft
+              - >-
+                API Management sowie Konzept und Proof of Concept einer Datenintegration in
+                Dynamics 365 mit Azure Data Factory (initech); APIs und OAuth 2.0 (Helix); Azure
+                (Globex Consulting, BKB, initech); Migrationen (Globex Consulting, BZB)
+              - "Cloud: Spezialist (4); APIs, Datenintegration: Erfahren (3); Automatisierung: Erste Erfahrung (2)"
+            - - >-
+                Aufgabe: fachliche und technische Verantwortung gegenüber Fachbereichen,
+                Konzernstellen und externen Dienstleistern
+              - >-
+                Beratung von ICT-Projekten, Teamleitungen und CIO-Gremien, Anbieterevaluation
+                (BKB); Stellvertretung des Delivery Lead, wöchentliche Kundenpräsentationen
+                (Globex Consulting); Stakeholder-Management mit Behörden- und Partnerorganisationen (initech)
+              - "Spezialist (4)"
+            - - >-
+                Aufgabe: Entscheidungsgrundlagen für das Management; Roadmaps, Make-or-Buy,
+                Architekturentscheidungen
+              - >-
+                Roadmaps gemäss ICT-Strategie, Sourcing-Modell (IaaS, PaaS, SaaS, On-Prem),
+                Business Cases, TCO- und CapEx/OpEx-Analysen, Power-BI-Dashboards für
+                Management-Gremien (BKB); Kosten-Nutzen-Vergleiche (Globex Consulting)
+              - "Spezialist (4); Make-or-Buy: Erfahren (3)"
+            - - "Profil: Studium in Informatik, Wirtschaftsinformatik oder vergleichbar"
+              - "MSc und BSc Wirtschaftsinformatik (Beispiel-Hochschule); Informatiker EFZ"
+              - "Erfüllt"
+            - - >-
+                Profil: mehrjährige Erfahrung in Softwareentwicklung, Solution Engineering,
+                technischer Projektleitung oder Business-naher IT-Beratung
+              - >-
+                Alle vier: Softwareentwicklung (BZB, Swiss IT Services, Helix), Solution Engineering
+                (BKB), technische Projektleitung und Beratung (Globex Consulting, initech)
+              - "Erfüllt"
+            - - >-
+                Profil: Verständnis von Systemarchitekturen, Schnittstellen, APIs, Datenmodellen
+                und modernen IT-Landschaften
+              - >-
+                Enterprise- und ICT-Architekturen (BKB), Azure-Zielarchitekturen (Globex Consulting), API
+                Management und Datenintegration (initech), SQL (Swiss IT Services); Datenmodelle nur
+                indirekt
+              - "Architekturen: Spezialist (4); Schnittstellen, APIs, Datenmodelle: Erfahren (3)"
+            - - >-
+                Profil: IT-Projekte leiten oder koordinieren; zwischen Business, IT und externen
+                Partnern vermitteln
+              - >-
+                Team mit bis zu 12 Personen inkl. Termin- und Budgetverantwortung (Globex Consulting); Team
+                Lead mit Budget, Zeitplan, Release-Planung und Stakeholder-Management (initech)
+              - "Spezialist (4)"
+            - - >-
+                Profil: technische Tiefe, um Code, Schnittstellen und Architekturentscheidungen zu
+                beurteilen und prototypisch zu validieren
+              - >-
+                Entwicklung mit Java, SQL und ABAP (BZB, Swiss IT Services, initech); Proofs of Concept
+                (initech, Helix); Prototyping mit Claude Code; Security-Analysen (BKB)
+              - "Erfahren (3)"
+            - - "Profil: offen, neugierig, Can-Do-Mentalität, analytisch, pragmatisch"
+              - >-
+                Arbeitsweise pragmatisch, strukturiert, teamorientiert; Masterarbeit bei Helix
+                Research, Hackathons; Zertifizierung AZ-305
+              - "Spezialist (4)"
+            - - "Profil: agile und klassische Methoden; Jira und Confluence von Vorteil"
+              - >-
+                Scrum und Kanban (BZB), agiles Team (Swiss IT Services), agile Beratungsprojekte
+                (Globex Consulting, initech), SAFe und klassische Projektmethoden (BKB)
+              - "Agil und klassisch: Erfahren (3); Jira, Confluence: Lücke"
+            - - >-
+                Profil (Plus): Azure, MS SQL Server, Windows Server, Automatisierung, Power
+                Platform, Automotive- oder Enterprise-IT
+              - >-
+                Azure (Globex Consulting, BKB, initech; AZ-305); Power BI (BKB);
+                Enterprise-IT in Bank, Krankenversicherung, Bundesamt und SAP ERP; Automatisierung
+                mit Claude Code
+              - >-
+                Azure: Spezialist (4); Power BI: Erfahren (3); Automatisierung: Erste Erfahrung
+                (2); SQL Server, Windows Server, Automotive: Lücke
+            - - "Profil: verhandlungssicheres Deutsch und Englisch"
+              - >-
+                Deutsch Muttersprache, Englisch fliessend; Helix in Zürich und New York,
+                Austauschsemester in New York und Seoul
+              - "Erfüllt"
+
+  - heading: Lücken und wie Lebenslauf und Anschreiben damit umgehen
+    blocks:
+      - >-
+        Grundsatz: Der Lebenslauf nennt nur belegte Kompetenzen, das Anschreiben betont
+        übertragbare Erfahrung, offene Punkte gehören ins Gespräch.
+      - list:
+          - >-
+            Jira und Confluence: nicht belegt, deshalb nirgends erwähnt. Brücke ist die Arbeit mit
+            Scrum, Kanban und SAFe; im Gespräch offen ansprechen.
+          - >-
+            MS SQL Server und Windows Server: kein direkter Nachweis. Nahe daran: Azure SQL (initech),
+            SQL-Optimierung (Swiss IT Services), Kostenvergleiche mit Azure Hybrid Benefit, einem
+            Lizenzvorteil u. a. für Windows Server und SQL Server (Globex Consulting).
+          - >-
+            Power Platform: belegt ist nur Power BI (BKB). Der Lebenslauf schreibt deshalb
+            «Power BI (Teil der Microsoft Power Platform)».
+          - >-
+            Automatisierung: belegt ist die Automatisierung von Arbeiten in Office 365 mit Claude
+            Code, kein grösseres Automatisierungsprojekt. Stufe deshalb «Erste Erfahrung».
+          - >-
+            Automotive: keine Branchenerfahrung. Das Anschreiben setzt auf die Leidenschaft für
+            Autos und Technik, der Lebenslauf auf Enterprise-IT in Bank, Krankenversicherung,
+            Bundesamt und SAP ERP.
+          - >-
+            Datenmodelle: nur indirekt über SQL und Datenintegration belegt; im Gespräch am
+            Integrationsprojekt bei initech konkretisieren.
+
+  - heading: AIDA im Anschreiben
+    blocks:
+      - steps:
+          - >-
+            Attention (erster Absatz): verbindet die Leidenschaft für Autos und Technik mit der
+            Frage, wie aus Technik Nutzen für das Geschäft wird, und mit dem Dreiklang des
+            Inserats: technisches Verständnis, Projektleitung, Business-Nähe.
+          - >-
+            Interest (zweiter Absatz): greift auf, was die Stelle ausmacht (kleines, agiles
+            IT-Team, konzernweite Lösungen vor Ort, lokale Projekte nahe am Business), und nennt
+            die gesuchte Aufgabe mit klaren Schnittstellen zwischen IT und Fachbereich.
+          - >-
+            Desire (Aufzählung und folgender Absatz): vier Nachweise entlang der Aufgaben, nämlich
+            Architektur und Entscheidungsgrundlagen, Governance und Sicherheit, Projektleitung und
+            Integration, technische Tiefe und Prototypen; danach Methoden und Arbeitsweise.
+          - "Action (letzter Absatz): lädt zu einem persönlichen Gespräch mit konkreten Beispielen ein."
+
+  - heading: Änderungen gegenüber dem Entwurf
+    blocks:
+      - list:
+          - "Rollentitel auf die ausgeschriebene Stelle «IT Business Service Manager» aktualisiert."
+          - "Private Angaben und Zeitbezüge für die öffentliche Seite entfernt."
+          - >-
+            Aufbau nach AIDA: Einstieg ohne Standardformel, eigener Absatz zur Stelle, Nachweise
+            als Aufzählung, klare Einladung zum Gespräch.
+          - >-
+            Nachweise auf die Aufgaben des Inserats ausgerichtet und um Fakten aus dem Lebenslauf
+            ergänzt: Team und Budget bei Globex Consulting, API Management und Datenintegration bei initech,
+            Proofs of Concept bei initech und Helix.
+          - >-
+            Beibehalten: Stimme und Kernaussagen, also Leidenschaft für Autos und Technik, Claude
+            Code, IT-System-Inventar und Power BI, IT-Governance, Security-Analysen, Projektleitung
+            in der Beratung, Arbeitsweise.
+          - "Sprachlich gestrafft; «Beispiel Automobile» durchgehend mit Bindestrich."
+
+  - heading: Links
+    blocks:
+      - links:
+          - { label: "Lebenslauf für Beispiel Automobile", page: beispiel-automobile }
+          - { label: "Anschreiben", page: beispiel-automobile/letter }
+          - { label: "Coaching-Übersicht", page: coaching }
+
+note: >-
+  Levels mirror data/profiles/beispiel-automobile.yaml (self-assessment proposals). The ad text was
+  provided by the owner; the link points to the published ad.

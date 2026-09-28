@@ -1,0 +1,278 @@
+# Application page for the job ad "IT Business Service Manager 100% (m/w/d)" at Beispiel Automobile
+# Schweiz AG (jobs.example.com, published 2026-09-09): tailored CV (/beispiel-automobile/) and cover letter
+# (/beispiel-automobile/anschreiben/), German only.
+# Everything in this file is public once merged into `main`. `note` and `evidence` are never
+# rendered, but they are not confidential either.
+# Facts come from data/cv.yaml; the evidence id `letter` marks the owner's own professional
+# statements from his letter draft. Skill levels are self-assessment proposals
+# (level_proposed) pending owner review.
+
+kind: profile
+base: ../cv.yaml
+id: beispiel-automobile
+languages: [de]
+target: IT Business Service Manager
+omit: [certifications]   # owner 2026-09-23: no certificates on application pages
+headline: "ICT-Architekt · Integration, Cloud & Projektleitung"
+claim: >-
+  Ich übersetze Business-Anforderungen in tragfähige Konzepte und Zielarchitekturen, leite die
+  Umsetzung zwischen Fachbereich, IT und Partnern und validiere Lösungen bei Bedarf selbst mit
+  einem Prototyp.
+summary: >-
+  Wirtschaftsinformatiker (MSc Beispiel-Hochschule) mit Erfahrung in Bank, Beratung und Technologie. Bei der
+  Beispiel Kantonalbank habe ich als ICT-Architekt Vorhaben auf
+  Architekturkonformität geprüft, Architekturen, Standards und Roadmaps entwickelt und mit
+  Power-BI-Dashboards Entscheidungsgrundlagen für Team und Management-Gremien geschaffen. Bei
+  Globex Consulting habe ich als Teilprojektleiter ein Team mit bis zu 12 Personen inkl. Termin- und
+  Budgetverantwortung geführt und eine globale Azure-Migration mitgestaltet, bei initech als Team
+  Lead API Management verantwortet und eine Datenintegration in Dynamics 365 konzipiert. Stärken:
+  Vermitteln zwischen Business, IT und externen Partnern, analytisches Denken und pragmatische
+  Lösungen, in agilen wie klassischen Projekten.
+usp:
+  - title: Wofür ich stehe
+    text: >-
+      Lösungen, die fachlich passen und technisch tragen. Ich nehme mir Zeit, das Geschäft zu
+      verstehen, bewerte Optionen nach Architektur, Sicherheit, Kosten und Betrieb und mache
+      Entscheidungen für Management und Fachbereich nachvollziehbar.
+  - title: Zusammenarbeit mit mir
+    text: >-
+      Pragmatisch, strukturiert und teamorientiert. Ich erkenne Prioritäten schnell,
+      kommuniziere lösungsorientiert mit Fachbereichen, IT und externen Partnern und bin in
+      agilen wie klassischen Projekten zu Hause.
+  - title: Was Sie erwarten können
+    text: >-
+      Klare Entscheidungsgrundlagen von Business Case und Zielarchitektur bis Roadmap,
+      Projektleitung mit Blick auf Termine, Budget und stabilen Betrieb und bei Bedarf einen
+      Prototyp, der eine Lösungsidee früh überprüfbar macht.
+
+experience:
+  - id: bkb
+    summary: >-
+      Als ICT-Architekt Bindeglied zwischen ICT-Projekten, Teamleitungen und
+      CIO-Gremien: Lösungen bewerten, Standards setzen und Entscheidungen vorbereiten.
+    highlights:
+      - >-
+        Prüfung von Vorhaben auf Architekturrelevanz und Konformität; Lösungsvorschläge auf Basis
+        des Microsoft-Azure-Servicekatalogs (Value Stream Cloud)
+      - >-
+        Beratung von ICT-Projekten, Teamleitungen und CIO-Gremien, u. a. bei Beschaffung und
+        Anbieterevaluation von IT-Produkten und Services
+      - >-
+        Mitverantwortung für das IT-System-Inventar; Power-BI-Dashboards als Entscheidungsgrundlage
+        für Team und Management-Gremien, z. B. die Erkenntnis, dass in der gesamten IT
+        unterschiedliche Versionen gleicher Applikationen installiert waren
+      - >-
+        Entwicklung und Pflege vorhabenübergreifender Enterprise- und ICT-Architekturen inkl.
+        Standards und Roadmaps gemäss ICT-Strategie
+      - >-
+        Mitentwicklung der Cloud-Strategie und des Sourcing-Modells (IaaS, PaaS, SaaS, On-Prem)
+        inkl. Business Cases, TCO- und CapEx/OpEx-Analysen
+      - >-
+        Erweiterung der IT-Governance im Team, um bei der Migration auf Azure technische Schulden
+        abzubauen: Regeln mit den DevOps-Teams für Frameworks und Programmiersprachen, Hinweise
+        auf Abweichungen von Standards, die die Komplexität erhöhen
+      - >-
+        Detaillierte Analyse von IT-Security-Komponenten zur Beurteilung von Lösungsarchitekturen
+      - >-
+        Zusammenarbeit mit Portfolio- und Projektmanagement zu Migrationsplänen und dem Cloud
+        Target Operating Model; Arbeit nach SAFe
+      - >-
+        Architektur für operative Resilienz, Cloud-Backup und Lifecycle-Management der
+        IT-Infrastruktur
+
+  - id: globex
+    summary: >-
+      Teilprojektleitung Cloud-Architektur: Verantwortung für Team, Termine und Budget sowie
+      Zielarchitekturen gemeinsam mit Business- und IT-Stakeholdern.
+    highlights:
+      - >-
+        Führung eines Projektteams mit bis zu 12 Personen inkl. Termin- und Budgetverantwortung;
+        Stellvertretung des Delivery Lead
+      - >-
+        Globale Cloud-Transformation: Migration von über 1000 Servern in über 50 Ländern auf Azure
+        (Lift & Shift)
+      - Entwicklung von Zielarchitekturen für Azure mit Business- und IT-Stakeholdern
+      - >-
+        Business Cases und Kosten-Nutzen-Vergleiche (u. a. Azure Hybrid Benefit) als
+        Entscheidungsgrundlage; wöchentliche Kundenpräsentationen
+      - Integration von Azure Services in Operating Models inkl. RACI
+      - >-
+        Design und Implementierung von Cloud-Security-Services (WAF, Load Balancer) sowie globale
+        Anbindung von SIEM- und Monitoring-Tools
+      - Planung der schrittweisen Migration von Active Directory zu Entra ID
+
+  - id: initech
+    summary: >-
+      Technische Projektleitung, API Management und Datenintegration in agilen
+      Beratungsprojekten für ein Bundesamt und eine grosse Krankenversicherung.
+    projects:
+      - start: 2019-10
+        end: 2020-10
+        description: >-
+          Team Lead IT-Architektur, Engineering und API Management für die IT-Transformation
+          eines Bundesamts: Projektmanagement inkl. Budget und Zeitplan, Release-Planung,
+          Stakeholder-Management mit Behörden- und Partnerorganisationen, Einarbeitung von
+          Mitarbeitenden
+      - start: 2020-11
+        end: 2021-02
+        description: >-
+          Datenintegration in der Azure-Cloud für eine grosse Krankenversicherung: Konzept und
+          Architektur zur Integration einer On-Prem-Oracle-DB in Dynamics 365 (Azure Data
+          Factory, Azure SQL, Landing Zone) inkl. Proof of Concept
+    highlights:
+      - "Technologien: API Management, Webservices, IAM, Azure, Java, Docker"
+
+  - id: helix
+    summary: >-
+      Software Engineering und Technical Sales Support: Cloud, APIs und KI praktisch umgesetzt,
+      vom Proof of Concept bis zur Lösung für einen Kunden.
+    highlights:
+      - Proof of Concept für eine sichere Access-Management-Lösung (APIs, OAuth 2.0)
+      - Integration von Watson-KI-Services in einen Pepper-Roboter für einen Kunden bei Helix Research
+      - Aufbau von Helix Cloud Private on-premise im eigenen Rechenzentrum (VMs, Kubernetes, Docker)
+      - Zusammenarbeit mit dem CTO von Helix Schweiz im Pre-Sales
+      - >-
+        Blockchain-basierter Prozess für die Firmengründung in der Schweiz (Hyperledger,
+        digitalswitzerland)
+      - Cloud-Schulungen für das Sales-Team; technischer Experte an Hackathons
+
+  - id: example-it-services
+    highlights:
+      - Entwicklung und Anpassung von SAP-ERP-Lösungen (ABAP) für Kunden in einem agilen Team
+      - Optimierung von SQL-Abfragen für die Performance der Produktivdatenbank; Projektplanung
+
+  - id: bzb
+    highlights:
+      - >-
+        Migration des Zeitreihen-Analysesystems in Zusammenarbeit mit Ökonominnen und Ökonomen
+        (Java, Groovy; Scrum, Kanban)
+
+# Competency profile for this ad. Levels: 1 Grundkenntnisse, 2 Erste Erfahrung, 3 Erfahren,
+# 4 Spezialist. Skills that exist in data/cv.yaml keep their level there.
+skills:
+  - id: mb-business-it
+    area: domain
+    name: "Business & IT-Management"
+    items:
+      - { name: "Anforderungsanalyse & Lösungsbewertung", level: 4, level_proposed: true, key: true, evidence: [bkb, globex, initech] }
+      - { name: "Entscheidungsgrundlagen für das Management", level: 4, level_proposed: true, key: true, evidence: [bkb, globex, letter] }
+      - { name: "Business Cases / TCO", level: 4, level_proposed: true, evidence: [bkb, globex] }
+      - { name: "Make-or-Buy & Anbieterevaluation", level: 3, level_proposed: true, key: true, evidence: [bkb] }
+      - { name: "IT-Governance & Standards", level: 3, level_proposed: true, evidence: [bkb, letter] }
+      - { name: "IT-Inventar & Applikationslandschaft", level: 3, level_proposed: true, evidence: [bkb, letter] }
+  - id: mb-architecture-integration
+    area: technology
+    name: "Architektur & Integration"
+    items:
+      - { name: "Enterprise Architecture", level: 4, level_proposed: true, evidence: [bkb, beispiel-hochschule-bsc] }
+      - { name: "Zielarchitekturen & Lösungsdesign", level: 4, level_proposed: true, key: true, evidence: [globex, bkb, initech] }
+      - { name: "Schnittstellen & API Management", level: 3, level_proposed: true, key: true, evidence: [initech, helix] }
+      - { name: "Datenintegration (Azure Data Factory, Azure SQL)", level: 3, level_proposed: true, key: true, evidence: [initech] }
+      - { name: "SQL & relationale Datenbanken", level: 3, level_proposed: true, evidence: [example-it-services, initech] }
+      - { name: "Security-Beurteilung von Lösungsarchitekturen", level: 3, level_proposed: true, evidence: [bkb, globex, letter] }
+  - id: mb-cloud
+    area: technology
+    name: "Cloud & Plattformen"
+    items:
+      - { name: "Microsoft Azure IaaS/PaaS", level: 4, level_proposed: true, key: true, evidence: [globex, bkb, initech, az-305] }
+      - { name: "Entra ID / IAM", level: 3, level_proposed: true, evidence: [globex, initech] }
+      - { name: "Kubernetes / Docker", level: 3, level_proposed: true, evidence: [helix, initech] }
+      - { name: "Power BI (Teil der Microsoft Power Platform)", level: 3, level_proposed: true, evidence: [bkb, letter] }
+  - id: mb-development
+    area: technology
+    name: "Entwicklung & Prototyping"
+    items:
+      - { name: "Proof of Concept & Prototyping", level: 3, level_proposed: true, key: true, evidence: [initech, helix, letter] }
+      - { name: "KI-gestützte Entwicklung (Claude Code)", level: 3, level_proposed: true, evidence: [letter] }
+      - { name: "Java", level: 3, level_proposed: true, evidence: [initech, bzb] }
+      - { name: "ABAP (SAP ERP)", level: 3, level_proposed: true, evidence: [example-it-services] }
+      - { name: "Prozessautomatisierung (Office 365)", level: 2, level_proposed: true, evidence: [letter] }
+  - id: mb-methods
+    area: method
+    name: "Projektleitung & Methoden"
+    items:
+      - { name: "Technische Projektleitung", level: 4, level_proposed: true, key: true, evidence: [globex, initech] }
+      - { name: "Scrum / Kanban", level: 3, level_proposed: true, evidence: [bzb, example-it-services, letter] }
+      - { name: "SAFe", level: 3, level_proposed: true, evidence: [bkb] }
+      - { name: "Klassische Projektmethoden", level: 3, level_proposed: true, evidence: [bkb, letter] }
+      - { name: "Release- und Migrationsplanung", level: 3, level_proposed: true, evidence: [initech, globex, bkb] }
+  - id: mb-personal
+    area: personal
+    name: "Persönliche Stärken"
+    items:
+      - { name: "Vermitteln zwischen Business, IT und Partnern", level: 4, level_proposed: true, key: true, evidence: [globex, initech, bkb] }
+      - { name: "Stakeholder- & C-Level-Beratung", level: 4, level_proposed: true, evidence: [bkb, globex, helix] }
+      - { name: "Analytisches Denken", level: 4, level_proposed: true, evidence: [bkb, globex, beispiel-hochschule-msc] }
+      - { name: "Pragmatische Lösungen & Priorisierung", level: 4, level_proposed: true, evidence: [letter] }
+      - { name: "Neugier & Lernbereitschaft", level: 4, level_proposed: true, evidence: [helix, az-305, letter] }
+      - { name: "Teamführung", level: 3, level_proposed: true, evidence: [globex, initech] }
+
+job:
+  title: "IT Business Service Manager 100% (m/w/d)"
+  company: Beispiel Automobile Schweiz AG
+  location: Beispielstadt
+  url: https://example.com/jobs/BA-5501
+  published: 2026-09-09
+
+# Cover letter (AIDA), based on the owner's own draft and adapted to this ad.
+letter:
+  date: 2026-09-23
+  place: Zürich
+  recipient: ["Beispiel Automobile Schweiz AG", "IT-Abteilung", "Musterstrasse 55", "8000 Beispielstadt"]
+  subject: "Bewerbung als IT Business Service Manager 100 %"
+  salutation: "Sehr geehrtes Team"
+  attention:
+    - >-
+      Autos und Technik sind seit Langem meine Leidenschaft. Als IT-Architekt und Solution
+      Engineer treibt mich eine Frage an: Wie wird aus Technik echter Nutzen für das Geschäft?
+      Bei der Beispiel Automobile Schweiz AG kommt beides zusammen: in einer Rolle, die technisches
+      Verständnis, Projektleitung und Business-Nähe verbindet.
+  interest:
+    - >-
+      Mich reizt, in einem kleinen, agilen IT-Team konzernweite Lösungen vor Ort einzuführen
+      und lokale Digitalisierungs-, Automatisierungs- und Integrationsprojekte nahe am Business
+      umzusetzen. Genau das suche ich: eine verantwortungsvolle Aufgabe mit klaren
+      Schnittstellen zwischen IT und Fachbereich, in einem Umfeld, das Stabilität und
+      Weiterentwicklung verbindet.
+  desire:
+    - "Was ich dafür mitbringe:"
+    - points:
+        - >-
+          Architektur und Entscheidungsgrundlagen: Als ICT-Architekt der Beispiel Kantonalbank prüfte ich Vorhaben auf Architekturkonformität, entwickelte Standards und
+          Roadmaps und beriet CIO-Gremien. Ich war für das IT-System-Inventar mitverantwortlich;
+          meine Power-BI-Dashboards dienten Team und Management-Gremien als
+          Entscheidungsgrundlage und zeigten etwa, dass gleiche Applikationen in verschiedenen
+          Versionen installiert waren.
+        - >-
+          Governance und Sicherheit: Bei der Azure-Migration der Bank erweiterten wir die
+          IT-Governance, um technische Schulden abzubauen, etwa mit Regeln für Frameworks und
+          Programmiersprachen, die wir mit den DevOps-Teams definierten. Um Lösungsarchitekturen
+          zu beurteilen, analysierte ich IT-Security-Komponenten im Detail.
+        - >-
+          Projektleitung und Integration: Bei Globex Consulting führte ich als Teilprojektleiter ein Team
+          von bis zu 12 Personen mit Budgetverantwortung und gestaltete eine globale
+          Azure-Migration mit. Bei initech war ich Team Lead für API Management und konzipierte die
+          Integration einer Oracle-Datenbank in Dynamics 365 via Azure Data Factory, samt Proof
+          of Concept.
+        - >-
+          Technische Tiefe und Prototypen: Lösungsideen prüfe ich gerne selbst. Mit dem
+          KI-Coding-Assistenten Claude Code automatisiere ich Arbeiten in Office 365 und
+          entwickle eine mobile Applikation; bei Helix setzte ich einen Proof of Concept für
+          sicheres Access Management mit APIs und OAuth 2.0 um.
+    - >-
+      Ich arbeite agil wie klassisch, auch mit SAFe. Meine Arbeitsweise ist pragmatisch,
+      strukturiert und teamorientiert: Ich erkenne Prioritäten schnell, verstehe zuerst das
+      Geschäft, kommuniziere lösungsorientiert mit Fachstellen und achte auf stabile
+      Betriebsprozesse.
+  action:
+    - >-
+      Gerne zeige ich Ihnen in einem persönlichen Gespräch anhand konkreter Beispiele, wie ich
+      Ihre Applikationslandschaft mitgestalten kann. Ich freue mich auf Ihre Einladung.
+  closing: "Freundliche Grüsse"
+  enclosures: "Lebenslauf, Arbeitszeugnisse und Diplome"
+
+note: >-
+  Letter based on the owner's own draft, adapted to this ad (AIDA). Skill levels are
+  self-assessment proposals; gaps (Jira, Confluence, Windows Server, MS SQL Server, Power
+  Platform beyond Power BI, automotive) are deliberately not claimed. See
+  data/pages/stichwortanalyse-beispiel-automobile.yaml.

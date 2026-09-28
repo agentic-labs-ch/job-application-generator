@@ -1,0 +1,24 @@
+# FICTIONAL article page for tests only.
+kind: article
+base: ../../../data/cv.example.yaml
+id: robin-notes
+title: Fictional keyword analysis
+lead: An invented analysis that exercises paragraphs, lists, tables and links.
+sections:
+  - heading: Requirements
+    blocks:
+      - A paragraph about imaginary requirements.
+      - table:
+          columns: [Keyword, Evidence, Level]
+          rows:
+            - [Imaginary platforms, Lumen Labs (fictional), Specialist]
+            - [Supercalifragilisticexpialidocious-requirement-without-breaks, Harbor Works (fictional), Experienced]
+      - list: [First invented point, Second invented point]
+      - steps: [Do one fictional thing, Do another]
+  - heading: Links
+    blocks:
+      - links:
+          - { label: Main CV, page: cv }
+          - { label: Role version, page: robin-lead }
+          - { label: Cover letter, page: robin-lead/letter }
+          - { label: Fictional ad, url: "https://example.com/jobs/platform-lead" }

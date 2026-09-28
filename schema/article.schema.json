@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.invalid/schema/article.schema.json",
+  "title": "Article page",
+  "description": "A text page next to the CV (keyword analysis, coaching notes). Public once merged, except `note`. Page links are checked at build time. See docs/profiles.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "base", "id", "title", "sections"],
+  "properties": {
+    "kind": { "type": "string", "const": "article" },
+    "base": { "$ref": "profile.schema.json#/definitions/relPath" },
+    "id": { "$ref": "cv.schema.json#/definitions/id" },
+    "languages": { "$ref": "profile.schema.json#/definitions/languages" },
+    "title": { "$ref": "cv.schema.json#/definitions/text" },
+    "lead": { "$ref": "cv.schema.json#/definitions/longText" },
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["heading", "blocks"],
+        "properties": {
+          "heading": { "$ref": "cv.schema.json#/definitions/text" },
+          "blocks": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "anyOf": [
+                { "$ref": "cv.schema.json#/definitions/longText" },
+                { "$ref": "#/definitions/list" },
+                { "$ref": "#/definitions/steps" },
+                { "$ref": "#/definitions/table" },
+                { "$ref": "#/definitions/links" }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "note": { "$ref": "cv.schema.json#/definitions/note" }
+  },
+  "definitions": {
+    "list": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["list"],
+      "properties": {
+        "list": { "type": "array", "minItems": 1, "items": { "$ref": "cv.schema.json#/definitions/longText" } }
+      }
+    },
+    "steps": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["steps"],
+      "properties": {
+        "steps": { "type": "array", "minItems": 1, "items": { "$ref": "cv.schema.json#/definitions/longText" } }
+      }
+    },
+    "table": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["table"],
+      "properties": {
+        "table": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["columns", "rows"],
+          "properties": {
+            "columns": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 5,
+              "items": { "$ref": "cv.schema.json#/definitions/text" }
+            },
+            "rows": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "$ref": "cv.schema.json#/definitions/longText" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["links"],
+      "properties": {
+        "links": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["label"],
+            "properties": {
+              "label": { "$ref": "cv.schema.json#/definitions/text" },
+              "page": {
+                "description": "cv, a profile id, <profile id>/letter or an article id.",
+                "type": "string",
+                "pattern": "^[a-z0-9]+(-[a-z0-9]+)*(/letter)?$"
+              },
+              "url": { "$ref": "cv.schema.json#/definitions/url" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

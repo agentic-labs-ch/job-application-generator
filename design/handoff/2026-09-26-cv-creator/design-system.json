@@ -1,0 +1,25 @@
+{
+  "v": 3,
+  "layout": "files",
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-09-22T22:12:44Z"
+  },
+  "title": "Granat",
+  "namespace": "Granat",
+  "libraries": [],
+  "sections": {},
+  "groups": [],
+  "assetGroups": {},
+  "blobs": {},
+  "docs": {
+    "readme": "project/README.md",
+    "sections": []
+  },
+  "lastChange": {
+    "by": "Alex",
+    "at": "2026-09-24T12:12:42Z",
+    "via": "Cowork",
+    "note": "Umbau nach D1–D8: eine Familie in 400, ruhige Skala cv-ruhig, acht Farb-Themes (4 neu), zehn Schriften, Varianten-Abschnitt, Musterblatt, neues Cover."
+  }
+}

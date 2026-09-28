@@ -1,0 +1,546 @@
+{
+ "key": "technische-daten",
+ "lang": "de",
+ "name": "Alex Muster",
+ "target": "IT Business Service Manager",
+ "headline": "ICT-Architekt · Integration, Cloud & Projektleitung",
+ "claim": "Ich übersetze Business-Anforderungen in tragfähige Konzepte und Zielarchitekturen, leite die Umsetzung zwischen Fachbereich, IT und Partnern und validiere Lösungen bei Bedarf selbst mit einem Prototyp.",
+ "profile": "Wirtschaftsinformatiker (MSc Beispiel-Hochschule) mit Erfahrung in Bank, Beratung und Technologie. Bei der Beispiel Kantonalbank habe ich als ICT-Architekt Vorhaben auf Architekturkonformität geprüft, Architekturen, Standards und Roadmaps entwickelt und mit Power-BI-Dashboards Entscheidungsgrundlagen für Team und Management-Gremien geschaffen. Bei Globex Consulting habe ich als Teilprojektleiter ein Team mit bis zu 12 Personen inkl. Termin- und Budgetverantwortung geführt und eine globale Azure-Migration mitgestaltet, bei initech als Team Lead API Management verantwortet und eine Datenintegration in Dynamics 365 konzipiert. Stärken: Vermitteln zwischen Business, IT und externen Partnern, analytisches Denken und pragmatische Lösungen, in agilen wie klassischen Projekten.",
+ "strengths": [
+  {
+   "title": "Wofür ich stehe",
+   "text": "Lösungen, die fachlich passen und technisch tragen. Ich nehme mir Zeit, das Geschäft zu verstehen, bewerte Optionen nach Architektur, Sicherheit, Kosten und Betrieb und mache Entscheidungen für Management und Fachbereich nachvollziehbar."
+  },
+  {
+   "title": "Zusammenarbeit mit mir",
+   "text": "Pragmatisch, strukturiert und teamorientiert. Ich erkenne Prioritäten schnell, kommuniziere lösungsorientiert mit Fachbereichen, IT und externen Partnern und bin in agilen wie klassischen Projekten zu Hause."
+  },
+  {
+   "title": "Was Sie erwarten können",
+   "text": "Klare Entscheidungsgrundlagen von Business Case und Zielarchitektur bis Roadmap, Projektleitung mit Blick auf Termine, Budget und stabilen Betrieb und bei Bedarf einen Prototyp, der eine Lösungsidee früh überprüfbar macht."
+  }
+ ],
+ "location": "Zürich, Schweiz",
+ "email": "alex.muster@example.com",
+ "linkedin": "https://example.com/alex-muster",
+ "job": {
+  "title": "IT Business Service Manager 100% (m/w/d)",
+  "company": "Beispiel Automobile Schweiz AG",
+  "location": "Musterstadt"
+ },
+ "brand": {
+  "paper": "#000000",
+  "ink": "#ffffff",
+  "accent": "#5b8def"
+ },
+ "photo": "portrait.jpg",
+ "experience": [
+  {
+   "id": "bkb",
+   "organization": "Beispiel Kantonalbank (BKB)",
+   "location": "Zürich",
+   "start": "2023-12",
+   "end": "2026-02",
+   "role": "ICT-Architekt",
+   "highlights": [
+    "Prüfung von Vorhaben auf Architekturrelevanz und Konformität; Lösungsvorschläge auf Basis des Microsoft-Azure-Servicekatalogs (Value Stream Cloud)",
+    "Beratung von ICT-Projekten, Teamleitungen und CIO-Gremien, u. a. bei Beschaffung und Anbieterevaluation von IT-Produkten und Services",
+    "Mitverantwortung für das IT-System-Inventar; Power-BI-Dashboards als Entscheidungsgrundlage für Team und Management-Gremien, z. B. die Erkenntnis, dass in der gesamten IT unterschiedliche Versionen gleicher Applikationen installiert waren",
+    "Entwicklung und Pflege vorhabenübergreifender Enterprise- und ICT-Architekturen inkl. Standards und Roadmaps gemäss ICT-Strategie",
+    "Mitentwicklung der Cloud-Strategie und des Sourcing-Modells (IaaS, PaaS, SaaS, On-Prem) inkl. Business Cases, TCO- und CapEx/OpEx-Analysen",
+    "Erweiterung der IT-Governance im Team, um bei der Migration auf Azure technische Schulden abzubauen: Regeln mit den DevOps-Teams für Frameworks und Programmiersprachen, Hinweise auf Abweichungen von Standards, die die Komplexität erhöhen",
+    "Detaillierte Analyse von IT-Security-Komponenten zur Beurteilung von Lösungsarchitekturen",
+    "Zusammenarbeit mit Portfolio- und Projektmanagement zu Migrationsplänen und dem Cloud Target Operating Model; Arbeit nach SAFe",
+    "Architektur für operative Resilienz, Cloud-Backup und Lifecycle-Management der IT-Infrastruktur"
+   ],
+   "summary": "Als ICT-Architekt Bindeglied zwischen ICT-Projekten, Teamleitungen und CIO-Gremien: Lösungen bewerten, Standards setzen und Entscheidungen vorbereiten."
+  },
+  {
+   "id": "globex",
+   "organization": "Globex Consulting AG",
+   "location": "Zürich",
+   "start": "2021-07",
+   "end": "2023-11",
+   "role": "Consultant · Teilprojektleiter Cloud-Architektur",
+   "highlights": [
+    "Führung eines Projektteams mit bis zu 12 Personen inkl. Termin- und Budgetverantwortung; Stellvertretung des Delivery Lead",
+    "Globale Cloud-Transformation: Migration von über 1000 Servern in über 50 Ländern auf Azure (Lift & Shift)",
+    "Entwicklung von Zielarchitekturen für Azure mit Business- und IT-Stakeholdern",
+    "Business Cases und Kosten-Nutzen-Vergleiche (u. a. Azure Hybrid Benefit) als Entscheidungsgrundlage; wöchentliche Kundenpräsentationen",
+    "Integration von Azure Services in Operating Models inkl. RACI",
+    "Design und Implementierung von Cloud-Security-Services (WAF, Load Balancer) sowie globale Anbindung von SIEM- und Monitoring-Tools",
+    "Planung der schrittweisen Migration von Active Directory zu Entra ID"
+   ],
+   "summary": "Teilprojektleitung Cloud-Architektur: Verantwortung für Team, Termine und Budget sowie Zielarchitekturen gemeinsam mit Business- und IT-Stakeholdern."
+  },
+  {
+   "id": "initech",
+   "organization": "Initech Solutions AG",
+   "location": "Zürich & Bern",
+   "start": "2019-10",
+   "end": "2021-02",
+   "role": "Consultant; ab 01.2021 Senior Consultant",
+   "projects": [
+    {
+     "start": "2019-10",
+     "end": "2020-10",
+     "description": "Team Lead IT-Architektur, Engineering und API Management für die IT-Transformation eines Bundesamts: Projektmanagement inkl. Budget und Zeitplan, Release-Planung, Stakeholder-Management mit Behörden- und Partnerorganisationen, Einarbeitung von Mitarbeitenden"
+    },
+    {
+     "start": "2020-11",
+     "end": "2021-02",
+     "description": "Datenintegration in der Azure-Cloud für eine grosse Krankenversicherung: Konzept und Architektur zur Integration einer On-Prem-Oracle-DB in Dynamics 365 (Azure Data Factory, Azure SQL, Landing Zone) inkl. Proof of Concept"
+    }
+   ],
+   "highlights": [
+    "Technologien: API Management, Webservices, IAM, Azure, Java, Docker"
+   ],
+   "summary": "Technische Projektleitung, API Management und Datenintegration in agilen Beratungsprojekten für ein Bundesamt und eine grosse Krankenversicherung."
+  },
+  {
+   "id": "helix",
+   "organization": "Helix Technologies Schweiz AG",
+   "location": "Zürich & New York",
+   "start": "2017-10",
+   "end": "2019-10",
+   "role": "Junior Software Engineer (Master@Helix) · Technical Sales Support",
+   "highlights": [
+    "Proof of Concept für eine sichere Access-Management-Lösung (APIs, OAuth 2.0)",
+    "Integration von Watson-KI-Services in einen Pepper-Roboter für einen Kunden bei Helix Research",
+    "Aufbau von Helix Cloud Private on-premise im eigenen Rechenzentrum (VMs, Kubernetes, Docker)",
+    "Zusammenarbeit mit dem CTO von Helix Schweiz im Pre-Sales",
+    "Blockchain-basierter Prozess für die Firmengründung in der Schweiz (Hyperledger, digitalswitzerland)",
+    "Cloud-Schulungen für das Sales-Team; technischer Experte an Hackathons"
+   ],
+   "summary": "Software Engineering und Technical Sales Support: Cloud, APIs und KI praktisch umgesetzt, vom Proof of Concept bis zur Lösung für einen Kunden."
+  },
+  {
+   "id": "example-it-services",
+   "organization": "Example IT Services International",
+   "location": "Zürich",
+   "start": "2013-10",
+   "end": "2015-04",
+   "role": "Softwareentwickler SAP/ERP (neben dem Studium)",
+   "highlights": [
+    "Entwicklung und Anpassung von SAP-ERP-Lösungen (ABAP) für Kunden in einem agilen Team",
+    "Optimierung von SQL-Abfragen für die Performance der Produktivdatenbank; Projektplanung"
+   ]
+  },
+  {
+   "id": "bzb",
+   "organization": "Beispiel Zentralbank (BZB)",
+   "location": "Zürich",
+   "start": "2012-08",
+   "end": "2013-08",
+   "role": "Softwareentwickler (Praktikum)",
+   "highlights": [
+    "Migration des Zeitreihen-Analysesystems in Zusammenarbeit mit Ökonominnen und Ökonomen (Java, Groovy; Scrum, Kanban)"
+   ]
+  }
+ ],
+ "education": [
+  {
+   "id": "beispiel-hochschule-msc",
+   "institution": "Beispiel School of Management and Law",
+   "location": "Zürich",
+   "start": "2017-09",
+   "end": "2019-07",
+   "degree": "MSc Wirtschaftsinformatik",
+   "summary": "Masterarbeit bei Helix Research (Texterkennung, Machine Learning); Austauschsemester Hudson College, New York (08.2018–12.2018)"
+  },
+  {
+   "id": "beispiel-hochschule-bsc",
+   "institution": "Beispiel School of Management and Law",
+   "location": "Winterthur",
+   "start": "2013-09",
+   "end": "2017-07",
+   "degree": "BSc Wirtschaftsinformatik",
+   "summary": "Bachelorarbeit in Enterprise Architecture (TOGAF, ArchiMate); Austauschsemester Han River University, Seoul (02.2016–06.2016)"
+  },
+  {
+   "id": "kantonsschule-beispiel",
+   "institution": "Kantonsschule Beispiel",
+   "location": "Zürich",
+   "start": "2009-08",
+   "end": "2013-08",
+   "degree": "Informatiker EFZ und kaufmännische Berufsmaturität"
+  }
+ ],
+ "skills": [
+  {
+   "id": "mb-business-it",
+   "name": "Business & IT-Management",
+   "items": [
+    {
+     "name": "Anforderungsanalyse & Lösungsbewertung",
+     "level": 4,
+     "key": true,
+     "refs": [
+      "bkb",
+      "globex",
+      "initech"
+     ]
+    },
+    {
+     "name": "Entscheidungsgrundlagen für das Management",
+     "level": 4,
+     "key": true,
+     "refs": [
+      "bkb",
+      "globex"
+     ]
+    },
+    {
+     "name": "Business Cases / TCO",
+     "level": 4,
+     "key": false,
+     "refs": [
+      "bkb",
+      "globex"
+     ]
+    },
+    {
+     "name": "Make-or-Buy & Anbieterevaluation",
+     "level": 3,
+     "key": true,
+     "refs": [
+      "bkb"
+     ]
+    },
+    {
+     "name": "IT-Governance & Standards",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "bkb"
+     ]
+    },
+    {
+     "name": "IT-Inventar & Applikationslandschaft",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "bkb"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mb-architecture-integration",
+   "name": "Architektur & Integration",
+   "items": [
+    {
+     "name": "Enterprise Architecture",
+     "level": 4,
+     "key": false,
+     "refs": [
+      "bkb",
+      "beispiel-hochschule-bsc"
+     ]
+    },
+    {
+     "name": "Zielarchitekturen & Lösungsdesign",
+     "level": 4,
+     "key": true,
+     "refs": [
+      "globex",
+      "bkb",
+      "initech"
+     ]
+    },
+    {
+     "name": "Schnittstellen & API Management",
+     "level": 3,
+     "key": true,
+     "refs": [
+      "initech",
+      "helix"
+     ]
+    },
+    {
+     "name": "Datenintegration (Azure Data Factory, Azure SQL)",
+     "level": 3,
+     "key": true,
+     "refs": [
+      "initech"
+     ]
+    },
+    {
+     "name": "SQL & relationale Datenbanken",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "example-it-services",
+      "initech"
+     ]
+    },
+    {
+     "name": "Security-Beurteilung von Lösungsarchitekturen",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "bkb",
+      "globex"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mb-cloud",
+   "name": "Cloud & Plattformen",
+   "items": [
+    {
+     "name": "Microsoft Azure IaaS/PaaS",
+     "level": 4,
+     "key": true,
+     "refs": [
+      "globex",
+      "bkb",
+      "initech"
+     ]
+    },
+    {
+     "name": "Entra ID / IAM",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "globex",
+      "initech"
+     ]
+    },
+    {
+     "name": "Kubernetes / Docker",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "helix",
+      "initech"
+     ]
+    },
+    {
+     "name": "Power BI (Teil der Microsoft Power Platform)",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "bkb"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mb-development",
+   "name": "Entwicklung & Prototyping",
+   "items": [
+    {
+     "name": "Proof of Concept & Prototyping",
+     "level": 3,
+     "key": true,
+     "refs": [
+      "initech",
+      "helix"
+     ]
+    },
+    {
+     "name": "KI-gestützte Entwicklung (Claude Code)",
+     "level": 3,
+     "key": false,
+     "refs": []
+    },
+    {
+     "name": "Java",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "initech",
+      "bzb"
+     ]
+    },
+    {
+     "name": "ABAP (SAP ERP)",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "example-it-services"
+     ]
+    },
+    {
+     "name": "Prozessautomatisierung (Office 365)",
+     "level": 2,
+     "key": false,
+     "refs": []
+    }
+   ]
+  },
+  {
+   "id": "mb-methods",
+   "name": "Projektleitung & Methoden",
+   "items": [
+    {
+     "name": "Technische Projektleitung",
+     "level": 4,
+     "key": true,
+     "refs": [
+      "globex",
+      "initech"
+     ]
+    },
+    {
+     "name": "Scrum / Kanban",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "bzb",
+      "example-it-services"
+     ]
+    },
+    {
+     "name": "SAFe",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "bkb"
+     ]
+    },
+    {
+     "name": "Klassische Projektmethoden",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "bkb"
+     ]
+    },
+    {
+     "name": "Release- und Migrationsplanung",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "initech",
+      "globex",
+      "bkb"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mb-personal",
+   "name": "Persönliche Stärken",
+   "items": [
+    {
+     "name": "Vermitteln zwischen Business, IT und Partnern",
+     "level": 4,
+     "key": true,
+     "refs": [
+      "globex",
+      "initech",
+      "bkb"
+     ]
+    },
+    {
+     "name": "Stakeholder- & C-Level-Beratung",
+     "level": 4,
+     "key": false,
+     "refs": [
+      "bkb",
+      "globex",
+      "helix"
+     ]
+    },
+    {
+     "name": "Analytisches Denken",
+     "level": 4,
+     "key": false,
+     "refs": [
+      "bkb",
+      "globex",
+      "beispiel-hochschule-msc"
+     ]
+    },
+    {
+     "name": "Pragmatische Lösungen & Priorisierung",
+     "level": 4,
+     "key": false,
+     "refs": []
+    },
+    {
+     "name": "Neugier & Lernbereitschaft",
+     "level": 4,
+     "key": false,
+     "refs": [
+      "helix"
+     ]
+    },
+    {
+     "name": "Teamführung",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "globex",
+      "initech"
+     ]
+    }
+   ]
+  }
+ ],
+ "knowledge": null,
+ "languages": [
+  {
+   "name": "Deutsch",
+   "level": "Muttersprache",
+   "detail": "Gewandt in Business-Gesprächen und im persönlichen Austausch"
+  },
+  {
+   "name": "Persisch (Farsi)",
+   "level": "Muttersprache",
+   "detail": "Im Alltag gesprochen"
+  },
+  {
+   "name": "Englisch",
+   "level": "Fliessend",
+   "detail": "Sehr stark im Business- und vor allem im Technik-Wortschatz; literarisch weniger"
+  },
+  {
+   "name": "Französisch",
+   "level": "Grundkenntnisse"
+  },
+  {
+   "name": "Koreanisch",
+   "level": "Grundkenntnisse"
+  }
+ ],
+ "interests": "Technologie, Politik, Reisen & Backpacking (Asien, Südamerika, Südafrika), Fussball (7 Jahre FC Beispiel), Fitness, Motorrad, Boxen; PADI Advanced Open Water Diver",
+ "letter": {
+  "date": "2026-09-23",
+  "place": "Zürich",
+  "recipient": [
+   "Beispiel Automobile Schweiz AG",
+   "IT-Abteilung",
+   "Musterstrasse 55",
+   "8000 Musterstadt"
+  ],
+  "subject": "Bewerbung als IT Business Service Manager 100 %",
+  "salutation": "Sehr geehrtes Team",
+  "attention": [
+   "Autos und Technik sind seit Langem meine Leidenschaft. Als IT-Architekt und Solution Engineer treibt mich eine Frage an: Wie wird aus Technik echter Nutzen für das Geschäft? Bei der Beispiel Automobile Schweiz AG kommt beides zusammen: in einer Rolle, die technisches Verständnis, Projektleitung und Business-Nähe verbindet."
+  ],
+  "interest": [
+   "Mich reizt, in einem kleinen, agilen IT-Team konzernweite Lösungen vor Ort einzuführen und lokale Digitalisierungs-, Automatisierungs- und Integrationsprojekte nahe am Business umzusetzen. Genau das suche ich: eine verantwortungsvolle Aufgabe mit klaren Schnittstellen zwischen IT und Fachbereich, in einem Umfeld, das Stabilität und Weiterentwicklung verbindet."
+  ],
+  "desire": [
+   "Was ich dafür mitbringe:",
+   {
+    "points": [
+     "Architektur und Entscheidungsgrundlagen: Als ICT-Architekt der Beispiel Kantonalbank prüfte ich Vorhaben auf Architekturkonformität, entwickelte Standards und Roadmaps und beriet CIO-Gremien. Ich war für das IT-System-Inventar mitverantwortlich; meine Power-BI-Dashboards dienten Team und Management-Gremien als Entscheidungsgrundlage und zeigten etwa, dass gleiche Applikationen in verschiedenen Versionen installiert waren.",
+     "Governance und Sicherheit: Bei der Azure-Migration der Bank erweiterten wir die IT-Governance, um technische Schulden abzubauen, etwa mit Regeln für Frameworks und Programmiersprachen, die wir mit den DevOps-Teams definierten. Um Lösungsarchitekturen zu beurteilen, analysierte ich IT-Security-Komponenten im Detail.",
+     "Projektleitung und Integration: Bei Globex Consulting führte ich als Teilprojektleiter ein Team von bis zu 12 Personen mit Budgetverantwortung und gestaltete eine globale Azure-Migration mit. Bei initech war ich Team Lead für API Management und konzipierte die Integration einer Oracle-Datenbank in Dynamics 365 via Azure Data Factory, samt Proof of Concept.",
+     "Technische Tiefe und Prototypen: Lösungsideen prüfe ich gerne selbst. Mit dem KI-Coding-Assistenten Claude Code automatisiere ich Arbeiten in Office 365 und entwickle eine mobile Applikation; bei Helix setzte ich einen Proof of Concept für sicheres Access Management mit APIs und OAuth 2.0 um."
+    ]
+   },
+   "Ich arbeite agil wie klassisch, auch mit SAFe. Meine Arbeitsweise ist pragmatisch, strukturiert und teamorientiert: Ich erkenne Prioritäten schnell, verstehe zuerst das Geschäft, kommuniziere lösungsorientiert mit Fachstellen und achte auf stabile Betriebsprozesse."
+  ],
+  "action": [
+   "Gerne zeige ich Ihnen in einem persönlichen Gespräch anhand konkreter Beispiele, wie ich Ihre Applikationslandschaft mitgestalten kann. Ich freue mich auf Ihre Einladung."
+  ],
+  "closing": "Freundliche Grüsse",
+  "enclosures": "Lebenslauf, Arbeitszeugnisse und Diplome"
+ }
+}

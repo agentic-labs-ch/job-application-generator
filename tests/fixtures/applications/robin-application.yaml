@@ -1,0 +1,86 @@
+# FICTIONAL application of data/cv.example.yaml for an invented job ad. Every name, company,
+# colour source and link is invented. Used for tests only.
+kind: application
+base: ../../../data/cv.example.yaml
+id: robin-application
+language: en
+job:
+  title: Fictional Observability Lead 100%
+  company: Example Widgets Ltd (fictional)
+  location: Exampleton
+  reference: EX-0042
+  url: https://example.com/jobs/observability-lead
+  published: 2026-09-01
+  requirements:
+    - text: Several years of running imaginary platforms in production
+      weight: must
+      evidence: [lumen-labs-lead, harbor-works-engineer]
+    - text: Experience leading a small invented team
+      weight: must
+      evidence: [lumen-labs-lead]
+    - text: Certification in a made-up observability product
+      weight: plus
+      evidence: []
+      gap: No such certificate; not claimed on the page.
+brand:
+  source: Invented colours for tests.
+  paper: "#0d1b2a"
+  ink: "#f4f1ea"
+  accent: "#2f6fed"
+  marks: ["#e63946", "#2a9d8f", "#e9c46a"]
+target: Fictional Observability Lead
+headline: Fictional Systems Engineer · Imaginary Monitoring
+claim: Calm platforms that invented teams trust at three in the morning.
+profile: >-
+  Robin Muster is an invented systems engineer used to test applications. This profile says
+  who the person is in a few sentences, tailored to a fictional observability lead role, so
+  that layout, validation and accessibility checks run against realistic text lengths.
+strengths:
+  - title: Imaginary platform operations
+    text: Runs invented monitoring platforms and replaced a fictional nightly batch job with an event-driven pipeline.
+    evidence: [lumen-labs-lead]
+  - title: Invented team leadership
+    text: Leads a small made-up team and mentored three invented colleagues through their first on-call rotations.
+    evidence: [lumen-labs-lead]
+  - title: Fictional community work
+    text: Organised a monthly meetup for an invented local community for three years.
+    evidence: [meetup-host]
+experience:
+  - id: lumen-labs-lead
+    summary: Leads an invented team that builds imaginary monitoring tools.
+    highlights:
+      - Replaced a fictional nightly batch job with an event-driven pipeline.
+      - Mentored three invented colleagues through their first on-call rotations.
+  - id: north-point-intern
+    compact: true
+education:
+  - id: example-university-msc
+    summary: Invented thesis on imaginary monitoring.
+knowledge:
+  - name: Platforms
+    items: [Linux, Automation, Observability]
+    evidence: [lumen-labs-lead, harbor-works-engineer]
+  - name: Programming
+    items: [Python, Go, SQL]
+    evidence: [lumen-labs-lead]
+interests: Hiking and chess
+letter:
+  date: 2026-09-24
+  place: Exampleton
+  recipient: [Example Widgets Ltd (fictional), People Team, 1 Sample Street, Exampleton]
+  subject: Application as Fictional Observability Lead 100%
+  salutation: Dear hiring team
+  attention:
+    - Invented monitoring tools only help when people trust them. That is the problem I like to solve.
+  interest:
+    - Your fictional ad describes a small team that runs imaginary platforms for many users.
+  desire:
+    - "What I bring:"
+    - points:
+        - Replaced a fictional batch job with an event-driven pipeline.
+        - Automated provisioning for a made-up fleet of 40 test machines.
+  action:
+    - I would be glad to tell you more in a conversation.
+  closing: Kind regards
+  enclosures: References, diplomas
+note: Fictional test data.

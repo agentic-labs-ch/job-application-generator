@@ -1,0 +1,14 @@
+# Negative fixture: the sentinel below lives only in YAML comments, a non-public place.
+# SYNTHETIC-SENTINEL-4b1d-NOT-FOR-PUBLICATION
+# A test builds this file and asserts the sentinel never reaches the output directory.
+meta:
+  languages: [en]
+profile:
+  name: Sam Placeholder # SYNTHETIC-SENTINEL-4b1d-NOT-FOR-PUBLICATION
+  headline: Fictional Test Person
+experience:
+  # SYNTHETIC-SENTINEL-4b1d-NOT-FOR-PUBLICATION
+  - id: fixture-role
+    organization: Fixture Org (fictional)
+    role: Tester
+    start: 2020-01

@@ -1,0 +1,317 @@
+# Application for the ad "Technology Strategy Manager (all genders)" at Globex Consulting, Zürich
+# (job no. GX-1042; screenshots from the owner, 2026-09-24). German, like the ad. CV and
+# motivation letter on one page in the order of docs/cv-guide.md, in Globex Consulting's colours.
+# Everything in this file is public once merged into `main`. `note`, `evidence`,
+# `job.requirements` and `brand.source` are never rendered, but they are not confidential either.
+# Facts come from data/cv.yaml; statements marked in `note` come from the owner's work
+# references (Arbeitszeugnisse) and wait for the owner's approval.
+
+kind: application
+base: ../cv.yaml
+id: globex-technology-strategy-manager
+language: de
+omit: [ certifications ] # owner 2026-09-23: no certificates on application pages
+
+job:
+  title: "Technology Strategy Manager (all genders)"
+  company: Globex Consulting
+  location: Zürich
+  reference: GX-1042
+  url: https://example.com/jobs/GX-1042
+  requirements:
+    - text: "IT-Universitätsabschluss, idealerweise mit MBA oder Promotion"
+      weight: must
+      evidence: [ beispiel-hochschule-msc, beispiel-hochschule-bsc ]
+      gap: "MSc Wirtschaftsinformatik; kein MBA, keine Promotion."
+    - text: "Mindestens fünf Jahre im strategischen IT-Management, als CIO oder in
+        vergleichbarer Rolle in Industrie oder Beratung"
+      weight: must
+      evidence: [ bkb, globex, initech ]
+      gap: >-
+        Über sechs Jahre IT-Beratung und Enterprise-Architektur; strategisch im
+        engeren Sinn gut zwei Jahre (BKB, beratend). Globex Consulting als
+        Consultant, initech technisch; keine CIO-Rolle.
+    - text: "Erfolgreiche Bilanz in der Projektakquise; neue Geschäftsbeziehungen
+        eigenständig aufbauen"
+      weight: must
+      evidence: [ helix, bkb ]
+      gap: >-
+        Keine Akquisebilanz belegt. Die Seite nennt nur Kaufentscheide von
+        beiden Seiten (Pre-Sales bei Helix, Anbieterevaluation bei der BKB);
+        weitere Nachweise aus den eigenen Unterlagen warten auf die Freigabe des
+        Owners.
+    - text: "Projektleitung und fachliche Teamführung"
+      weight: must
+      evidence: [ globex, initech ]
+    - text: "Tiefes Know-how in digitaler und IT-Strategie, Agile IT Operating Model,
+        IT-Wert- und Kostenoptimierung, Transformationsmanagement, Cloud, KI,
+        IT-Security oder Tech M&A"
+      weight: must
+      evidence: [ bkb, globex ]
+      gap: >-
+        Stark in Cloud-Strategie, Operating Model, Kostenanalysen, Cloud und
+        Security. Tech M&A ist nicht belegt, KI nur aus der Helix-Zeit und als
+        Kompetenz.
+    - text: "Sicher in Deutsch und Englisch"
+      weight: must
+      evidence: [ lang-de, lang-en ]
+    - text: "Analytische und konzeptionelle Stärke, exzellente Kommunikation"
+      weight: must
+      evidence: [ globex, bkb ]
+    - text: "Mit Entscheidungsträgern auf höchster Führungsebene Technologiestrategien
+        entwickeln"
+      weight: plus
+      evidence: [ bkb, globex ]
+    - text: "Agile Zusammenarbeits- und Organisationsmodelle entwerfen"
+      weight: plus
+      evidence: [ bkb, globex ]
+    - text: "Werthebel und IT-Kostenoptimierungspotenziale analysieren"
+      weight: plus
+      evidence: [ bkb, globex ]
+    - text: "Integrations- und Carve-out-Strategien im Rahmen von M&A"
+      weight: plus
+      evidence: []
+      gap: "Nicht belegt; ein möglicher Nachweis aus den eigenen Unterlagen wartet auf
+        die Freigabe des Owners."
+    - text: "Strategisches Transformation Office aufbauen und steuern"
+      weight: plus
+      evidence: [ globex ]
+      gap: "Kein Transformation Office geführt; nächster Nachweis: Stellvertretung des
+        Delivery Lead."
+    - text: "Disruptive Trends wie Cloud, generative KI und IoT einbeziehen"
+      weight: plus
+      evidence: [ globex, bkb, helix ]
+      gap: "Cloud ist stark belegt. Generative KI nur als Kompetenz (Azure OpenAI),
+        IoT ist nicht belegt."
+
+brand:
+  source: >-
+    Fictional company (sample data), colours chosen for this sample.
+  paper: "#000000"
+  ink: "#ffffff"
+  accent: "#ff9f1c"
+
+# Branche (owner's model '4 Berufsfamilien x 4 Branchen', 2026-09-27): sets the page's typeface.
+branche: beratung-sales
+target: Technology Strategy Manager
+headline: "Cloud-Strategie · Transformation · Enterprise-Architektur"
+claim: >-
+  Strategie und Umsetzung aus einer Hand: vom Business Case im CIO-Gremium bis
+  zur globalen Cloud-Migration.
+profile: >-
+  Wirtschaftsinformatiker (MSc Beispiel-Hochschule) mit über sechs Jahren
+  Erfahrung in IT-Beratung und Enterprise-Architektur. Als Kadermitarbeiter der
+  Beispiel Kantonalbank habe ich die Cloud-Strategie und das Sourcing-Modell
+  inkl. Business Cases, TCO- und CapEx/OpEx-Analysen mitentwickelt und
+  CIO-Gremien beraten. Davor habe ich bei Globex Consulting Kunden aus
+  verschiedenen Branchen bei Cloud-Transformationsstrategien beraten und diese
+  umgesetzt, darunter eine globale Azure-Migration mit über 1000 Servern in über
+  50 Ländern. Deutsch ist meine Muttersprache, Englisch spreche ich fliessend.
+
+strengths:
+  - title: "Cloud-Strategie & Wertbeitrag"
+    text: >-
+      Cloud-Strategie und Sourcing-Modell der BKB (IaaS, PaaS, SaaS, On-Prem)
+      mitentwickelt: Business Cases, TCO- und CapEx/OpEx-Analysen als
+      Entscheidungsgrundlage für CIO-Gremien; Beratung bei Beschaffung und
+      Anbieterevaluation.
+    evidence: [ bkb ]
+  - title: "Transformation & Operating Model"
+    text: >-
+      Azure Services mit klaren Verantwortlichkeiten (RACI) in Operating Models
+      integriert; Cloud Target Operating Model mit Portfolio- und
+      Projektmanagement (SAFe); IT-Governance mit den DevOps-Teams, um bei der
+      Azure-Migration technische Schulden abzubauen.
+    evidence: [ globex, bkb ]
+  - title: "Führung & Kundenvertrauen"
+    text: >-
+      Teilprojektleiter eines Teams von bis zu 12 Personen mit Termin- und
+      Budgetverantwortung, Stellvertreter des Delivery Lead; Team Lead in der
+      IT-Transformation eines Bundesamts. Im Kontakt mit Geschäftsleitungen und
+      Vorständen der Kunden.
+    evidence: [ globex, initech ]
+
+experience:
+  - id: bkb
+    summary: >-
+      In der Einheit Architektur & Sicherheit Bindeglied zwischen ICT-Strategie,
+      Vorhaben und CIO-Gremien.
+    highlights:
+      - >-
+        Mitentwicklung der Cloud-Strategie und des Sourcing-Modells (IaaS, PaaS,
+        SaaS, On-Prem) inkl. Business Cases, TCO- und CapEx/OpEx-Analysen
+      - >-
+        Beratung von CIO-Gremien, Teamleitungen und ICT-Projekten, u. a. bei
+        Beschaffung und Anbieterevaluation von IT-Produkten und Services
+      - >-
+        Entwicklung vorhabenübergreifender Enterprise- und ICT-Architekturen,
+        Standards und Roadmaps gemäss ICT-Strategie; Prüfung der
+        Architekturkonformität von Vorhaben
+      - >-
+        Zusammenarbeit mit Portfolio- und Projektmanagement an Migrationsplänen
+        und am Cloud Target Operating Model (SAFe)
+      - >-
+        Mitverantwortung für das IT-System-Inventar; Power-BI-Dashboards als
+        Entscheidungsgrundlage für Management-Gremien
+  - id: globex
+    summary: >-
+      Beratung von Kunden aus verschiedenen Branchen bei
+      Cloud-Transformationsstrategien und deren Umsetzung; Schwerpunkte
+      Cloud-Architektur, Cybersecurity und Projektmanagement.
+    highlights:
+      - >-
+        Führung eines Projektteams mit bis zu 12 Personen inkl. Termin- und
+        Budgetverantwortung; Stellvertretung des Delivery Lead
+      - >-
+        Globale Cloud-Transformation: Migration von über 1000 Servern in über 50
+        Ländern auf Azure (Lift & Shift)
+      - >-
+        Business Cases und Kosten-Nutzen-Vergleiche (u. a. Azure Hybrid
+        Benefit); wöchentliche Präsentationen beim Kunden
+      - >-
+        Entwicklung von Zielarchitekturen für Azure mit Business- und
+        IT-Stakeholdern; Integration der Azure Services in Operating Models
+        inkl. RACI
+      - >-
+        Konzeption und Umsetzung von Cloud-Security-Services (WAF, Load
+        Balancer), globale Anbindung von SIEM und Monitoring; Planung der
+        Migration von Active Directory zu Entra ID
+  - id: initech
+    summary: >-
+      Beratung in Transformations- und Cloud-Projekten für die öffentliche Hand
+      und eine Krankenversicherung.
+    projects:
+      - start: 2019-10
+        end: 2020-10
+        description: >-
+          Team Lead IT-Architektur, Engineering und API Management in der
+          IT-Transformation eines Bundesamts, inkl. Budget, Zeitplan und
+          Stakeholder-Management
+      - start: 2020-11
+        end: 2021-02
+        description: >-
+          Azure-Cloud-Integration für eine grosse Krankenversicherung:
+          Koordination zwischen Stakeholdern und Entwicklern für die neue
+          Cloud-Integrationsstrategie (Ansatz Azure Landing Zone); Architektur
+          und Proof of Concept für die Integration einer On-Prem-Oracle-DB in
+          Dynamics 365
+    highlights:
+      - Einarbeitung und Koordination neuer Mitarbeitender
+  - id: helix
+    highlights:
+      - Pre-Sales an der Seite des CTO von Helix Schweiz; Cloud-Schulungen für
+        das Sales-Team
+      - Integration von Watson-KI-Services in einen Pepper-Roboter für einen
+        Kunden bei Helix Research
+  - id: example-it-services
+    compact: true
+  - id: bzb
+    compact: true
+
+knowledge:
+  - name: "Strategie & Architektur"
+    items:
+      - "Cloud-Strategie & Sourcing"
+      - "Business Cases / TCO"
+      - "Kostenanalysen (CapEx/OpEx, Azure Hybrid Benefit)"
+      - "Cloud Target Operating Model"
+      - "Operating Models (RACI)"
+      - "Anbieterevaluation"
+      - "Enterprise Architecture (TOGAF, ArchiMate)"
+    evidence: [ bkb, globex, beispiel-hochschule-bsc ]
+  - name: "Beratung & Führung"
+    items:
+      - "Stakeholder- & C-Level-Beratung"
+      - "Präsentation & Schulung"
+      - "Teamführung"
+      - "Projektmanagement"
+      - "SAFe"
+      - "Scrum / Kanban"
+    evidence: [ bkb, globex, initech, helix ]
+  - name: "Technologie"
+    items:
+      - "Microsoft Azure (IaaS, PaaS)"
+      - "Cloud-Security (WAF, SIEM, Entra ID)"
+      - "Azure OpenAI / AI Services"
+      - "Helix Watson"
+      - "Power BI"
+    evidence: [ globex, bkb, helix ]
+
+interests: >-
+  Reisen und Backpacking (Asien, Südamerika, Südafrika), Fussball (7 Jahre FC
+  Beispiel), Fitness, Boxen, Tauchen (PADI Advanced Open Water Diver)
+
+letter:
+  date: 2026-09-24
+  place: Zürich
+  recipient:
+    [
+      "Globex Consulting AG",
+      "Recruiting-Team",
+      "Beispielstrasse 16",
+      "8001 Zürich"
+    ]
+  subject: "Bewerbung als Technology Strategy Manager (Job-Nr. GX-1042)"
+  salutation: "Sehr geehrtes Recruiting-Team"
+  attention:
+    - >-
+      Mehr als zwei Jahre lang habe ich bei Globex Consulting Kunden bei
+      Cloud-Transformationen beraten und diese umgesetzt. Danach habe ich die
+      andere Seite kennengelernt: Als ICT-Architekt der Beispiel Kantonalbank
+      habe ich CIO-Gremien beraten und gesehen, wie IT-Strategien entschieden,
+      finanziert und gesteuert werden. Beide Perspektiven möchte ich in Ihr
+      Strategy & Transformation Team einbringen.
+  interest:
+    - >-
+      Bei Globex Consulting habe ich Kunden aus verschiedenen Branchen durch
+      Cloud-Transformationen begleitet. Im Strategy & Transformation Team möchte
+      ich sie früher abholen: bei der Strategie, bei den Werthebeln und bei der
+      Frage, wo Cloud und generative KI echten Nutzen stiften.
+  desire:
+    - "Was ich mitbringe:"
+    - points:
+        - >-
+          Beratung bis ins CIO-Gremium: Bei der BKB habe ich CIO-Gremien,
+          Teamleitungen und Projekte beraten, fachtechnische Konflikte zwischen
+          Fachbereichen gelöst und in internen und externen Gremien präsentiert.
+        - >-
+          Transformation und Führung: Bei Globex Consulting habe ich eine
+          globale Azure-Migration mit über 1000 Servern in über 50 Ländern
+          mitgestaltet. Als Teilprojektleiter führte ich ein Team von bis zu 12
+          Personen mit Termin- und Budgetverantwortung und vertrat den Delivery
+          Lead.
+        - >-
+          Transparenz für Entscheide: Meine Power-BI-Dashboards zum
+          IT-System-Inventar zeigten Management-Gremien, dass gleiche
+          Applikationen in verschiedenen Versionen installiert waren.
+        - >-
+          Kaufentscheide von beiden Seiten: im Pre-Sales bei Helix an der Seite
+          des CTO von Helix Schweiz und bei der BKB in Beschaffung und
+          Anbieterevaluation.
+    - >-
+      Ich denke analytisch, arbeite strukturiert und bereite komplexe
+      Zusammenhänge für Geschäftsleitung und Fachbereiche entscheidungsreif auf.
+  action:
+    - >-
+      Gerne erläutere ich Ihnen in einem persönlichen Gespräch, welche
+      Erfahrungen aus Bank und Beratung ich in Ihre Kundenmandate einbringen
+      würde. Ich freue mich auf Ihre Einladung.
+  closing: "Freundliche Grüsse"
+  enclosures: "Arbeitszeugnisse und Diplome"
+
+note: >-
+  Owner review. (1) Statements from the owner's work references that are not yet
+  in data/cv.yaml: "Kadermitarbeiter" and the unit "Architektur & Sicherheit"
+  (BKB Arbeitszeugnis 28.02.2026); "fachtechnische Konflikte zwischen
+  Fachbereichen gelöst" and talks in external Gremien (same); advice on cloud
+  transformation strategies for clients in several industries, focus on cloud
+  architecture, cybersecurity and project management, contact with client
+  executives and boards (Globex Consulting Zeugnis 30.11.2023); coordination of
+  stakeholders and developers on the Azure landing zone strategy, onboarding and
+  coordination of new team members (initech Zeugnis 28.02.2021). "IT-Governance
+  mit den DevOps-Teams" and the Power BI finding are the owner's statements from
+  the Beispiel Automobile page. (2) "über sechs Jahre" counts 10.2019 to 02.2026
+  without the gap 03-06.2021. (3) Letter in the Sie form although the ad uses
+  Du. (4) Certificates left out (owner decision 2026-09-23), although the CV
+  guide has a section for them. (5) Gaps not claimed: project acquisition, Tech
+  M&A, transformation office, MBA.

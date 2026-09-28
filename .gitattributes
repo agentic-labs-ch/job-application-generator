@@ -1,0 +1,2 @@
+# Course PDFs (docs/cv-guide/) are binary: no diffs, no line-ending conversion
+*.pdf binary

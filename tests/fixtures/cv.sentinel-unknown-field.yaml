@@ -1,0 +1,8 @@
+# Negative fixture: the sentinel sits in a field the schema does not know.
+# Validation must reject the file, so nothing is built and the value is never printed.
+meta:
+  languages: [en]
+profile:
+  name: Sam Placeholder
+  headline: Fictional Test Person
+  private_notes: SYNTHETIC-SENTINEL-4b1d-NOT-FOR-PUBLICATION

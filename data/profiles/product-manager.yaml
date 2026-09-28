@@ -1,0 +1,316 @@
+# Role version "Product Manager" (kind: profile) of ../cv.yaml. Public once merged, unlisted and
+# noindex. Facts come only from the base dataset; wording is tailored to technical and platform
+# product management (see ../pages/stichwortanalyse-product-manager.yaml). The owner has not held
+# a Product Owner or Product Manager title: this version shows transferable evidence and claims
+# no product ownership. Skill levels are self-assessment proposals pending owner review.
+
+kind: profile
+base: ../cv.yaml
+id: product-manager
+languages: [de, en]
+target: { de: Product Manager, en: Product Manager }
+
+omit: [certifications, activities]   # owner 2026-09-23: no certificates on application pages;
+                                     # no Engagement (owner confirmed 2026-09-23)
+headline:
+  de: "Technisches Produktmanagement · Cloud- und Plattform-Services"
+  en: "Technical Product Management · Cloud & Platform Services"
+
+claim:
+  de: >-
+    Ich bringe Kundennutzen, Business Case und technische Machbarkeit zusammen – für Cloud- und
+    Plattform-Services mit klarer Roadmap und tragfähigem Betriebsmodell.
+  en: >-
+    I bring customer value, business case and technical feasibility together – for cloud and
+    platform services with a clear roadmap and a workable operating model.
+
+summary:
+  de: >-
+    Enterprise- und Cloud-Architekt mit Erfahrung in Bank, Beratung und Technologie. Bei der
+    Beispiel Kantonalbank betreute ich den Value Stream Cloud nach SAFe mit Lösungsvorschlägen auf
+    Basis des Azure-Servicekatalogs, entwickelte Roadmaps gemäss ICT-Strategie, wirkte an
+    Cloud-Strategie und Sourcing-Modell inklusive Business Cases und TCO-Analysen mit und beriet
+    Projekte, Teamleitungen und CIO-Gremien. Bei Globex Consulting führte ich als Teilprojektleiter ein
+    Team mit bis zu 12 Personen in einer globalen Cloud-Migration, mit Termin- und
+    Budgetverantwortung; bei Helix arbeitete ich im Pre-Sales mit dem CTO von Helix Schweiz zusammen.
+    Diese Erfahrung bringe ich ins technische Produktmanagement ein: für Cloud- und
+    Plattform-Services, die Kundennutzen, Wirtschaftlichkeit und Betrieb verbinden.
+  en: >-
+    Enterprise and cloud architect with experience in banking, consulting and technology. At
+    Beispiel Kantonalbank I supported the Cloud value stream in SAFe with solution proposals based
+    on the Azure service catalogue, developed roadmaps aligned with the ICT strategy, co-developed
+    the cloud strategy and sourcing model incl. business cases and TCO analyses, and advised
+    projects, team leads and CIO boards. At Globex Consulting I led a team of up to 12 people as
+    sub-project lead in a global cloud migration, with schedule and budget responsibility; at Helix
+    I worked with the CTO of Helix Switzerland in pre-sales. I bring this experience to technical
+    product management: cloud and platform services that combine customer value,
+    cost-effectiveness and operations.
+
+usp:
+  - title: { de: Wofür ich stehe, en: What I stand for }
+    text:
+      de: >-
+        Nachvollziehbare Entscheidungen: Ich mache Nutzen, Kosten und Varianten transparent, mit
+        Business Cases, TCO- und CapEx/OpEx-Analysen und einem Sourcing-Modell für IaaS, PaaS,
+        SaaS und On-Prem.
+      en: >-
+        Decisions people can follow: I make value, cost and options transparent, with business
+        cases, TCO and CapEx/OpEx analyses and a sourcing model covering IaaS, PaaS, SaaS and
+        on-prem.
+  - title: { de: Zusammenarbeit mit mir, en: Working with me }
+    text:
+      de: >-
+        Strukturiert und im Dialog: Ich bringe Fachbereiche, IT, Anbieter und Betrieb zusammen,
+        übersetze zwischen Business- und Techniksprache und halte Ergebnisse in Roadmaps,
+        Standards und Präsentationen fest.
+      en: >-
+        Structured and in dialogue: I bring business units, IT, vendors and operations together,
+        translate between business and technical language and capture results in roadmaps,
+        standards and presentations.
+  - title: { de: Was Sie erwarten können, en: What you can expect }
+    text:
+      de: >-
+        Technische Tiefe für Produktentscheide: Mit Architektur- und Cloud-Erfahrung spreche ich
+        mit Engineering auf Augenhöhe, prüfe die Machbarkeit früh,
+        wenn nötig mit einem Proof of Concept, und denke Sicherheit und Betrieb von Anfang an mit.
+      en: >-
+        Technical depth for product decisions: with architecture and cloud experience I talk to
+        engineering as a peer, check feasibility early,
+        with a proof of concept where needed, and consider security and operations from the start.
+
+experience:
+  - id: bkb
+    summary:
+      de: "Bindeglied zwischen ICT-Strategie, Azure-Servicekatalog und Projekten in einer Organisation nach SAFe."
+      en: "Link between ICT strategy, the Azure service catalogue and projects in an organisation working with SAFe."
+    highlights:
+      - de: "Betreuung des Value Stream Cloud nach SAFe: Lösungsvorschläge auf Basis des Microsoft-Azure-Servicekatalogs und Prüfung der Architekturkonformität von Vorhaben"
+        en: "Supported the Cloud value stream in SAFe: solution proposals based on the Microsoft Azure service catalogue and architecture compliance reviews of projects"
+      - de: "Mitentwicklung der Cloud-Strategie und des Sourcing-Modells (IaaS, PaaS, SaaS, On-Prem) inkl. Business Cases, TCO- und CapEx/OpEx-Analysen"
+        en: "Co-developed the cloud strategy and sourcing model (IaaS, PaaS, SaaS, on-prem) incl. business cases, TCO and CapEx/OpEx analyses"
+      - de: "Entwicklung und Pflege von Roadmaps und Standards gemäss ICT-Strategie für vorhabenübergreifende Enterprise- und ICT-Architekturen"
+        en: "Developed and maintained roadmaps and standards aligned with the ICT strategy for cross-project enterprise and ICT architectures"
+      - de: "Beratung von ICT-Projekten, Teamleitungen und CIO-Gremien, u. a. bei Beschaffung und Anbieterevaluation von IT-Produkten und Services; Präsentationen in internen und externen Gremien"
+        en: "Advised ICT projects, team leads and CIO boards, incl. procurement and vendor evaluation of IT products and services; presented at internal and external boards"
+      - de: "Zusammenarbeit mit Portfolio- und Projektmanagement zu Migrationsplänen und dem Cloud Target Operating Model"
+        en: "Worked with portfolio and project management on migration plans and the cloud target operating model"
+      - de: "Architektur für operative Resilienz, Cloud-Backup und Lifecycle-Management der IT-Infrastruktur"
+        en: "Architecture for operational resilience, cloud backup and IT infrastructure lifecycle management"
+
+  - id: globex
+    summary:
+      de: "Teilprojektleitung in einer globalen Cloud-Transformation, verantwortlich für Team, Termine und Budget."
+      en: "Sub-project lead in a global cloud transformation, responsible for team, schedule and budget."
+    highlights:
+      - de: "Führung eines Projektteams mit bis zu 12 Personen inkl. Termin- und Budgetverantwortung; Stellvertretung des Delivery Lead"
+        en: "Led a project team of up to 12 people incl. schedule and budget responsibility; deputy to the delivery lead"
+      - de: "Globale Cloud-Transformation: Migration von über 1000 Servern in über 50 Ländern auf Azure (Lift & Shift)"
+        en: "Global cloud transformation: migrated 1000+ servers across 50+ countries to Azure (lift & shift)"
+      - de: "Business Cases und Kosten-Nutzen-Vergleiche (u. a. Azure Hybrid Benefit) als Entscheidungsgrundlage; wöchentliche Kundenpräsentationen"
+        en: "Business cases and cost-benefit comparisons (incl. Azure Hybrid Benefit) as a basis for decisions; weekly client presentations"
+      - de: "Entwicklung von Zielarchitekturen für Azure gemeinsam mit Business- und IT-Stakeholdern"
+        en: "Designed Azure target architectures together with business and IT stakeholders"
+      - de: "Integration von Azure Services in Betriebsmodelle inkl. RACI"
+        en: "Integrated Azure services into operating models incl. RACI"
+      - de: "Planung der schrittweisen Migration von Active Directory zu Entra ID"
+        en: "Planned the phased migration from Active Directory to Entra ID"
+
+  - id: initech
+    summary:
+      de: "Beratung in zwei Kundenprojekten mit Schwerpunkt Release-Planung, Stakeholder-Management und Cloud-Integration."
+      en: "Consulting in two client projects focused on release planning, stakeholder management and cloud integration."
+    projects:
+      - start: 2019-10
+        end: 2020-10
+        description:
+          de: "Team Lead IT-Architektur, Engineering und API Management für die IT-Transformation eines Bundesamts: Release-Planung, Projektmanagement inkl. Budget und Zeitplan, Stakeholder-Management mit Behörden- und Partnerorganisationen, Einarbeitung von Mitarbeitenden"
+          en: "Team lead for IT architecture, engineering and API management in a federal office's IT transformation: release planning, project management incl. budget and schedule, stakeholder management with public-sector and partner organisations, onboarding team members"
+      - start: 2020-11
+        end: 2021-02
+        description:
+          de: "Azure-Cloud-Integration bei einer grossen Krankenversicherung: Konzept, Architektur und Proof of Concept zur Integration einer On-Prem-Oracle-DB in Dynamics 365 (Azure Data Factory, Azure SQL, Landing Zone)"
+          en: "Azure cloud integration for a major health insurer: concept, architecture and proof of concept to integrate an on-prem Oracle DB into Dynamics 365 (Azure Data Factory, Azure SQL, landing zone)"
+    highlights:
+      - de: "Technologien: API Management, IAM, Azure, Docker, Java, Webservices"
+        en: "Technologies: API management, IAM, Azure, Docker, Java, web services"
+
+  - id: helix
+    summary:
+      de: "Kundennahe Rolle zwischen Technik und Vertrieb."
+      en: "Client-facing role between technology and sales."
+    highlights:
+      - de: "Zusammenarbeit mit dem CTO von Helix Schweiz im Pre-Sales"
+        en: "Worked with the CTO of Helix Switzerland in pre-sales"
+      - de: "Cloud-Schulungen für das Sales-Team; technischer Experte an Hackathons"
+        en: "Cloud training for sales peers; technical expert at hackathons"
+      - de: "Proof of Concept für eine sichere Access-Management-Lösung (APIs, OAuth 2.0)"
+        en: "Proof of concept for a secure access management solution (APIs, OAuth 2.0)"
+      - de: "Integration von Watson-KI-Services in einen Pepper-Roboter für einen Kunden bei Helix Research"
+        en: "Implemented Watson AI services on a Pepper robot for a client at Helix Research"
+      - de: "Aufbau von Helix Cloud Private on-premise im eigenen Rechenzentrum (VMs, Kubernetes, Docker)"
+        en: "Set up Helix Cloud Private on-premise in Helix's data centre (VMs, Kubernetes, Docker)"
+
+  - id: example-it-services
+    highlights:
+      - de: "Entwicklung und Anpassung von SAP-ERP-Lösungen (ABAP) für Kunden in einem agilen Team, inkl. Projektplanung"
+        en: "Developed and customised SAP ERP solutions (ABAP) for clients in an agile team, incl. project planning"
+      - de: "Optimierung von SQL-Abfragen für die Performance der Produktivdatenbank"
+        en: "Optimised SQL queries for production database performance"
+
+  - id: bzb
+    highlights:
+      - de: "Migration des Zeitreihen-Analysesystems in Zusammenarbeit mit Ökonominnen und Ökonomen; Arbeit nach Scrum und Kanban (Java, Groovy)"
+        en: "Migrated the time-series analysis system together with economists; worked with Scrum and Kanban (Java, Groovy)"
+
+skills:
+  - id: pm-strategy
+    area: domain
+    name: { de: "Strategie, Services & Wirtschaftlichkeit", en: "Strategy, services & business value" }
+    items:
+      - name: { de: "Cloud-Strategie & Sourcing-Modell (IaaS, PaaS, SaaS, On-Prem)", en: "Cloud strategy & sourcing model (IaaS, PaaS, SaaS, on-prem)" }
+        level: 4
+        level_proposed: true
+        key: true
+        evidence: [bkb]
+      - name: { de: "Business Cases, TCO & CapEx/OpEx", en: "Business cases, TCO & CapEx/OpEx" }
+        level: 4
+        level_proposed: true
+        key: true
+        evidence: [bkb, globex]
+      - name: Enterprise Architecture
+        level: 4
+        level_proposed: true
+        evidence: [bkb, globex, beispiel-hochschule-bsc]
+      - name: { de: "Servicekatalog & Lösungsvorschläge (Azure)", en: "Service catalogue & solution proposals (Azure)" }
+        level: 3
+        level_proposed: true
+        key: true
+        evidence: [bkb]
+      - name: { de: "Anbieterevaluation & Beschaffung", en: "Vendor evaluation & procurement" }
+        level: 3
+        level_proposed: true
+        evidence: [bkb]
+      - name: { de: "Betriebsmodelle (Target Operating Model, RACI)", en: "Operating models (target operating model, RACI)" }
+        level: 3
+        level_proposed: true
+        evidence: [globex, bkb]
+      - name: { de: "Operative Resilienz & Lifecycle-Management", en: "Operational resilience & lifecycle management" }
+        level: 3
+        level_proposed: true
+        evidence: [bkb]
+      - name: { de: "Pre-Sales & Sales Enablement", en: "Pre-sales & sales enablement" }
+        level: 2
+        level_proposed: true
+        evidence: [helix]
+
+  - id: pm-methods
+    area: method
+    name: { de: "Planung, Delivery & agile Methoden", en: "Planning, delivery & agile methods" }
+    items:
+      - name: { de: "Anforderungsanalyse & Lösungsdesign", en: "Requirements analysis & solution design" }
+        level: 4
+        level_proposed: true
+        key: true
+        evidence: [bkb, globex, initech]
+      - name: { de: "Projektmanagement (Budget, Termine)", en: "Project management (budget, schedule)" }
+        level: 4
+        level_proposed: true
+        evidence: [globex, initech, example-it-services]
+      - name: { de: Roadmap-Planung, en: Roadmap planning }
+        level: 3
+        level_proposed: true
+        key: true
+        evidence: [bkb, globex]
+      - name: SAFe
+        level: 3
+        level_proposed: true
+        key: true
+        evidence: [bkb]
+      - name: Scrum / Kanban
+        level: 3
+        level_proposed: true
+        evidence: [bzb, example-it-services]
+      - name: { de: Proof of Concept, en: Proof of concept }
+        level: 3
+        level_proposed: true
+        evidence: [helix, initech]
+      - name: { de: Release-Planung, en: Release planning }
+        level: 2
+        level_proposed: true
+        evidence: [initech]
+
+  - id: pm-cloud
+    area: technology
+    name: { de: "Cloud & Plattformen", en: "Cloud & platforms" }
+    items:
+      - name: { de: "Public Cloud: Microsoft Azure (IaaS, PaaS)", en: "Public cloud: Microsoft Azure (IaaS, PaaS)" }
+        level: 4
+        level_proposed: true
+        key: true
+        evidence: [globex, bkb, initech, az-305]
+      - name: { de: "Cloud-Migration (Azure Migrate, Site Recovery, Backup)", en: "Cloud migration (Azure Migrate, Site Recovery, Backup)" }
+        level: 4
+        level_proposed: true
+        evidence: [globex, bkb]
+      - name: "Identity & Access Management (Entra ID)"
+        level: 3
+        level_proposed: true
+        evidence: [globex, initech, helix]
+      - name: Kubernetes / Docker
+        level: 3
+        level_proposed: true
+        evidence: [helix, initech]
+      - name: { de: "API-Management & Integration", en: "API management & integration" }
+        level: 3
+        level_proposed: true
+        evidence: [initech, helix]
+      - name: { de: "Private & Hybrid Cloud", en: "Private & hybrid cloud" }
+        level: 3
+        level_proposed: true
+        evidence: [helix, bkb, initech]
+
+  - id: pm-personal
+    area: personal
+    name: { de: "Persönliche & soziale Kompetenzen", en: "Personal & social skills" }
+    items:
+      - name: { de: "Stakeholder-Management bis C-Level", en: "Stakeholder management up to C-level" }
+        level: 4
+        level_proposed: true
+        key: true
+        evidence: [bkb, globex, initech, helix]
+      - name: { de: "Präsentation & Schulung", en: "Presenting & training" }
+        level: 4
+        level_proposed: true
+        key: true
+        evidence: [bkb, globex, helix]
+      - name: { de: "Analytisches & konzeptionelles Denken", en: "Analytical & conceptual thinking" }
+        level: 4
+        level_proposed: true
+        evidence: [bkb, globex, initech, beispiel-hochschule-msc]
+      - name: { de: Teamführung, en: Team leadership }
+        level: 3
+        level_proposed: true
+        evidence: [globex, initech]
+      - name: { de: Kundenorientierung, en: Client focus }
+        level: 3
+        level_proposed: true
+        key: true
+        evidence: [globex, helix, initech]
+      - name: { de: "Selbstständige & strukturierte Arbeitsweise", en: "Independent & structured way of working" }
+        level: 3
+        level_proposed: true
+        evidence: [bkb, globex, initech]
+      - name: { de: "Interkulturelle Zusammenarbeit", en: "Intercultural collaboration" }
+        level: 3
+        level_proposed: true
+        evidence: [globex, beispiel-hochschule-msc, beispiel-hochschule-bsc, beispiel-hochschule-buddy]
+
+note: >-
+  Levels follow the base where the skill exists there (Azure IaaS/PaaS, Azure Migrate, Entra ID,
+  Kubernetes/Docker, SAFe, cloud strategy, business cases, enterprise architecture, operational
+  resilience, project management, stakeholder advisory, presenting, analytical thinking, team
+  leadership). Deviation: Scrum / Kanban 3 instead of 4, because the base shows team-member use
+  (BZB, Swiss IT Services) but no Scrum Master, Product Owner or coaching role, and in a product
+  role level 4 would suggest agile product ownership. Pre-sales (2) could be 3 if the owner
+  confirms independent pre-sales work at Helix. No product ownership, product KPIs, pricing or
+  go-to-market is claimed (gaps listed on the analysis page).

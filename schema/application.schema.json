@@ -1,0 +1,190 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.invalid/schema/application.schema.json",
+  "title": "Application (Bewerbung): CV and motivation letter for one job ad, on one page",
+  "description": "One application for one job ad, in the ad's language: the base dataset's facts, selected and worded for the ad in the order of docs/cv-guide.md, the motivation letter at the end and the company's colours. Public once merged, except `note`, `evidence`, `job.requirements` and `brand.source` (never rendered). Cross-field rules (base ids, requirement gaps, colour contrast, word limits) are enforced in scripts/lib/validate.mjs. See docs/applications.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "base", "id", "language", "job", "brand", "target", "headline", "profile", "strengths", "letter"],
+  "properties": {
+    "kind": { "type": "string", "const": "application" },
+    "base": { "$ref": "profile.schema.json#/definitions/relPath" },
+    "id": { "$ref": "cv.schema.json#/definitions/id" },
+    "language": {
+      "description": "Page language: the language of the job ad.",
+      "$ref": "cv.schema.json#/definitions/lang"
+    },
+    "photo": {
+      "description": "Own portrait for this application (a file next to the base dataset).",
+      "allOf": [{ "$ref": "cv.schema.json#/definitions/photo" }]
+    },
+    "job": {
+      "description": "The job ad this application answers. Without an ad there is no application: the requirements decide what the page shows.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "company", "url", "requirements"],
+      "properties": {
+        "title": { "$ref": "cv.schema.json#/definitions/shortText" },
+        "company": { "$ref": "cv.schema.json#/definitions/shortText" },
+        "location": { "$ref": "cv.schema.json#/definitions/shortText" },
+        "reference": { "$ref": "cv.schema.json#/definitions/shortText" },
+        "url": { "$ref": "cv.schema.json#/definitions/url" },
+        "published": { "$ref": "profile.schema.json#/definitions/date" },
+        "requirements": {
+          "description": "Keyword analysis of the ad, never rendered: each requirement, its weight and the base entries that answer it. An empty evidence list is a gap and needs `gap`.",
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["text", "weight", "evidence"],
+            "properties": {
+              "text": { "$ref": "cv.schema.json#/definitions/longString" },
+              "weight": { "type": "string", "enum": ["must", "plus"] },
+              "evidence": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": { "$ref": "cv.schema.json#/definitions/id" }
+              },
+              "gap": { "$ref": "cv.schema.json#/definitions/longString" }
+            }
+          }
+        }
+      }
+    },
+    "brand": {
+      "description": "Company colours of this application (not design-system tokens). The page's colour tokens are derived from them and checked for contrast (DESIGN.md, Company colours).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["paper", "ink", "accent"],
+      "properties": {
+        "source": {
+          "description": "Where the colours come from (never rendered).",
+          "$ref": "cv.schema.json#/definitions/longString"
+        },
+        "paper": { "$ref": "#/definitions/hex" },
+        "ink": { "$ref": "#/definitions/hex" },
+        "accent": { "$ref": "#/definitions/hex" },
+        "accentText": {
+          "description": "Optional colour for text in the accent (links, target role); must reach 4.5:1. Without it the accent is used, moved towards the ink until it does.",
+          "$ref": "#/definitions/hex"
+        },
+        "marks": {
+          "description": "Optional decorative colours (e.g. a logo's colours), used only for the page stripe and the marks of the three key strengths; never for text or as the only carrier of meaning.",
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "items": { "$ref": "#/definitions/hex" }
+        }
+      }
+    },
+    "branche": {
+      "description": "The Branche of the employer (owner's model '4 Berufsfamilien x 4 Branchen', 2026-09-27). It sets the style recipe of the page, today its one typeface (BRANCHEN in site/templates.mjs). Without it, the page uses Instrument Sans.",
+      "enum": ["finanz-oeffentlich", "beratung-sales", "tech-produkt", "mensch-kreativ"]
+    },
+    "target": { "$ref": "cv.schema.json#/definitions/text" },
+    "headline": { "$ref": "cv.schema.json#/definitions/text" },
+    "claim": { "$ref": "cv.schema.json#/definitions/longText" },
+    "profile": {
+      "description": "Kurzprofil: who I am, in a few sentences (max. 110 words).",
+      "$ref": "cv.schema.json#/definitions/longText"
+    },
+    "strengths": {
+      "description": "The three strongest competencies for this ad, each with its proof (max. 45 words).",
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title", "text", "evidence"],
+        "properties": {
+          "title": { "$ref": "cv.schema.json#/definitions/text" },
+          "text": { "$ref": "cv.schema.json#/definitions/longText" },
+          "evidence": { "$ref": "#/definitions/evidence" }
+        }
+      }
+    },
+    "experience": {
+      "description": "Tailoring of base positions; every base position is always shown. `compact` shows date, role and organisation only (older positions).",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id"],
+        "properties": {
+          "id": { "$ref": "cv.schema.json#/definitions/id" },
+          "compact": { "type": "boolean" },
+          "summary": { "$ref": "cv.schema.json#/definitions/longText" },
+          "highlights": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 5,
+            "uniqueItems": true,
+            "items": { "$ref": "cv.schema.json#/definitions/longText" }
+          },
+          "projects": { "$ref": "profile.schema.json#/properties/experience/items/properties/projects" }
+        }
+      }
+    },
+    "education": {
+      "description": "Tailoring of base education entries: a replacement for the short sentence.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "summary"],
+        "properties": {
+          "id": { "$ref": "cv.schema.json#/definitions/id" },
+          "summary": { "$ref": "cv.schema.json#/definitions/longText" }
+        }
+      }
+    },
+    "knowledge": {
+      "description": "Weitere Kenntnisse: keywords for the ad in a few groups, without levels.",
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "items", "evidence"],
+        "properties": {
+          "name": { "$ref": "cv.schema.json#/definitions/text" },
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 12,
+            "uniqueItems": true,
+            "items": { "$ref": "cv.schema.json#/definitions/text" }
+          },
+          "evidence": { "$ref": "#/definitions/evidence" }
+        }
+      }
+    },
+    "interests": {
+      "description": "Optional selection from the base interests for this ad.",
+      "$ref": "cv.schema.json#/definitions/longText"
+    },
+    "omit": {
+      "description": "Base sections left out on this page.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "enum": ["certifications", "interests"] }
+    },
+    "letter": { "$ref": "profile.schema.json#/properties/letter" },
+    "note": { "$ref": "cv.schema.json#/definitions/note" }
+  },
+  "definitions": {
+    "hex": {
+      "type": "string",
+      "pattern": "^#[0-9a-fA-F]{6}$"
+    },
+    "evidence": {
+      "description": "Base entry ids (experience, education, certifications, activities, languages). Never rendered.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "cv.schema.json#/definitions/id" }
+    }
+  }
+}

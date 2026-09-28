@@ -1,0 +1,331 @@
+# Role version "IT Business Service Manager" (generic; not tied to one job ad).
+# Public once merged into main, like everything in this file except `note` and `evidence`
+# (never rendered, not confidential). Facts come only from ../cv.yaml. All skill levels are
+# self-assessment proposals (level_proposed: true) pending owner review.
+# Keyword analysis: ../pages/stichwortanalyse-it-business-service-manager.yaml
+
+kind: profile
+base: ../cv.yaml
+id: it-business-service-manager
+languages: [de, en]
+target: { de: IT Business Service Manager, en: IT Business Service Manager }
+
+omit: [certifications]   # owner 2026-09-23: no certificates on application pages
+photo:   # owner 2026-09-23: this role version uses the photo in the white shirt
+  src: portrait-2.jpg
+  alt:
+    de: Porträt von Alex Muster
+    en: Portrait of Alex Muster
+  width: 480
+  height: 600
+headline:
+  de: "ICT-Architekt · Brücke zwischen Business, IT und Anbietern"
+  en: "ICT Architect · Bridging business, IT and providers"
+
+claim:
+  de: >-
+    Ich übersetze Business-Bedürfnisse in verlässliche IT-Services: von Zielarchitektur,
+    Business Case und Anbieterevaluation bis zu Migration und Betriebsmodell mit klaren Rollen.
+  en: >-
+    I turn business needs into reliable IT services: from target architecture, business case
+    and vendor evaluation to migration and an operating model with clear roles.
+
+summary:
+  de: >-
+    Wirtschaftsinformatiker (MSc, Beispiel-Hochschule) an der Schnittstelle von Business und IT, mit Erfahrung
+    in Bank, Beratung und Technologie. Bei der Beispiel Kantonalbank habe ich Standards und
+    Roadmaps erarbeitet, die Cloud-Strategie und das Sourcing-Modell mitentwickelt und
+    CIO-Gremien beraten, u. a. bei Beschaffung und Anbieterevaluation. Bei Globex Consulting führte ich
+    ein Projektteam mit bis zu 12 Personen inkl. Termin- und Budgetverantwortung, arbeitete in
+    einer globalen Cloud-Transformation (Migration von über 1000 Servern in über 50 Ländern auf
+    Azure) und integrierte Azure Services in Betriebsmodelle inkl. RACI. Davor: API Management,
+    Datenintegration und Release-Planung bei initech, Pre-Sales und Proofs of Concept bei Helix. Ich
+    übersetze Technik in klare Entscheidungen und bringe Fachbereiche, IT und Anbieter auf einen
+    gemeinsamen Plan.
+  en: >-
+    MSc in Business Information Technology (Beispiel-Hochschule), working at the interface between business
+    and IT, with experience in banking, consulting and technology. At Beispiel Kantonalbank I
+    developed standards and roadmaps, co-developed the cloud strategy and sourcing model and
+    advised CIO boards, incl. on procurement and vendor evaluation. At Globex Consulting I led a project
+    team of up to 12 people incl. schedule and budget responsibility, worked on a global cloud
+    transformation (1000+ servers across 50+ countries migrated to Azure) and integrated Azure
+    services into operating models incl. RACI. Before that: API management, data integration
+    and release planning at initech; pre-sales and proofs of concept at Helix. I turn technology into
+    clear decisions and bring business units, IT and providers onto a shared plan.
+
+usp:
+  - title: { de: Wofür ich stehe, en: What I stand for }
+    text:
+      de: >-
+        Für IT-Services, die fachlich begründet, wirtschaftlich durchgerechnet und im Betrieb klar
+        geregelt sind. Entscheide stütze ich auf Business Case, TCO und Standards – und halte
+        fest, wer wofür verantwortlich ist.
+      en: >-
+        IT services that are justified by the business, properly costed and clearly organised in
+        operation. I base decisions on business cases, TCO and standards – and record who is
+        responsible for what.
+  - title: { de: Zusammenarbeit mit mir, en: Working with me }
+    text:
+      de: >-
+        Ich kläre Anforderungen direkt mit den Fachbereichen, mache Optionen vergleichbar und
+        halte alle Beteiligten auf dem gleichen Stand – bei Globex Consulting etwa mit wöchentlichen
+        Kundenpräsentationen. Wissen gebe ich weiter: mit Trainingsmaterial, Schulungen und der
+        Einarbeitung neuer Teammitglieder.
+      en: >-
+        I clarify requirements directly with business units, make options comparable and keep
+        everyone on the same page – at Globex Consulting, for example, through weekly client
+        presentations. I pass on what I know: through training material, training sessions and
+        onboarding new team members.
+  - title: { de: Was Sie erwarten können, en: What you can expect }
+    text:
+      de: >-
+        Entscheidungsvorlagen, die das Management nachvollziehen kann: Business Cases, Roadmaps
+        und Migrationspläne. Dazu genug technische Tiefe, um Architekturen, Schnittstellen und
+        Prototypen selbst zu beurteilen – aus Cloud-, Integrations- und Entwicklungsprojekten.
+      en: >-
+        Decision papers that management can follow: business cases, roadmaps and migration
+        plans. Plus enough technical depth to assess architectures, interfaces and prototypes
+        myself – from cloud, integration and development projects.
+
+experience:
+  - id: bkb
+    summary:
+      de: "Architektur- und Sourcing-Entscheide für Cloud- und Infrastruktur-Services vorbereitet – für Projekte, Teamleitungen und CIO-Gremien."
+      en: "Prepared architecture and sourcing decisions for cloud and infrastructure services – for projects, team leads and CIO boards."
+    highlights:
+      - de: "Beratung von ICT-Projekten, Teamleitungen und CIO-Gremien, u. a. bei Beschaffung und Anbieterevaluation von IT-Produkten und Services"
+        en: "Advised ICT projects, team leads and CIO boards, incl. procurement and vendor evaluation of IT products and services"
+      - de: "Mitentwicklung der Cloud-Strategie und des Sourcing-Modells (IaaS, PaaS, SaaS, On-Prem) inkl. Business Cases, TCO- und CapEx/OpEx-Analysen"
+        en: "Co-developed the cloud strategy and sourcing model (IaaS, PaaS, SaaS, on-prem) incl. business cases, TCO and CapEx/OpEx analyses"
+      - de: "Betreuung des Value Stream Cloud: Lösungsvorschläge und Prüfung der Architekturkonformität auf Basis des Microsoft-Azure-Servicekatalogs"
+        en: "Supported the Cloud value stream: solution proposals and architecture compliance checks based on the Microsoft Azure service catalogue"
+      - de: "Architektur für operative Resilienz, Cloud-Backup und Lifecycle-Management der IT-Infrastruktur"
+        en: "Architecture for operational resilience, cloud backup and IT infrastructure lifecycle management"
+      - de: "Zusammenarbeit mit Portfolio- und Projektmanagement zu Migrationsplänen und dem Cloud Target Operating Model; Arbeit nach SAFe"
+        en: "Worked with portfolio and project management on migration plans and the cloud target operating model; SAFe"
+      - de: "Standards und Roadmaps gemäss ICT-Strategie; Prüfung von Vorhaben auf Architekturrelevanz; Trainingsmaterial sowie Präsentationen in internen und externen Gremien"
+        en: "Standards and roadmaps aligned with the ICT strategy; reviewed projects for architecture relevance; training material and presentations at internal and external boards"
+
+  - id: globex
+    summary:
+      de: "Teilprojektleitung Cloud-Architektur: vom Business Case über die Zielarchitektur bis zur Einbindung in das Betriebsmodell."
+      en: "Sub-project lead for cloud architecture: from business case and target architecture to integration into the operating model."
+    highlights:
+      - de: "Führung eines Projektteams mit bis zu 12 Personen inkl. Termin- und Budgetverantwortung; Stellvertretung des Delivery Lead"
+        en: "Led a project team of up to 12 people incl. schedule and budget responsibility; deputy to the delivery lead"
+      - de: "Integration von Azure Services in Betriebsmodelle (Operating Models) inkl. RACI"
+        en: "Integrated Azure services into operating models incl. RACI"
+      - de: "Globale Cloud-Transformation: Migration von über 1000 Servern in über 50 Ländern auf Azure (Lift & Shift)"
+        en: "Global cloud transformation: migrated 1000+ servers across 50+ countries to Azure (lift & shift)"
+      - de: "Entwicklung von Zielarchitekturen für Azure gemeinsam mit Business- und IT-Stakeholdern"
+        en: "Designed Azure target architectures together with business and IT stakeholders"
+      - de: "Business Cases und Kosten-Nutzen-Vergleiche (u. a. Azure Hybrid Benefit); wöchentliche Kundenpräsentationen"
+        en: "Business cases and cost-benefit comparisons (incl. Azure Hybrid Benefit); weekly client presentations"
+      - de: "Globale Anbindung von SIEM- und Monitoring-Tools; Planung der schrittweisen Migration von Active Directory zu Entra ID"
+        en: "Connected SIEM and monitoring tools globally; planned the phased migration from Active Directory to Entra ID"
+
+  - id: initech
+    summary:
+      de: "Beratung in IT-Transformation und Cloud-Integration für ein Bundesamt und eine grosse Krankenversicherung."
+      en: "Consulting on IT transformation and cloud integration for a federal office and a major health insurer."
+    projects:
+      - start: 2019-10
+        end: 2020-10
+        description:
+          de: "IT-Transformation eines Bundesamts, Team Lead IT-Architektur, Engineering und API Management: Stakeholder-Management mit Behörden- und Partnerorganisationen, Release-Planung, Projektmanagement inkl. Budget und Zeitplan, Einarbeitung von Mitarbeitenden"
+          en: "IT transformation of a federal office, team lead for IT architecture, engineering and API management: stakeholder management with public-sector and partner organisations, release planning, project management incl. budget and schedule, onboarding team members"
+      - start: 2020-11
+        end: 2021-02
+        description:
+          de: "Azure-Cloud- und Datenintegration bei einer grossen Krankenversicherung: Konzept, Architektur und Proof of Concept zur Integration einer On-Prem-Oracle-DB in Dynamics 365 (Azure Data Factory, Azure SQL, Landing Zone)"
+          en: "Azure cloud and data integration for a major health insurer: concept, architecture and proof of concept to integrate an on-prem Oracle DB into Dynamics 365 (Azure Data Factory, Azure SQL, landing zone)"
+    highlights:
+      - de: "Technologien: API Management, Webservices, IAM, Azure, Java, Docker"
+        en: "Technologies: API management, web services, IAM, Azure, Java, Docker"
+
+  - id: helix
+    summary:
+      de: "Technischer Pre-Sales: Lösungen für Kunden prototypisch umgesetzt und Cloud-Wissen ins Sales-Team getragen."
+      en: "Technical pre-sales: built prototype solutions for clients and brought cloud know-how to the sales team."
+    highlights:
+      - de: "Zusammenarbeit mit dem CTO von Helix Schweiz im Pre-Sales"
+        en: "Worked with the CTO of Helix Switzerland in pre-sales"
+      - de: "Proof of Concept für eine sichere Access-Management-Lösung (APIs, OAuth 2.0)"
+        en: "Proof of concept for a secure access management solution (APIs, OAuth 2.0)"
+      - de: "Integration von Watson-KI-Services in einen Pepper-Roboter für einen Kunden bei Helix Research"
+        en: "Implemented Watson AI services on a Pepper robot for a client at Helix Research"
+      - de: "Cloud-Schulungen für das Sales-Team; technischer Experte an Hackathons"
+        en: "Cloud training for sales peers; technical expert at hackathons"
+      - de: "Einsatz in New York"
+        en: "Assignment in New York"
+
+  - id: example-it-services
+    highlights:
+      - de: "Entwicklung und Anpassung von SAP-ERP-Lösungen (ABAP) für Kunden in einem agilen Team"
+        en: "Developed and customised SAP ERP solutions (ABAP) for clients in an agile team"
+      - de: "Optimierung von SQL-Abfragen für die Performance der Produktivdatenbank; Projektplanung"
+        en: "Optimised SQL queries for production database performance; project planning"
+
+  - id: bzb
+    highlights:
+      - de: "Migration des Zeitreihen-Analysesystems gemeinsam mit Ökonominnen und Ökonomen als Fachanwendern (Java, Groovy; Scrum, Kanban)"
+        en: "Migrated the time-series analysis system together with economists as its business users (Java, Groovy; Scrum, Kanban)"
+
+# Competency profile tailored by keyword analysis. Levels: 1 Grundkenntnisse, 2 Erste
+# Erfahrung, 3 Erfahren, 4 Spezialist. Languages are added from ../cv.yaml.
+skills:
+  - id: bsm-service
+    area: domain
+    name: { de: "Service, Sourcing & Governance", en: "Service, sourcing & governance" }
+    items:
+      - name: { de: "Betriebsmodelle & Rollen (Target Operating Model, RACI)", en: "Operating models & roles (target operating model, RACI)" }
+        level: 3
+        level_proposed: true
+        key: true
+        evidence: [globex, bkb]
+      - name: { de: "Cloud-Strategie & Sourcing (IaaS, PaaS, SaaS, On-Prem)", en: "Cloud strategy & sourcing (IaaS, PaaS, SaaS, on-prem)" }
+        level: 4
+        level_proposed: true
+        evidence: [bkb]
+      - name: { de: "Entscheidungsvorlagen: Business Cases, TCO, CapEx/OpEx", en: "Decision papers: business cases, TCO, CapEx/OpEx" }
+        level: 4
+        level_proposed: true
+        key: true
+        evidence: [bkb, globex]
+      - name: { de: "Anbieterevaluation, Beschaffung & Make-or-Buy", en: "Vendor evaluation, procurement & make-or-buy" }
+        level: 3
+        level_proposed: true
+        key: true
+        evidence: [bkb]
+      - name: { de: "Standards, Roadmaps & Architektur-Governance", en: "Standards, roadmaps & architecture governance" }
+        level: 3
+        level_proposed: true
+        key: true
+        evidence: [bkb]
+      - name: { de: "Operative Resilienz & Lifecycle-Management", en: "Operational resilience & lifecycle management" }
+        level: 3
+        level_proposed: true
+        evidence: [bkb]
+      - name: { de: "Azure-Servicekatalog: Lösungsvorschläge & Konformität", en: "Azure service catalogue: solution proposals & compliance" }
+        level: 3
+        level_proposed: true
+        evidence: [bkb]
+
+  - id: bsm-methods
+    area: method
+    name: { de: "Projekt- & Lösungsmethoden", en: "Project & solution methods" }
+    items:
+      - name: { de: "Projektleitung (Termine, Budget)", en: "Project management (schedule, budget)" }
+        level: 4
+        level_proposed: true
+        key: true
+        evidence: [globex, initech]
+      - name: { de: "Anforderungsanalyse & Lösungsbewertung", en: "Requirements analysis & solution evaluation" }
+        level: 4
+        level_proposed: true
+        key: true
+        evidence: [bkb, globex, initech, helix, bzb]
+      - name: { de: "Migrationsplanung & Transformation", en: "Migration planning & transformation" }
+        level: 3
+        level_proposed: true
+        key: true
+        evidence: [globex, bkb]
+      - name: { de: "Proof of Concept & Prototypen", en: "Proofs of concept & prototypes" }
+        level: 3
+        level_proposed: true
+        evidence: [initech, helix]
+      - name: { de: "Agile Methoden (Scrum, Kanban, SAFe)", en: "Agile methods (Scrum, Kanban, SAFe)" }
+        level: 3
+        level_proposed: true
+        evidence: [bkb, bzb, example-it-services]
+      - name: { de: "Release-Planung", en: "Release planning" }
+        level: 2
+        level_proposed: true
+        evidence: [initech]
+
+  - id: bsm-cloud
+    area: technology
+    name: { de: "Cloud & Plattformen", en: "Cloud & platforms" }
+    items:
+      - name: "Microsoft Azure (IaaS/PaaS)"
+        level: 4
+        level_proposed: true
+        key: true
+        evidence: [globex, bkb, initech, az-305]
+      - name: "Azure Migrate / Site Recovery / Backup"
+        level: 4
+        level_proposed: true
+        evidence: [globex, bkb]
+      - name: "Identity & Access Management (Entra ID, OAuth 2.0)"
+        level: 3
+        level_proposed: true
+        evidence: [globex, helix, initech]
+      - name: { de: "Security-Monitoring (Defender for Cloud, Sentinel)", en: "Security monitoring (Defender for Cloud, Sentinel)" }
+        level: 3
+        level_proposed: true
+        evidence: [globex]
+
+  - id: bsm-integration
+    area: technology
+    name: { de: "Integration, Daten & Entwicklung", en: "Integration, data & development" }
+    items:
+      - name: { de: "API Management & Webservices", en: "API management & web services" }
+        level: 3
+        level_proposed: true
+        key: true
+        evidence: [initech, helix]
+      - name: { de: "Datenintegration (Azure Data Factory, Azure SQL)", en: "Data integration (Azure Data Factory, Azure SQL)" }
+        level: 3
+        level_proposed: true
+        evidence: [initech]
+      - name: { de: "Dynamics 365 (Anbindung)", en: "Dynamics 365 (integration)" }
+        level: 2
+        level_proposed: true
+        evidence: [initech]
+      - name: { de: "Softwareentwicklung (Java, ABAP, SQL)", en: "Software development (Java, ABAP, SQL)" }
+        level: 3
+        level_proposed: true
+        evidence: [bzb, example-it-services, initech]
+      - name: { de: "KI-Services (Helix Watson, Azure AI Services)", en: "AI services (Helix Watson, Azure AI Services)" }
+        level: 3
+        level_proposed: true
+        evidence: [helix]
+
+  - id: bsm-personal
+    area: personal
+    name: { de: "Persönliche & soziale Kompetenzen", en: "Personal & interpersonal skills" }
+    items:
+      - name: { de: "Stakeholder-Management & C-Level-Beratung", en: "Stakeholder management & C-level advisory" }
+        level: 4
+        level_proposed: true
+        key: true
+        evidence: [bkb, globex, initech, helix]
+      - name: { de: "Präsentation & Schulung", en: "Presenting & training" }
+        level: 4
+        level_proposed: true
+        evidence: [bkb, globex, helix]
+      - name: { de: "Analytisches Denken", en: "Analytical thinking" }
+        level: 4
+        level_proposed: true
+        evidence: [bkb, globex, beispiel-hochschule-msc]
+      - name: { de: "Teamführung", en: "Team leadership" }
+        level: 3
+        level_proposed: true
+        evidence: [globex, initech]
+      - name: { de: "Kundenorientierung", en: "Client focus" }
+        level: 3
+        level_proposed: true
+        evidence: [globex, initech, helix]
+      - name: { de: "Interkulturelle Zusammenarbeit", en: "Intercultural collaboration" }
+        level: 3
+        level_proposed: true
+        evidence: [globex, helix, beispiel-hochschule-msc, beispiel-hochschule-bsc, beispiel-hochschule-buddy]
+
+note: >-
+  Generic version for both flavours of the role (ITSM service ownership and business-IT bridge),
+  evidence first. Level change against cv.yaml: "Scrum / Kanban" (4) merged with "SAFe" (3) into
+  "Agile Methoden" at level 3, because cv.yaml shows agile work as a developer and in SAFe but no
+  leading or facilitating agile teams. Overlapping items use the same levels as the
+  ict-architect and product-manager versions. Not claimed (gaps, see keyword analysis): ITIL,
+  SLA/KPI management and service reviews, contract management, HERMES, Jira/Confluence, ITSM
+  tools, Power Platform beyond Power BI, MS SQL Server, Windows Server.

@@ -1,0 +1,301 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.invalid/schema/cv.schema.json",
+  "title": "CV dataset",
+  "description": "Public CV content. Every field may be rendered publicly except `note` and `tags` (never rendered, but still not confidential). Text fields are either one string for all languages or an object with one string per language in meta.languages. Cross-field rules (unique IDs, start <= end, languages) are enforced in scripts/lib/validate.mjs.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["meta", "profile"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["languages"],
+      "properties": {
+        "languages": {
+          "description": "Page languages. The first one is the default page (index.html); others are rendered to <lang>/index.html.",
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/definitions/lang" }
+        }
+      }
+    },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "headline"],
+      "properties": {
+        "name": { "$ref": "#/definitions/shortText" },
+        "headline": { "$ref": "#/definitions/text" },
+        "location": { "$ref": "#/definitions/text" },
+        "summary": { "$ref": "#/definitions/longText" },
+        "links": {
+          "type": "array",
+          "maxItems": 10,
+          "items": { "$ref": "#/definitions/link" }
+        },
+        "interests": { "$ref": "#/definitions/longText" },
+        "photo": { "$ref": "#/definitions/photo" },
+        "note": { "$ref": "#/definitions/note" }
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "organization", "role", "start"],
+        "properties": {
+          "id": { "$ref": "#/definitions/id" },
+          "organization": { "$ref": "#/definitions/shortText" },
+          "role": { "$ref": "#/definitions/text" },
+          "location": { "$ref": "#/definitions/text" },
+          "start": { "$ref": "#/definitions/yearMonth" },
+          "end": { "$ref": "#/definitions/yearMonth" },
+          "summary": { "$ref": "#/definitions/longText" },
+          "projects": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["start", "description"],
+              "properties": {
+                "start": { "$ref": "#/definitions/yearMonth" },
+                "end": { "$ref": "#/definitions/yearMonth" },
+                "description": { "$ref": "#/definitions/longText" }
+              }
+            }
+          },
+          "highlights": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "$ref": "#/definitions/longText" }
+          },
+          "tags": { "$ref": "#/definitions/tags" },
+          "note": { "$ref": "#/definitions/note" }
+        }
+      }
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "institution", "degree", "start"],
+        "properties": {
+          "id": { "$ref": "#/definitions/id" },
+          "institution": { "$ref": "#/definitions/shortText" },
+          "degree": { "$ref": "#/definitions/text" },
+          "field": { "$ref": "#/definitions/text" },
+          "location": { "$ref": "#/definitions/text" },
+          "start": { "$ref": "#/definitions/yearMonth" },
+          "end": { "$ref": "#/definitions/yearMonth" },
+          "summary": { "$ref": "#/definitions/longText" },
+          "tags": { "$ref": "#/definitions/tags" },
+          "note": { "$ref": "#/definitions/note" }
+        }
+      }
+    },
+    "certifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "issuer"],
+        "properties": {
+          "id": { "$ref": "#/definitions/id" },
+          "name": { "$ref": "#/definitions/text" },
+          "issuer": { "$ref": "#/definitions/shortText" },
+          "date": { "$ref": "#/definitions/yearOrYearMonth" },
+          "expires": { "$ref": "#/definitions/yearOrYearMonth" },
+          "url": { "$ref": "#/definitions/url" },
+          "tags": { "$ref": "#/definitions/tags" },
+          "note": { "$ref": "#/definitions/note" }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "items"],
+        "properties": {
+          "id": { "$ref": "#/definitions/id" },
+          "name": { "$ref": "#/definitions/text" },
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["name", "level"],
+              "properties": {
+                "name": { "$ref": "#/definitions/text" },
+                "level": {
+                  "description": "Granat four-step scale: 1 = Grundkenntnisse, 2 = Erste Erfahrung, 3 = Erfahren, 4 = Spezialist. Every skill is rated (owner 2026-09-26).",
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 4
+                },
+                "level_proposed": {
+                  "description": "true while the level is a proposal awaiting owner review.",
+                  "type": "boolean"
+                },
+                "refs": {
+                  "description": "Sources of the skill: ids of experience, education or certification entries, shown as linked codes (owner 2026-09-26).",
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": { "$ref": "#/definitions/id" }
+                },
+                "tags": { "$ref": "#/definitions/tags" }
+              }
+            }
+          },
+          "tags": { "$ref": "#/definitions/tags" }
+        }
+      }
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "level"],
+        "properties": {
+          "id": { "$ref": "#/definitions/id" },
+          "name": { "$ref": "#/definitions/text" },
+          "level": { "$ref": "#/definitions/text" },
+          "detail": { "$ref": "#/definitions/text" }
+        }
+      }
+    },
+    "activities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "organization", "description", "start"],
+        "properties": {
+          "id": { "$ref": "#/definitions/id" },
+          "organization": { "$ref": "#/definitions/shortText" },
+          "description": { "$ref": "#/definitions/longText" },
+          "start": { "$ref": "#/definitions/yearMonth" },
+          "end": { "$ref": "#/definitions/yearMonth" },
+          "tags": { "$ref": "#/definitions/tags" }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "lang": { "type": "string", "enum": ["de", "en"] },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "maxLength": 64
+    },
+    "photo": {
+      "description": "Portrait, a file next to the dataset. Published as assets/<src>; the build refuses files with EXIF or XMP metadata.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["src", "alt", "width", "height"],
+      "properties": {
+        "src": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*\\.(jpg|jpeg|png|webp)$" },
+        "alt": { "$ref": "#/definitions/text" },
+        "width": { "type": "integer", "minimum": 1, "maximum": 4000 },
+        "height": { "type": "integer", "minimum": 1, "maximum": 4000 }
+      }
+    },
+    "yearMonth": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
+    },
+    "yearOrYearMonth": {
+      "description": "YYYY-MM, or YYYY when only the year is known (certificates).",
+      "type": "string",
+      "pattern": "^[0-9]{4}(-(0[1-9]|1[0-2]))?$"
+    },
+    "shortText": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "pattern": "\\S"
+    },
+    "longString": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000,
+      "pattern": "\\S"
+    },
+    "text": {
+      "anyOf": [
+        { "$ref": "#/definitions/shortText" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "properties": {
+            "de": { "$ref": "#/definitions/shortText" },
+            "en": { "$ref": "#/definitions/shortText" }
+          }
+        }
+      ]
+    },
+    "longText": {
+      "anyOf": [
+        { "$ref": "#/definitions/longString" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "properties": {
+            "de": { "$ref": "#/definitions/longString" },
+            "en": { "$ref": "#/definitions/longString" }
+          }
+        }
+      ]
+    },
+    "tags": {
+      "description": "Display selection only (e.g. per job application). Not a confidentiality mechanism.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "ai",
+          "architecture",
+          "banking",
+          "cloud",
+          "consulting",
+          "data",
+          "development",
+          "education",
+          "leadership",
+          "presales",
+          "security"
+        ]
+      }
+    },
+    "note": {
+      "description": "Open point for the owner. Never rendered.",
+      "$ref": "#/definitions/longString"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "maxLength": 2000,
+      "pattern": "^(https?://|mailto:)[^\\s]+$"
+    },
+    "link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "url"],
+      "properties": {
+        "label": { "$ref": "#/definitions/text" },
+        "url": { "$ref": "#/definitions/url" }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<!-- @dsCard height=288 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans&display=swap">
+<style>
+  .cover { display: block; width: 960px; height: 288px; }
+  .ground { fill: var(--color-bg); }
+  .slab   { fill: var(--color-accent); rx: var(--radius-lg); }
+  .sat    { fill: var(--color-accent); rx: var(--radius-lg); }
+  .ink    { fill: var(--color-text); rx: var(--radius-lg); }
+  .cut    { stroke: var(--color-bg); stroke-width: 2; fill: none; }
+  .name   { fill: var(--color-text); font-family: var(--font-text, "Instrument Sans", sans-serif); font-weight: 400; font-size: 96px; }
+  .tagline{ fill: var(--color-text-muted); font-family: var(--font-text, "Instrument Sans", sans-serif); font-weight: 400; font-size: 14px; }
+</style>
+<svg class="cover" viewBox="0 0 960 288" width="960" height="288" role="img" aria-label="Granat: eine Schrift, klare Grössen, acht Paletten" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blöcke: color-accent des aktiven Themes als hohe Platte 192×224; color-accent von Tanne, Marine und Ocker (data-theme am Block) als Trabanten 104×104 und 136×104; color-text als dunkler Anschnittblock 120×104. Alle rx = radius-lg. -->
+  <!-- Anordnung: eine hohe Platte mit Trabanten rechts, Lücken space-3 (16px), zwei Blöcke laufen über die rechte Kante. Die Trabanten zeigen, dass die Rollen fest sind und die Werte wechseln. -->
+  <!-- Muster: drei Haarlinien in color-bg quer durch die Blöcke. Gewählt, weil das System mit Linien trennt statt mit Schatten und Granat ein geschliffener Stein ist. -->
+  <!-- Skalen: Lücken space-3 (16px), Linienabstand 64px (space-5 + space-4), Blockhöhen 104 und 224, Ecken radius-lg (18px). Name in der einen Familie, Regular 400, 96px. -->
+  <rect class="ground" x="0" y="0" width="960" height="288"/>
+  <rect class="slab" x="520" y="32" width="192" height="224"/>
+  <rect class="sat" data-theme="tanne"  x="728" y="32"  width="104" height="104"/>
+  <rect class="ink"                     x="848" y="32"  width="136" height="104"/>
+  <rect class="sat" data-theme="marine" x="728" y="152" width="104" height="104"/>
+  <rect class="sat" data-theme="ocker"  x="848" y="152" width="136" height="104"/>
+  <path class="cut" d="M504 80 H976 M504 144 H976 M504 208 H976"/>
+  <text class="name" x="64" y="200">Granat</text>
+  <text class="tagline" x="66" y="240">Eine Schrift, klare Grössen, acht Paletten.</text>
+</svg>

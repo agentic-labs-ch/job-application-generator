@@ -1,0 +1,289 @@
+# Application for the ad "Customer Success Account Manager" at Nimbus Software, Zürich (job number
+# NS-2317, posted 2026-09-03; screenshots from the owner, 2026-09-24). English, like the ad.
+# CV and motivation letter on one page in the order of docs/cv-guide.md, with Nimbus Software's
+# four logo colours used sparingly.
+# Everything in this file is public once merged into `main`. `note`, `evidence`,
+# `job.requirements` and `brand.source` are never rendered, but they are not confidential either.
+# Facts come from data/cv.yaml; statements marked in `note` come from the owner's work
+# references (Arbeitszeugnisse) and wait for the owner's approval.
+
+kind: application
+base: ../cv.yaml
+id: nimbus-customer-success-account-manager
+language: en
+omit: [ certifications ] # owner 2026-09-23: no certificates on application pages
+
+job:
+  title: "Customer Success Account Manager"
+  company: Nimbus Software
+  location: Zürich
+  reference: "NS-2317"
+  url: https://example.com/jobs/NS-2317
+  published: 2026-09-03
+  requirements:
+    - text: >-
+        Bachelor's degree in business, computer science or a related field AND
+        customer success, solution delivery, practice management,
+        customer-facing consulting or portfolio management experience
+      weight: must
+      evidence: [ beispiel-hochschule-bsc, beispiel-hochschule-msc, globex, initech ]
+    - text: "Fluency in German (collaboration with local customers)"
+      weight: must
+      evidence: [ lang-de ]
+    - text: "Trusted-advisor relationships; align technology investments with
+        strategic business priorities"
+      weight: must
+      evidence: [ bkb, globex ]
+    - text: "Stakeholder and priority alignment: shared objectives, success measures
+        and governance"
+      weight: must
+      evidence: [ bkb, globex ]
+    - text: "Own Customer Success Planning and execution; measurable customer value"
+      weight: must
+      evidence: [ globex, bkb ]
+      gap: >-
+        No formal customer success role; nearest evidence: deputy to the
+        delivery lead, business cases and weekly client presentations at Globex
+        Consulting.
+    - text: "Accelerate cloud adoption and advance AI transformation"
+      weight: must
+      evidence: [ globex, bkb, helix ]
+      gap: >-
+        Cloud adoption is strongly evidenced. AI only from Helix (Watson) and as
+        a skill (Azure OpenAI).
+    - text: "Proactively manage customer risks, adoption challenges and delivery
+        dependencies"
+      weight: must
+      evidence: [ globex, bkb ]
+      gap: "No explicit risk management role; evidence is delivery responsibility and
+        migration planning."
+    - text: "Microsoft certification in relevant technologies (Azure, M365, Copilot)"
+      weight: plus
+      evidence: [ az-305 ]
+    - text: "ITIL Foundation or equivalent service management certification"
+      weight: plus
+      evidence: []
+      gap: "No ITIL certificate."
+    - text: "PMI or equivalent project management certification"
+      weight: plus
+      evidence: []
+      gap: "No project management certificate; project leadership at Globex Consulting
+        and initech instead."
+    - text: "Prosci or equivalent change management certification"
+      weight: plus
+      evidence: []
+      gap: "No Prosci certificate."
+
+brand:
+  source: >-
+    Fictional company (sample data), colours chosen for this sample.
+  paper: "#ffffff"
+  ink: "#242424"
+  accent: "#3b4bc8"
+  marks: [ "#e4572e", "#2a9d8f", "#2b7bb9", "#e9c46a" ]
+
+# Branche (owner's model '4 Berufsfamilien x 4 Branchen', 2026-09-27): sets the page's typeface.
+branche: tech-produkt
+target: Customer Success Account Manager
+headline: "Cloud transformation · Stakeholder alignment · Azure"
+claim: >-
+  Customer outcomes over project milestones: I align stakeholders, keep delivery
+  on track and make the value of the cloud visible.
+profile: >-
+  Cloud and enterprise architect with an MSc in Business Information Technology
+  (Beispiel-Hochschule) and over six years in IT consulting and enterprise
+  architecture. I know Azure adoption from both sides: delivering it as a
+  consultant and shaping it as an architect at a Microsoft enterprise customer.
+  At Beispiel Kantonalbank I advised CIO boards, team leads and ICT projects,
+  incl. on procurement and vendor evaluation, and resolved technical conflicts
+  between business units. At Globex Consulting I advised clients in several
+  industries on cloud transformation and was deputy to the delivery lead. Native
+  German speaker, fluent in English.
+
+strengths:
+  - title: "Stakeholder alignment up to the C-level"
+    text: >-
+      Advised CIO boards, team leads and projects at Beispiel Kantonalbank. At
+      Globex Consulting, regular contact with client executives and boards and
+      weekly client presentations.
+    evidence: [ bkb, globex ]
+  - title: "Cloud adoption & value"
+    text: >-
+      Took part in a global Azure migration of 1,000+ servers in 50+ countries;
+      business cases and cost-benefit comparisons incl. Azure Hybrid Benefit;
+      Power BI dashboards that showed management boards where the same
+      applications ran in different versions.
+    evidence: [ globex, bkb ]
+  - title: "Delivery governance & risk"
+    text: >-
+      Sub-project lead of a team of up to 12 with schedule and budget
+      responsibility, deputy to the delivery lead; Azure services integrated
+      into operating models with RACI; the phased migration from Active
+      Directory to Entra ID planned.
+    evidence: [ globex ]
+
+experience:
+  - id: bkb
+    summary: >-
+      Architect at a Microsoft enterprise customer: cloud recommendations,
+      standards and roadmaps for projects and CIO boards.
+    highlights:
+      - >-
+        Advised ICT projects, team leads and CIO boards, incl. procurement and
+        vendor evaluation of IT products and services
+      - >-
+        Co-developed the cloud strategy and sourcing model (IaaS, PaaS, SaaS,
+        on-prem) incl. business cases, TCO and CapEx/OpEx analyses
+      - >-
+        Advised the cloud value stream: architecture compliance and solution
+        proposals based on the Microsoft Azure service catalogue
+      - Co-owned the IT system inventory; Power BI dashboards as a basis for
+        decisions in management boards
+      - Created training material and presented at internal and external boards
+  - id: globex
+    summary: >-
+      Advised clients in several industries on cloud transformation strategies
+      and delivered them, with a focus on cloud architecture, cybersecurity and
+      project management.
+    highlights:
+      - >-
+        Led a project team of up to 12 incl. schedule and budget responsibility;
+        deputy to the delivery lead
+      - "Global cloud transformation: migrated 1,000+ servers across 50+
+        countries to Azure (lift & shift)"
+      - >-
+        Weekly client presentations; business cases and cost-benefit comparisons
+        (incl. Azure Hybrid Benefit)
+      - >-
+        Integrated Azure services into operating models incl. RACI; planned the
+        phased migration from Active Directory to Entra ID
+      - >-
+        Designed and implemented cloud security services (WAF, load balancer);
+        connected SIEM and monitoring tools globally
+  - id: initech
+    summary: Consulting in public-sector and insurance projects.
+    projects:
+      - start: 2019-10
+        end: 2020-10
+        description: >-
+          Team lead for IT architecture, engineering and API management in a
+          federal office's IT transformation, incl. budget, schedule and
+          stakeholder management with public-sector and partner organisations
+      - start: 2020-11
+        end: 2021-02
+        description: >-
+          Azure cloud integration for a major health insurer: coordinated
+          stakeholders and developers on the new cloud integration strategy
+          (Azure landing zone approach); proof of concept to integrate an
+          on-prem Oracle DB into Dynamics 365
+    highlights:
+      - Onboarded and coordinated new team members
+  - id: helix
+    highlights:
+      - Worked with the CTO of Helix Switzerland in pre-sales; cloud training
+        for sales peers
+      - Implemented Watson AI services on a Pepper robot for a client at Helix
+        Research
+  - id: example-it-services
+    compact: true
+  - id: bzb
+    compact: true
+
+knowledge:
+  - name: "Customer & stakeholder"
+    items:
+      - "Stakeholder & C-level advisory"
+      - "Presenting & training"
+      - "Vendor evaluation"
+      - "Business cases / TCO"
+    evidence: [ bkb, globex, helix ]
+  - name: "Nimbus cloud & AI"
+    items:
+      - "Microsoft Azure (IaaS, PaaS)"
+      - "Entra ID"
+      - "Azure OpenAI / AI Services"
+      - "Power BI"
+    evidence: [ globex, bkb ]
+  - name: "Delivery & governance"
+    items:
+      - "Project management"
+      - "SAFe"
+      - "Scrum / Kanban"
+      - "Operating models (RACI)"
+      - "Enterprise architecture (TOGAF, ArchiMate)"
+    evidence: [ globex, initech, bkb, beispiel-hochschule-bsc ]
+
+interests: >-
+  Travel and backpacking (Asia, South America, South Africa), football (7 years
+  FC Beispiel), fitness, boxing, diving (PADI Advanced Open Water Diver)
+
+letter:
+  date: 2026-09-24
+  place: Zürich
+  recipient:
+    [
+      "Nimbus Software Schweiz GmbH",
+      "Talent Acquisition",
+      "Beispielplatz 2",
+      "8000 Zürich"
+    ]
+  subject: "Application: Customer Success Account Manager (job number NS-2317)"
+  salutation: "Dear Hiring Team"
+  attention:
+    - >-
+      I have seen Azure adoption from both sides of the table. At Globex
+      Consulting I helped deliver a global migration of more than 1,000 servers
+      to Azure; at Beispiel Kantonalbank, as an ICT architect, I advised the CIO
+      boards that decided, funded and governed the move to the cloud. As a
+      Customer Success Account Manager, I want to bring both perspectives to
+      your customers.
+  interest:
+    - >-
+      Swiss enterprises in regulated industries decide on Azure the way Beispiel
+      Kantonalbank did: through architecture reviews, business cases and CIO
+      boards. I know that path from the inside, and I would like to help Nimbus
+      Software's customers go down it faster, from cloud adoption to AI.
+  desire:
+    - "What I bring:"
+    - points:
+        - >-
+          Trusted advice at board level: I have advised CIO boards and know what
+          they weigh, from business priorities to procurement. I would use this
+          to tie each customer's technology investments to the goals their
+          leadership has set.
+        - >-
+          Success plans with measurable value: as an architect I backed cloud
+          decisions with business cases and dashboards. I would build Customer
+          Success Plans the same way, with shared objectives and success
+          measures that the customer's governance can track.
+        - >-
+          Risks and dependencies: Azure migrations at Globex Consulting showed
+          me where adoption stalls, from identity to operating models. I would
+          raise these risks early and agree with the customer and the account
+          team on who owns them.
+        - >-
+          Nimbus depth: the Azure Solutions Architect certification (AZ-305),
+          and I know the Azure service catalogue from the customer's point of
+          view.
+  action:
+    - >-
+      I would welcome the opportunity to discuss how I would lead Customer
+      Success Planning for your customers in Switzerland.
+  closing: "Kind regards"
+  enclosures: "References and diplomas"
+
+note: >-
+  Owner review. (1) Statements from the owner's work references that are not yet
+  in data/cv.yaml: "resolved technical conflicts between business units" and
+  talks at external boards (BKB Arbeitszeugnis); advice on cloud transformation
+  strategies for clients in several industries, focus areas and contact with
+  client executives and boards (Globex Consulting Zeugnis); coordination of
+  stakeholders and developers on the Azure landing zone strategy, onboarding and
+  coordination of new team members (initech Zeugnis). The Power BI finding is
+  the owner's statement from the Beispiel Automobile page. (2) The job link is
+  Nimbus Software's careers portal: the old job link redirects there; paste the
+  exact link of the ad. (3) Certificates left out (owner decision 2026-09-23);
+  AZ-305 is named once in the letter, since the ad lists Microsoft
+  certifications as a plus; check that it is still active. (4) Gaps not claimed:
+  formal customer success role, ITIL, PMI, Prosci; AI transformation only from
+  Helix and as a skill.

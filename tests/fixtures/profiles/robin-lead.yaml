@@ -1,0 +1,79 @@
+# FICTIONAL role version of data/cv.example.yaml, with a cover letter. Every name, company and
+# link is invented. Used for tests only.
+kind: profile
+base: ../../../data/cv.example.yaml
+id: robin-lead
+target: Fictional Platform Lead
+headline: Fictional Platform Lead · Imaginary Monitoring
+claim: I turn invented monitoring problems into calm, made-up platforms that teams enjoy running.
+summary: >-
+  Robin Muster is an invented systems engineer used to test role versions. This summary is
+  tailored to a fictional platform lead role and exists only to exercise layout, validation
+  and accessibility checks with realistic text lengths.
+usp:
+  - title: What I stand for
+    text: Reliable imaginary systems and clear, fictional documentation.
+  - title: Working with me
+    text: Calm, structured and transparent, with short feedback loops in an invented team.
+  - title: What you can expect
+    text: Made-up platforms that are easier to operate than before.
+experience:
+  - id: lumen-labs-lead
+    summary: Leads an invented team that builds imaginary monitoring tools.
+    highlights:
+      - Replaced a fictional nightly batch job with an event-driven pipeline.
+      - Mentored three invented colleagues through their first on-call rotations.
+  - id: harbor-works-engineer
+    projects:
+      - start: 2019-02
+        end: 2020-06
+        description: Led the fictional migration of an imaginary ticketing system.
+skills:
+  - id: robin-platform
+    area: domain
+    name: Platform
+    items:
+      - { name: Imaginary platform design, level: 4, level_proposed: true, key: true, evidence: [lumen-labs-lead] }
+      - { name: Fictional incident process, level: 3, evidence: [harbor-works-engineer] }
+  - id: robin-tech
+    area: technology
+    name: Technology
+    items:
+      - { name: Linux, level: 4, evidence: [harbor-works-engineer] }
+      - { name: Python, level: 3, evidence: [lumen-labs-lead] }
+  - id: robin-methods
+    area: method
+    name: Methods
+    items:
+      - { name: Incident review, level: 3, evidence: [harbor-works-engineer] }
+      - { name: Technical writing, level: 2, evidence: [letter] }
+  - id: robin-personal
+    area: personal
+    name: Personal
+    items:
+      - { name: Mentoring, level: 3, key: true, evidence: [lumen-labs-lead, meetup-host] }
+job:
+  title: Fictional Platform Lead 100%
+  company: Example Widgets Ltd (fictional)
+  location: Exampleton
+  url: https://example.com/jobs/platform-lead
+  published: 2026-09-01
+letter:
+  date: 2026-09-23
+  place: Exampleton
+  recipient: [Example Widgets Ltd (fictional), People Team, 1 Sample Street, Exampleton]
+  subject: Application as Fictional Platform Lead 100%
+  salutation: Dear hiring team
+  attention:
+    - Invented monitoring tools only help when people trust them. That is the problem I like to solve.
+  interest:
+    - Your fictional ad describes a small team that runs imaginary platforms for many users.
+  desire:
+    - In my made-up roles I built and ran such platforms.
+    - points:
+        - Replaced a fictional batch job with an event-driven pipeline.
+        - Automated provisioning for a made-up fleet of 40 test machines.
+  action:
+    - I would be glad to tell you more in a conversation.
+  closing: Kind regards
+  enclosures: CV, references

@@ -1,0 +1,167 @@
+# Sample application (public repo only): the fictional company Kolibri People AG, designer's
+# brief 2026-09-28 (fourth application, Branche Mensch & Kreativ). The ad is invented; the facts
+# come from ../cv.yaml (sample person Alex Muster). Everything here is sample data.
+
+kind: application
+base: ../cv.yaml
+id: kolibri-people-product-owner
+language: de
+photo: { src: portrait-2.jpg, alt: "Porträt von Alex Muster", width: 480, height: 600 }
+omit: [ certifications ]
+
+job:
+  title: "Product Owner HR-Plattform 80–100 %"
+  company: Kolibri People AG
+  location: Winterthur
+  reference: "KP-0417"
+  url: https://example.com/jobs/KP-0417
+  published: 2026-09-20
+  requirements:
+    - text: "Erfahrung als Bindeglied zwischen Fachbereich, Entwicklung und Betrieb"
+      weight: must
+      evidence: [ bkb, globex, initech ]
+    - text: "Backlog, Roadmap und Priorisierung nach Nutzen für die Anwenderinnen und Anwender"
+      weight: must
+      evidence: [ bkb, initech ]
+      gap: >-
+        Keine Rolle als Product Owner; nächste Belege: Roadmaps gemäss ICT-Strategie,
+        Release-Planung und Lösungsvorschläge im Value Stream Cloud nach SAFe.
+    - text: "Agile Methoden (Scrum, SAFe)"
+      weight: must
+      evidence: [ bkb, initech ]
+    - text: "Cloud-Plattformen und Integrationen (APIs)"
+      weight: must
+      evidence: [ globex, bkb, initech ]
+    - text: "Freude an Menschen, Präsentationen und Schulungen"
+      weight: must
+      evidence: [ bkb, helix ]
+    - text: "Erfahrung mit HR-Prozessen oder HR-Software"
+      weight: plus
+      evidence: []
+      gap: "Keine Erfahrung mit HR-Software; wird im Brief nicht behauptet."
+
+brand:
+  source: Fictional company (sample data), colours from the designer's brief 2026-09-28.
+  paper: "#fbf7f1"
+  ink: "#2b211b"
+  accent: "#b4462a"
+  marks: [ "#e07a5f", "#f2cc8f", "#81b29a" ]
+
+branche: mensch-kreativ
+target: Product Owner HR-Plattform
+headline: "Produkt · Plattform · Menschen"
+claim: >-
+  Gute Plattformen entstehen, wenn Fachbereich, Entwicklung und Betrieb dasselbe Ziel sehen. Genau
+  dort arbeite ich am liebsten.
+profile: >-
+  Enterprise- und Cloud-Architekt mit Erfahrung in Bank, Beratung und Technologie. Bei der Beispiel
+  Kantonalbank entwickelte ich Roadmaps gemäss ICT-Strategie, betreute den Value Stream Cloud nach
+  SAFe und beriet Projekte, Teamleitungen und CIO-Gremien. Bei Globex Consulting führte ich als
+  Teilprojektleiter ein Team mit bis zu 12 Personen, mit Termin- und Budgetverantwortung; bei
+  initech plante ich Releases für die IT-Transformation eines Bundesamts. Ich übersetze zwischen
+  Business und Technik und möchte diese Erfahrung als Product Owner für eine Plattform einsetzen,
+  die Menschen im Arbeitsalltag unterstützt.
+
+strengths:
+  - title: "Zwischen Fachbereich und Technik"
+    text: >-
+      Ich bringe Fachbereiche, IT, Anbieter und Betrieb zusammen und halte Ergebnisse in Roadmaps,
+      Standards und Präsentationen fest.
+    evidence: [ bkb, globex ]
+  - title: "Planung, die hält"
+    text: >-
+      Release-Planung und Projektmanagement mit Budget und Zeitplan bei initech, Termin- und
+      Budgetverantwortung für ein Team mit bis zu 12 Personen bei Globex Consulting.
+    evidence: [ initech, globex ]
+  - title: "Vermitteln und befähigen"
+    text: >-
+      Schulungsmaterial und Präsentationen in internen und externen Gremien; Cloud-Schulungen für
+      Kolleginnen und Kollegen im Vertrieb bei Helix.
+    evidence: [ bkb, helix ]
+
+experience:
+  - id: bkb
+    summary: >-
+      Bindeglied zwischen ICT-Strategie, Projekten und CIO-Gremien in einer Organisation nach SAFe.
+    highlights:
+      - >-
+        Entwicklung und Pflege von Roadmaps und Standards gemäss ICT-Strategie
+      - >-
+        Betreuung des Value Stream Cloud nach SAFe mit Lösungsvorschlägen auf Basis des
+        Azure-Servicekatalogs
+      - >-
+        Beratung von ICT-Projekten, Teamleitungen und CIO-Gremien, u. a. bei Anbieterevaluation;
+        Präsentationen in internen und externen Gremien
+  - id: globex
+    summary: >-
+      Teilprojektleitung in einer globalen Cloud-Transformation, verantwortlich für Team, Termine
+      und Budget.
+    highlights:
+      - >-
+        Führung eines Projektteams mit bis zu 12 Personen inkl. Termin- und Budgetverantwortung;
+        Stellvertretung des Delivery Lead
+      - >-
+        Business Cases und Kosten-Nutzen-Vergleiche als Entscheidungsgrundlage; wöchentliche
+        Kundenpräsentationen
+  - id: initech
+    summary: >-
+      Beratung in zwei Kundenprojekten mit Schwerpunkt Release-Planung, Stakeholder-Management und
+      Cloud-Integration.
+    highlights:
+      - Release-Planung und Projektmanagement inkl. Budget und Zeitplan für die IT-Transformation eines Bundesamts
+  - id: helix
+    highlights:
+      - Cloud-Schulungen für Kolleginnen und Kollegen im Vertrieb
+  - id: example-it-services
+    compact: true
+  - id: bzb
+    compact: true
+
+knowledge:
+  - name: "Produkt & Planung"
+    items: [ "Roadmaps", "Release-Planung", "Business Cases / TCO", "Anbieterevaluation" ]
+    evidence: [ bkb, initech ]
+  - name: "Agil & Methoden"
+    items: [ "SAFe", "Scrum / Kanban", "Projektmanagement" ]
+    evidence: [ bkb, initech, globex ]
+  - name: "Plattform & Integration"
+    items: [ "Microsoft Azure (IaaS, PaaS)", "API Management", "Entra ID" ]
+    evidence: [ globex, initech, bkb ]
+
+letter:
+  date: 2026-09-24
+  place: Zürich
+  recipient: [ "Kolibri People AG", "People & Culture", "Beispielgasse 7", "8400 Winterthur" ]
+  subject: "Bewerbung als Product Owner HR-Plattform 80–100 % (Referenz KP-0417)"
+  salutation: "Sehr geehrte Damen und Herren"
+  attention:
+    - >-
+      Eine HR-Plattform ist dann gut, wenn Mitarbeitende und HR-Teams sie gern benutzen. Als
+      ICT-Architekt habe ich gelernt, Anforderungen aus dem Fachbereich, technische Machbarkeit und
+      Betrieb zusammenzubringen. Das möchte ich als Product Owner bei Kolibri People einbringen.
+  interest:
+    - >-
+      Mich reizt an Ihrer Stelle die Nähe zu den Anwenderinnen und Anwendern: Entscheide über die
+      Plattform sind hier immer auch Entscheide über den Arbeitsalltag von Menschen.
+  desire:
+    - "Was ich mitbringe:"
+    - points:
+        - >-
+          Roadmaps und Priorisierung: Bei der Beispiel Kantonalbank entwickelte ich Roadmaps
+          gemäss ICT-Strategie und machte Nutzen und Kosten mit Business Cases transparent.
+        - >-
+          Agile Zusammenarbeit: Im Value Stream Cloud nach SAFe erarbeitete ich Lösungsvorschläge
+          mit den Teams; bei initech plante ich Releases für eine grosse IT-Transformation.
+        - >-
+          Integration: Mit Azure, API Management und Entra ID kenne ich die Bausteine, mit denen
+          eine Plattform an bestehende Systeme anschliesst.
+  action:
+    - >-
+      Gerne zeige ich Ihnen in einem Gespräch, wie ich die Plattform mit Ihren Teams
+      weiterentwickeln würde.
+  closing: "Freundliche Grüsse"
+  enclosures: "Zeugnisse und Diplome"
+
+note: >-
+  Sample data for the public repo. Kolibri People AG, the ad and its reference are invented
+  (designer's brief 2026-09-28). No HR software experience is claimed.

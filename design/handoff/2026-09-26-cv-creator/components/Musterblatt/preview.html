@@ -1,0 +1,296 @@
+<!-- @dsCard group="Blatt" height=1240 subtitle="Version, Farbe, Layout, Schrift und Grösse frei kombinieren · fiktive Daten" -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans&family=Helix+Plex+Sans&family=Source+Sans+3&family=Atkinson+Hyperlegible&family=Public+Sans&family=Hanken+Grotesk&family=Source+Serif+4&family=Literata&family=Newsreader&family=Zilla+Slab&display=swap">
+<style>
+  /* Skala cv-ruhig (design/catalog/scale/cv-ruhig.json). Nur rem: die Wahl «Gross» skaliert die Wurzel. */
+  :root {
+    --font-size-h1: clamp(2.5rem, 2.3239rem + 0.7512vw, 3rem);
+    --font-size-h2: clamp(1.625rem, 1.537rem + 0.3756vw, 1.875rem);
+    --font-size-claim: clamp(1.375rem, 1.331rem + 0.1878vw, 1.5rem);
+    --font-size-role: 1.3125rem;
+    --font-size-subtitle: 1.125rem;
+    --font-size-body: 1.0625rem;
+    --font-size-small: 1rem;
+  }
+  html { font-size: 100%; }
+  html[data-size="gross"] { font-size: 112.5%; }
+  body { margin: 0; background: var(--color-bg); color: var(--color-text); }
+  .ms { container-type: inline-size; font-family: var(--font-text); font-weight: 400; padding: var(--space-3); display: grid; gap: var(--space-4); }
+  :where(.ms *) { font: inherit; box-sizing: border-box; }
+
+  /* Werkzeugleiste */
+  .bar { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: end; padding: var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+  .bar label, .bar fieldset { display: grid; gap: var(--space-1); font-size: var(--font-size-small); color: var(--color-text-muted); margin: 0; padding: 0; border: 0; min-width: 0; }
+  .bar legend { padding: 0; margin-bottom: var(--space-1); }
+  .bar select { font-size: var(--font-size-small); color: var(--color-text); background: var(--color-bg); border: 1px solid var(--color-border-strong); border-radius: var(--radius); min-height: 44px; padding: 0 var(--space-3); max-width: 100%; }
+  .seg { display: flex; border: 1px solid var(--color-border-strong); border-radius: var(--radius); overflow: hidden; }
+  .seg input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .seg span { display: grid; place-items: center; min-height: 42px; min-width: 64px; padding: 0 var(--space-3); color: var(--color-text); background: var(--color-bg); cursor: pointer; }
+  .seg input:checked + span { background: var(--color-accent); color: var(--color-on-accent); }
+  .bar select:focus-visible, .seg input:focus-visible + span { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+
+  /* Blatt */
+  .sheet { background: var(--color-bg); color: var(--color-text); border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; display: grid; font-size: var(--font-size-body); line-height: 1.6; hyphens: auto; overflow-wrap: break-word; }
+  .sheet > * { min-width: 0; }
+  .head, .main, .side, .foot { padding: var(--space-5); display: grid; gap: var(--space-5); align-content: start; }
+  .head { gap: var(--space-2); grid-template-columns: 1fr auto; align-items: start; }
+  .head .who { display: grid; gap: var(--space-2); min-width: 0; }
+  .name { font-size: var(--font-size-h1); line-height: 1.1; margin: 0; text-wrap: balance; }
+  .target, .headline { font-size: var(--font-size-subtitle); line-height: 1.4; margin: 0; }
+  .target { color: var(--color-accent); }
+  .contact { display: grid; gap: var(--space-2); }
+  .contact h2 { display: none; }
+  .contact p { margin: 0; color: var(--color-text-muted); }
+  .contact a { color: var(--color-accent); text-decoration-thickness: 1px; text-underline-offset: 3px; overflow-wrap: anywhere; }
+  .portrait { width: 104px; aspect-ratio: 4 / 5; border-radius: var(--radius-md); border: 1px solid var(--color-border-strong); display: grid; place-items: center; color: var(--color-text-muted); font-size: var(--font-size-small);
+    background: repeating-linear-gradient(45deg, var(--color-surface-sunk) 0 6px, var(--color-surface) 6px 12px); }
+  section { display: grid; gap: var(--space-3); }
+  section > h2 { font-size: var(--font-size-h2); line-height: 1.2; margin: 0 0 var(--space-1); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-accent); text-wrap: balance; }
+  .claim { font-size: var(--font-size-claim); line-height: 1.35; margin: 0; max-width: 34ch; text-wrap: balance; }
+  .lead { margin: 0; max-width: var(--content-max-width); }
+  .station { display: grid; grid-template-columns: minmax(0, 1fr); column-gap: var(--space-4); row-gap: var(--space-1); padding-bottom: var(--space-4); }
+  .station + .station { padding-top: var(--space-4); border-top: 1px solid var(--color-border); }
+  .sheet[data-layout="cv"] .station, .sheet[data-layout="1c"] .station { grid-template-columns: auto minmax(0, 1fr); }
+  .sheet[data-layout="cv"] .station > :not(.year), .sheet[data-layout="1c"] .station > :not(.year) { grid-column: 2; }
+  .year { grid-column: 1; grid-row: 1; font-size: var(--font-size-role); line-height: 1.3; color: var(--color-text-muted); font-variant-numeric: tabular-nums; display: none; }
+  .role { font-size: var(--font-size-role); line-height: 1.3; margin: 0; }
+  .org { font-size: var(--font-size-subtitle); line-height: 1.4; margin: 0 0 var(--space-2); }
+  .period { color: var(--color-text-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .sum { color: var(--color-text-muted); margin: 0; max-width: var(--content-max-width); }
+  .hl { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); max-width: var(--content-max-width); }
+  .hl li { display: grid; grid-template-columns: 1.25em 1fr; }
+  .hl li::before { content: "–"; color: var(--color-accent); }
+  .group { display: grid; gap: var(--space-2); }
+  .group h3 { font-size: var(--font-size-subtitle); line-height: 1.4; margin: 0; }
+  .rows { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); }
+  .rows li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-1) var(--space-3); align-items: center; break-inside: avoid; }
+  .lvl { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--color-text-muted); white-space: nowrap; }
+  .dots { display: inline-flex; gap: 4px; }
+  .dots i { width: 10px; height: 10px; border-radius: var(--radius-pill); border: 1.5px solid var(--color-level-empty); }
+  .dots i.on { background: var(--color-accent); border-color: var(--color-accent); }
+  .legend { font-size: var(--font-size-small); color: var(--color-text-faint); margin: 0; }
+  .legend span { white-space: nowrap; }
+  .lang { margin: 0; display: flex; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap; }
+  .lang span:last-child { color: var(--color-text-muted); }
+  .foot { font-size: var(--font-size-small); color: var(--color-text-faint); padding-top: var(--space-3); padding-bottom: var(--space-3); border-top: 1px solid var(--color-border); }
+
+  /* cv: eine Spalte mit Zeitstrahl-Jahr, Kompetenzen zweispaltig */
+  .sheet[data-layout="cv"] .year, .sheet[data-layout="1c"] .year { display: block; }
+  .sheet[data-layout="cv"] .portrait { order: -1; }
+  .sheet[data-layout="cv"] .head { grid-template-columns: auto 1fr; column-gap: var(--space-4); }
+  .sheet[data-layout="cv"] .side, .sheet[data-layout="1c"] .side { padding-top: 0; }
+  @container (min-width: 720px) {
+    .sheet[data-layout="cv"] .skills, .sheet[data-layout="1c"] .skills { grid-template-columns: 1fr 1fr; column-gap: var(--space-5); }
+    .sheet[data-layout="cv"] .skills > h2, .sheet[data-layout="1c"] .skills > h2,
+    .sheet[data-layout="cv"] .skills > .legend, .sheet[data-layout="1c"] .skills > .legend { grid-column: 1 / -1; }
+
+    /* 1a: Seitenleiste in surface-sunk, randabfallend */
+    .sheet[data-layout="1a"] { grid-template-columns: minmax(220px, 32%) 1fr; grid-template-areas: "side head" "side main" "side foot"; }
+    .sheet[data-layout="1a"] .side { grid-area: side; background: var(--color-surface-sunk); }
+    .sheet[data-layout="1a"] .head { grid-area: head; grid-template-columns: 1fr; padding-bottom: 0; }
+    .sheet[data-layout="1a"] .main { grid-area: main; }
+    .sheet[data-layout="1a"] .foot { grid-area: foot; }
+
+    /* 1b: Kopfband in surface, darunter Haupt- und schmale Spalte */
+    .sheet[data-layout="1b"] { grid-template-columns: 1fr minmax(200px, 30%); grid-template-areas: "head head" "main side" "foot foot"; }
+    .sheet[data-layout="1b"] .head { grid-area: head; background: var(--color-surface); border-bottom: 1px solid var(--color-border); grid-template-columns: auto 1fr auto; column-gap: var(--space-4); }
+    .sheet[data-layout="1b"] .portrait { order: -1; }
+    .sheet[data-layout="1b"] .main { grid-area: main; }
+    .sheet[data-layout="1b"] .side { grid-area: side; padding-left: 0; }
+    .sheet[data-layout="1b"] .foot { grid-area: foot; }
+  }
+  @container (max-width: 560px) {
+    .head, .main, .side, .foot { padding: var(--space-4) var(--space-3); }
+    .sheet .head { grid-template-columns: minmax(0, 1fr); }
+    .sheet .portrait { order: -1; width: 88px; }
+    .sheet[data-layout] .station { grid-template-columns: minmax(0, 1fr); }
+    .sheet[data-layout][data-theme] .station > * { grid-column: 1; grid-row: auto; }
+    .rows li { grid-template-columns: minmax(0, 1fr); }
+  }
+  .sheet[data-layout="1a"] .contact h2 { display: block; }
+  .sheet[data-layout="1a"] .side .portrait { width: 120px; }
+  .sheet[data-layout="1b"] .contact { align-self: end; }
+  @media (prefers-reduced-motion: no-preference) { .seg span { transition: background-color 120ms ease-out, color 120ms ease-out; } }
+</style>
+
+<div class="ms">
+  <form class="bar" aria-label="Blatt einstellen" onsubmit="return false">
+    <label>Version
+      <select id="ms-version">
+        <option value="light|cv">Haupt-CV</option>
+        <option value="light|1a">IT Business Service Manager</option>
+        <option value="petrol|1b">Product Manager</option>
+        <option value="indigo|1c">ICT Architect</option>
+      </select>
+    </label>
+    <label>Farbe
+      <select id="ms-color">
+        <option value="light">Granat · Papier</option>
+        <option value="dark">Granat · Abend</option>
+        <option value="petrol">Petrol · dunkles Blatt</option>
+        <option value="indigo">Indigo · kühl</option>
+        <option value="tanne">Tanne</option>
+        <option value="ocker">Ocker</option>
+        <option value="marine">Marine</option>
+        <option value="graphit">Graphit</option>
+      </select>
+    </label>
+    <label>Layout
+      <select id="ms-layout">
+        <option value="cv">cv · eine Spalte</option>
+        <option value="1a">1a · Seitenleiste</option>
+        <option value="1b">1b · Kopfband</option>
+        <option value="1c">1c · Zeitstrahl</option>
+      </select>
+    </label>
+    <label>Schrift
+      <select id="ms-font">
+        <option value="instrument-sans">Instrument Sans</option>
+        <option value="ibm-plex-sans">IBM Plex Sans</option>
+        <option value="source-sans-3">Source Sans 3</option>
+        <option value="atkinson-hyperlegible">Atkinson Hyperlegible</option>
+        <option value="public-sans">Public Sans</option>
+        <option value="hanken-grotesk">Hanken Grotesk</option>
+        <option value="source-serif-4">Source Serif 4</option>
+        <option value="literata">Literata</option>
+        <option value="newsreader">Newsreader</option>
+        <option value="zilla-slab">Zilla Slab</option>
+      </select>
+    </label>
+    <fieldset>
+      <legend>Grösse</legend>
+      <div class="seg">
+        <label><input type="radio" name="ms-size" value="normal" checked><span>Normal</span></label>
+        <label><input type="radio" name="ms-size" value="gross"><span>Gross</span></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <article class="sheet" id="ms-sheet" data-theme="light" data-layout="cv" lang="de" aria-label="Musterblatt Lebenslauf, fiktive Person">
+    <header class="head" data-block="head">
+      <div class="who">
+        <h1 class="name">Robin Muster</h1>
+        <p class="target">Bewerbung als Projektleiter Digitalisierung</p>
+        <p class="headline">IT-Business-Consultant für Prozesse und Einführungen</p>
+        <section class="contact" id="ms-contact" data-block="contact">
+          <h2>Kontakt</h2>
+          <p>Zürich · <a href="#ms-sheet">robin.muster@example.ch</a> · <a href="#ms-sheet">linkedin.com/in/robin-muster</a></p>
+        </section>
+      </div>
+      <div class="portrait" id="ms-portrait" aria-label="Platzhalter für das Porträt">RM</div>
+    </header>
+
+    <div class="main">
+      <section data-block="profile">
+        <h2>Profil</h2>
+        <p class="claim">Ich bringe Fachbereich und IT an einen Tisch und führe Vorhaben bis in den Betrieb.</p>
+        <p class="lead">Zehn Jahre Erfahrung in Banken und Versicherungen, davon fünf als Projektleiter. Schwerpunkte sind Anforderungen, Prozessdesign und die Einführung neuer Systeme bei vielen Beteiligten.</p>
+      </section>
+
+      <section data-block="experience">
+        <h2>Berufserfahrung</h2>
+        <div class="station" data-block="entry">
+          <span class="year">2019</span>
+          <h3 class="role">Projektleiter Digitalisierung</h3>
+          <p class="org">Musterbank AG, Zürich · <span class="period">03.2019 – heute</span></p>
+          <p class="sum">Leitung von Vorhaben im Kundenservice mit bis zu zwölf Personen.</p>
+          <ul class="hl">
+            <li>Neues Kundenportal in vier Ländern eingeführt, termingerecht und im Budget.</li>
+            <li>Durchlaufzeit von Kundenanfragen von 22 auf 13 Tage gesenkt.</li>
+            <li>Betriebsübergabe mit Schulung für 140 Mitarbeitende geplant und durchgeführt.</li>
+          </ul>
+        </div>
+        <div class="station" data-block="entry">
+          <span class="year">2016</span>
+          <h3 class="role">Business Analyst</h3>
+          <p class="org">Beispiel Versicherung AG, Bern · <span class="period">09.2016 – 02.2019</span></p>
+          <p class="sum">Anforderungen und Prozesse für die Schadenabwicklung.</p>
+          <ul class="hl">
+            <li>Schadenprozess neu modelliert, Medienbrüche von sieben auf zwei reduziert.</li>
+            <li>Abnahmetests mit dem Fachbereich aufgebaut und moderiert.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section data-block="education">
+        <h2>Ausbildung</h2>
+        <div class="station" data-block="entry">
+          <span class="year">2014</span>
+          <h3 class="role">MAS Business Engineering</h3>
+          <p class="org">Fachhochschule Muster, Olten · <span class="period">09.2014 – 06.2016</span></p>
+        </div>
+      </section>
+    </div>
+
+    <aside class="side" id="ms-side">
+      <section class="skills" data-block="skills">
+        <h2>Kompetenzen</h2>
+        <div class="group" data-block="group">
+          <h3>Methodenkompetenz</h3>
+          <ul class="rows">
+            <li><span>Anforderungsmanagement</span><span class="lvl"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>Spezialist</span></li>
+            <li><span>Programmleitung</span><span class="lvl"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>Erfahren</span></li>
+            <li><span>Moderation</span><span class="lvl"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>Erfahren</span></li>
+          </ul>
+        </div>
+        <div class="group" data-block="group">
+          <h3>Technologie</h3>
+          <ul class="rows">
+            <li><span>Prozessmodellierung BPMN</span><span class="lvl"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>Spezialist</span></li>
+            <li><span>Scrum und Kanban</span><span class="lvl"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>Erfahren</span></li>
+            <li><span>SQL</span><span class="lvl"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span>Erste Erfahrung</span></li>
+          </ul>
+        </div>
+        <p class="legend">Stufen: <span>1 Grundkenntnisse</span> · <span>2 Erste Erfahrung</span> · <span>3 Erfahren</span> · <span>4 Spezialist</span></p>
+      </section>
+      <section data-block="languages">
+        <h2>Sprachen</h2>
+        <p class="lang"><span>Deutsch</span><span>Muttersprache</span></p>
+        <p class="lang"><span>Englisch</span><span>Fliessend</span></p>
+        <p class="lang"><span>Französisch</span><span>Gute Kenntnisse</span></p>
+      </section>
+    </aside>
+
+    <footer class="foot">Robin Muster · Lebenslauf · Seite 1 von 2</footer>
+  </article>
+</div>
+
+<script>
+(function () {
+  var sheet = document.getElementById('ms-sheet');
+  var who = sheet.querySelector('.who');
+  var head = sheet.querySelector('.head');
+  var side = document.getElementById('ms-side');
+  var contact = document.getElementById('ms-contact');
+  var portrait = document.getElementById('ms-portrait');
+  var version = document.getElementById('ms-version');
+  var color = document.getElementById('ms-color');
+  var layout = document.getElementById('ms-layout');
+  var font = document.getElementById('ms-font');
+
+  function applyLayout(l) {
+    sheet.setAttribute('data-layout', l);
+    if (l === '1a') {
+      side.insertBefore(contact, side.firstChild);
+      side.insertBefore(portrait, side.firstChild);
+    } else {
+      who.appendChild(contact);
+      head.appendChild(portrait);
+    }
+  }
+  version.addEventListener('change', function () {
+    var p = version.value.split('|');
+    color.value = p[0]; layout.value = p[1];
+    sheet.setAttribute('data-theme', p[0]);
+    applyLayout(p[1]);
+  });
+  color.addEventListener('change', function () { sheet.setAttribute('data-theme', color.value); });
+  layout.addEventListener('change', function () { applyLayout(layout.value); });
+  font.addEventListener('change', function () { sheet.style.fontFamily = 'var(--font-' + font.value + ')'; });
+  document.querySelectorAll('input[name="ms-size"]').forEach(function (r) {
+    r.addEventListener('change', function () { document.documentElement.setAttribute('data-size', r.value); });
+  });
+  applyLayout(layout.value);
+})();
+</script>

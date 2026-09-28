@@ -1,0 +1,94 @@
+# Keyword analysis for the role version "ICT-Architekt" (kind: article). Public once merged,
+# unlisted and noindex. Facts about the owner come only from ../cv.yaml; the job ads are
+# summarised without company names. Self-assessment levels are proposals and match
+# ../profiles/ict-architect.yaml.
+
+kind: article
+base: ../cv.yaml
+id: stichwortanalyse-ict-architect
+languages: [de]
+title: "Stichwortanalyse: ICT-Architekt"
+lead: >-
+  Grundlage sind sechs Stelleninserate aus der Region Zürich, die im September 2026
+  ausgeschrieben waren: eine Bank, ein Finanzdienstleister, eine kantonale Verwaltung, ein
+  Telekom- und Cloud-Anbieter und zwei IT-Beratungen. Gesucht waren Enterprise-, IT- und
+  Solution-Architektinnen und -Architekten. Die Häufigkeit zählt, in wie vielen Inseraten ein
+  Stichwort als Pflicht oder als Vorteil vorkommt. Die Selbsteinschätzung folgt der vierstufigen
+  Skala von Grundkenntnisse (1) bis Spezialist (4). Die Stichprobe ist klein und zeigt
+  Tendenzen, keine Statistik. Stand 09.2026.
+
+sections:
+  - heading: "Häufige Anforderungen"
+    blocks:
+      - table:
+          columns: ["Stichwort", "Häufigkeit", "Nachweis im Lebenslauf", "Selbsteinschätzung"]
+          rows:
+            - ["Mehrjährige Architekturerfahrung (Enterprise, Solution)", "6/6", "ICT-Architekt (BKB), Teilprojektleiter Cloud-Architektur (Globex Consulting), Team Lead IT-Architektur (initech)", "Spezialist (4)"]
+            - ["Ziel- und Lösungsarchitekturen", "6/6", "Azure-Zielarchitekturen (Globex Consulting), vorhabenübergreifende Architekturen (BKB), Integrationskonzept (initech)", "Spezialist (4)"]
+            - ["Stakeholder-Management, Kommunikation mit Fachbereichen und Management", "6/6", "Beratung von ICT-Projekten, Teamleitungen und CIO-Gremien (BKB), wöchentliche Kundenpräsentationen (Globex Consulting)", "Spezialist (4)"]
+            - ["Studium (Wirtschafts-)Informatik", "5/6", "MSc und BSc Wirtschaftsinformatik (Beispiel-Hochschule), Informatiker EFZ", "erfüllt"]
+            - ["Sehr gutes Deutsch, teils auch Englisch", "5/6", "Deutsch Muttersprache, Englisch fliessend", "erfüllt"]
+            - ["Architekturstandards, Governance, Konformitätsprüfung", "4/6", "Standards und Roadmaps, Prüfung von Vorhaben auf Architekturrelevanz und Konformität (BKB)", "Erfahren (3)"]
+            - ["Cloud (Azure, Private Cloud)", "4/6", "Cloud-Strategie (BKB), Migration von über 1000 Servern auf Azure (Globex Consulting), Helix Cloud Private, AZ-305", "Azure Spezialist (4), Private Cloud Erfahren (3)"]
+            - ["TOGAF", "4/6, davon 1× Pflicht", "Bachelorarbeit in Enterprise Architecture (TOGAF, ArchiMate), kein Zertifikat", "Erfahren (3)"]
+            - ["Branchenerfahrung Finanz, Versicherung oder öffentliche Hand", "4/6, als Vorteil", "BKB und BZB; Projekte für ein Bundesamt und eine Krankenversicherung (initech)", "erfüllt"]
+            - ["IT-Strategie und Roadmaps", "3/6", "Roadmaps gemäss ICT-Strategie, Mitentwicklung der Cloud-Strategie (BKB)", "Roadmaps Erfahren (3), Cloud-Strategie Spezialist (4)"]
+            - ["Leitung von Projekten und Teams", "3/6", "Projektteam mit bis zu 12 Personen inkl. Termin- und Budgetverantwortung (Globex Consulting), Team Lead (initech)", "Projektmanagement Spezialist (4), Teamführung Erfahren (3)"]
+            - ["Technologie-Evaluation, Pilotprojekte", "3/6", "Anbieterevaluation (BKB), Proofs of Concept (initech, Helix)", "Erfahren (3)"]
+            - ["Sicherheit und Resilienz", "3/6", "WAF und SIEM-Anbindung (Globex Consulting), operative Resilienz und Cloud-Backup (BKB), Entra ID", "Azure-Security Spezialist (4), Resilienz und IAM Erfahren (3)"]
+            - ["Business Cases, Aufwand und Kosten", "2/6", "Business Cases, TCO- und CapEx/OpEx-Analysen (BKB, Globex Consulting)", "Spezialist (4)"]
+            - ["Integration, APIs, ERP/CRM", "2/6", "API Management und Anbindung an Dynamics 365 (initech), SAP ERP (Swiss IT Services)", "Integration Erfahren (3), ERP/CRM Erste Erfahrung (2)"]
+            - ["Daten- und KI-Architektur", "2/6", "Azure Data Factory und Azure SQL (initech), Helix Watson", "Erste Erfahrung (2)"]
+            - ["Azure-Zertifizierung", "1/6, Pflicht", "AZ-305 (2025)", "erfüllt"]
+            - ["ArchiMate, UML, BPMN", "1/6, Pflicht", "ArchiMate in der Bachelorarbeit; UML und BPMN nicht belegt", "teilweise"]
+      - >-
+        Alle 13 Anforderungen, die in mindestens drei Inseraten vorkommen, kann ich mit
+        Stationen oder Abschlüssen belegen. Bei TOGAF fehlt der formale Nachweis: Ein Inserat
+        verlangt fundierte TOGAF-Kenntnisse, drei nennen TOGAF als Vorteil.
+
+  - heading: "Positionierung"
+    blocks:
+      - >-
+        Ich positioniere mich als ICT-Architekt, der Architektur-Governance und Umsetzung
+        verbindet. Die Inserate verlangen vor allem Erfahrung mit Zielarchitekturen, Standards
+        und Governance sowie die Fähigkeit, Entscheide mit Fachbereichen und Management
+        vorzubereiten. Eine bestimmte Plattform ist nur in einem Inserat Pflicht (Azure). Diese
+        Anforderungen deckt meine Rolle als ICT-Architekt bei der BKB direkt ab:
+        Standards und Roadmaps gemäss ICT-Strategie, Konformitätsprüfungen und Beratung bis in
+        CIO-Gremien.
+      - >-
+        Die Beratungsjahre bei Globex Consulting und initech zeigen die Umsetzungsseite:
+        Azure-Zielarchitekturen, eine globale Migration von über 1000 Servern, Teilprojektleitung
+        mit bis zu 12 Personen sowie Integration und API Management. Mit Bank, Zentralbank,
+        einem Bundesamt und einer Krankenversicherung passe ich zu den Branchen, die vier von
+        sechs Inseraten als Vorteil nennen.
+      - >-
+        Im Lebenslauf stehen deshalb Enterprise-Architektur, Governance und Cloud-Strategie vor
+        der Technologie. Azure dient als Beleg für Umsetzung, nicht als Hauptprofil. Für Stellen
+        mit Schwerpunkt Cloud-Engineering passt eine technischere Version besser.
+
+  - heading: "Lücken und Empfehlungen"
+    blocks:
+      - list:
+          - "TOGAF (4/6, einmal Pflicht): nur über die Bachelorarbeit belegt, ohne Zertifikat. Empfehlung: im Gespräch mit Beispielen zeigen, wie ich die Architekturarbeit bei der BKB strukturiert habe, und die TOGAF-Zertifizierung (Foundation) als Option prüfen."
+          - "UML und BPMN (1/6, Pflicht): im Lebenslauf nicht belegt. Empfehlung: nur aufnehmen, wenn ich Praxisbeispiele nennen kann, sonst vor einer solchen Bewerbung die Grundlagen auffrischen."
+          - "Daten- und KI-Architektur (2/6): Lakehouse, Data Mesh und Leitplanken für generative KI sind nicht belegt, Datenintegration nur aus einem Projekt. Empfehlung: Stellen mit diesem Schwerpunkt gezielt auswählen oder eine Weiterbildung zu Datenplattformen prüfen."
+          - "Regulatorik: Ein Inserat aus dem Finanzbereich nennt regulatorische Anforderungen als Vorteil. Mein Lebenslauf nennt operative Resilienz, aber keine konkreten Vorgaben. Empfehlung: nur ergänzen, was sich belegen lässt."
+          - "Kennzahlen: Ausser Server-, Länder- und Teamzahl enthält der Lebenslauf kaum Zahlen. Empfehlung: weitere Zahlen nur mit Beleg aufnehmen, etwa die Anzahl Zielarchitekturen bei Globex Consulting, sobald sie bestätigt ist."
+          - "Zertifikat: AZ-305 (2025) steht im Haupt-CV, die Rollenversion zeigt keine Zertifikate. Ein Inserat verlangt eine Azure-Zertifizierung als Pflicht. Empfehlung: AZ-305 bei dieser Bewerbung im Anschreiben nennen."
+          - "Eigeninitiative und Flexibilität (2/6): im Lebenslauf nur indirekt sichtbar. Empfehlung: im Anschreiben ein konkretes Beispiel nennen."
+
+  - heading: "Links"
+    blocks:
+      - links:
+          - { label: "Lebenslauf ICT-Architekt", page: ict-architect }
+          - { label: "Coaching-Übersicht", page: coaching }
+
+note: >-
+  Stichprobe am 2026-09-23 erhoben (jobs.ch, jobs.example.com, Karriereseite eines
+  Beratungsunternehmens); Firmennamen bewusst weggelassen. Inserate: Enterprise Architect AI &
+  Data (Bank, 04.2026); Lead IT Architect (Finanzdienstleister, 07.2026); Enterprise Architect
+  für digitale Steuerlösungen (kantonale Verwaltung, 08.2026); Senior IT Architecture
+  Consultant (IT-Beratung, 08.2026); Senior Enterprise Architect (IT-Beratung, ohne Datum, im
+  September 2026 online); Cloud Solution Architect Presales (Telekom und Cloud, 09.2026).
+  Selbsteinschätzungen sind Vorschläge.

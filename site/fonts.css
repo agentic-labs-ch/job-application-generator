@@ -1,0 +1,10 @@
+/* Self-hosted font (SIL Open Font License 1.1, via @fontsource): one family in Regular 400
+   (design system rule 1, F2: Instrument Sans). The Latin subset covers German and English.
+   The file is copied to assets/fonts/ by scripts/build.mjs. */
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/instrument-sans-latin-400-normal.woff2") format("woff2");
+}

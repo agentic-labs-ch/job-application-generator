@@ -1,0 +1,346 @@
+# Public CV master dataset. Content approved by the owner on 2026-09-22 for tracking in this
+# private repository. Publication is NOT yet approved (see docs/source-of-truth.md).
+# Everything in this file is public content: `tags` and `note` are never rendered, but they are
+# not confidential either. Skill levels, headline and summary are proposals pending owner review.
+
+meta:
+  languages: [de, en]
+
+profile:
+  name: Alex Muster
+  headline:
+    de: "ICT-Architekt · Cloud & Infrastruktur"
+    en: "ICT Architect · Cloud & Infrastructure"
+  location:
+    de: "Zürich, Schweiz"
+    en: "Zurich, Switzerland"
+  summary:
+    de: >-
+      Enterprise- und Cloud-Architekt mit Erfahrung in Bank, Beratung und Technologie. Ich
+      gestalte Zielarchitekturen und Cloud-Strategien, führe Architektur-Teams durch grosse
+      Migrationen und übersetze Technik in klare Entscheidungen für Business und IT. Stärken:
+      analytisches Denken, Lösungsdesign, Kundenorientierung, Teamfähigkeit.
+    en: >-
+      Enterprise and cloud architect with experience in banking, consulting and technology. I
+      design target architectures and cloud strategies, lead architecture teams through large
+      migrations and turn technology into clear decisions for business and IT. Strengths:
+      analytical thinking, solution design, client focus, teamwork.
+  links:
+    - label:
+        de: E-Mail
+        en: Email
+      url: mailto:alex.muster@example.com
+    - label: LinkedIn
+      url: https://example.com/alex-muster
+  interests:
+    de: >-
+      Technologie, Politik, Reisen & Backpacking (Asien, Südamerika, Südafrika), Fussball
+      (7 Jahre FC Beispiel), Fitness, Motorrad, Boxen; PADI Advanced Open Water Diver
+    en: >-
+      Technology, politics, travel & backpacking (Asia, South America, South Africa), football
+      (7 years FC Beispiel), fitness, motorcycling, boxing; PADI Advanced Open Water Diver
+  photo:
+    src: portrait.jpg
+    alt:
+      de: Porträt von Alex Muster
+      en: Portrait of Alex Muster
+    width: 480
+    height: 600
+  note: Headline and summary are proposals pending owner review. Photo approved for publication by the owner on 2026-09-23.
+
+experience:
+  - id: bkb
+    organization: Beispiel Kantonalbank (BKB)
+    location: Zürich
+    start: 2023-12
+    end: 2026-02
+    tags: [architecture, cloud, banking, consulting]
+    # Owner 2026-09-26: "ICT-Architekt" only (no "Senior", no Enterprise IT-Architekt / Solution Engineer).
+    role:
+      de: ICT-Architekt
+      en: ICT Architect
+    highlights:
+      - de: "Entwicklung und Pflege vorhabenübergreifender Enterprise- und ICT-Architekturen inkl. Standards und Roadmaps gemäss ICT-Strategie"
+        en: "Developed and maintained cross-project enterprise and ICT architectures incl. standards and roadmaps aligned with the ICT strategy"
+      - de: "Mitentwicklung der Cloud-Strategie und des Sourcing-Modells (IaaS, PaaS, SaaS, On-Prem) inkl. Business Cases, TCO- und CapEx/OpEx-Analysen"
+        en: "Co-developed the cloud strategy and sourcing model (IaaS, PaaS, SaaS, on-prem) incl. business cases, TCO and CapEx/OpEx analyses"
+      - de: "Architektur für operative Resilienz, Cloud-Backup und Lifecycle-Management der IT-Infrastruktur"
+        en: "Architecture for operational resilience, cloud backup and IT infrastructure lifecycle management"
+      - de: "Betreuung des Value Stream Cloud: Architekturkonformität und Lösungsvorschläge auf Basis des Microsoft-Azure-Servicekatalogs"
+        en: "Supported the Cloud value stream: architecture compliance and solution proposals based on the Microsoft Azure service catalogue"
+      - de: "Beratung von ICT-Projekten, Teamleitungen und CIO-Gremien, u. a. bei Beschaffung und Anbieterevaluation von IT-Produkten und Services"
+        en: "Advised ICT projects, team leads and CIO boards, incl. procurement and vendor evaluation of IT products and services"
+      - de: "Prüfung der Architekturrelevanz und Konformität von Vorhaben"
+        en: "Reviewed projects for architecture relevance and compliance"
+      - de: "Erstellung von Trainingsmaterial und Präsentationen in internen und externen Gremien"
+        en: "Created training material and presented at internal and external boards"
+      - de: "Zusammenarbeit mit Portfolio- und Projektmanagement zu Migrationsplänen und dem Cloud Target Operating Model; Arbeit nach SAFe"
+        en: "Worked with portfolio and project management on migration plans and the cloud target operating model; SAFe"
+
+  - id: globex
+    organization: Globex Consulting AG
+    location: Zürich
+    start: 2021-07
+    end: 2023-11
+    tags: [cloud, consulting, leadership, security, architecture]
+    role:
+      de: "Consultant · Teilprojektleiter Cloud-Architektur"
+      en: "Consultant · Sub-project Lead, Cloud Architecture"
+    highlights:
+      - de: "Führung eines Projektteams mit bis zu 12 Personen inkl. Termin- und Budgetverantwortung; Stellvertretung des Delivery Lead"
+        en: "Led a project team of up to 12 people incl. schedule and budget responsibility; deputy to the delivery lead"
+      - de: "Globale Cloud-Transformation: Migration von über 1000 Servern in über 50 Ländern auf Azure (Lift & Shift)"
+        en: "Global cloud transformation: migrated 1000+ servers across 50+ countries to Azure (lift & shift)"
+      - de: "Entwicklung von Zielarchitekturen für Azure mit Business- und IT-Stakeholdern"
+        en: "Designed Azure target architectures with business and IT stakeholders"
+      - de: "Design und Implementierung von Cloud-Security-Services (WAF, Load Balancer) sowie globale Anbindung von SIEM- und Monitoring-Tools"
+        en: "Designed and implemented cloud security services (WAF, load balancer) and connected SIEM and monitoring tools globally"
+      - de: "Integration von Azure Services in Operating Models inkl. RACI"
+        en: "Integrated Azure services into operating models incl. RACI"
+      - de: "Planung der schrittweisen Migration von Active Directory zu Entra ID"
+        en: "Planned the phased migration from Active Directory to Entra ID"
+      - de: "Business Cases und Kosten-Nutzen-Vergleiche (u. a. Azure Hybrid Benefit); wöchentliche Kundenpräsentationen"
+        en: "Business cases and cost-benefit comparisons (incl. Azure Hybrid Benefit); weekly client presentations"
+    note: Number of target architectures open (60+ or 100+); owner to decide. Omitted until then.
+
+  - id: initech
+    organization: Initech Solutions AG
+    location: Zürich & Bern
+    start: 2019-10
+    end: 2021-02
+    tags: [consulting, architecture, development, cloud, leadership]
+    role:
+      de: "Consultant; ab 01.2021 Senior Consultant"
+      en: "Consultant; Senior Consultant from 01.2021"
+    projects:
+      - start: 2019-10
+        end: 2020-10
+        description:
+          de: "Team Lead IT-Architektur, Engineering und API Management für die IT-Transformation eines Bundesamts: Projektmanagement inkl. Budget und Zeitplan, Einarbeitung von Mitarbeitenden, Stakeholder-Management mit Behörden- und Partnerorganisationen, Release-Planung"
+          en: "Team lead for IT architecture, engineering and API management in a federal office's IT transformation: project management incl. budget and schedule, onboarding team members, stakeholder management with public-sector and partner organisations, release planning"
+      - start: 2020-11
+        end: 2021-02
+        description:
+          de: "Azure-Cloud-Integration bei einer grossen Krankenversicherung: Konzept und Architektur zur Integration einer On-Prem-Oracle-DB in Dynamics 365 (Azure Data Factory, Azure SQL, Landing Zone) inkl. Proof of Concept"
+          en: "Azure cloud integration for a major health insurer: concept and architecture to integrate an on-prem Oracle DB into Dynamics 365 (Azure Data Factory, Azure SQL, landing zone) incl. proof of concept"
+    highlights:
+      - de: "Technologien: Java, Webservices, API Management, IAM, Docker, Azure"
+        en: "Technologies: Java, web services, API management, IAM, Docker, Azure"
+
+  - id: helix
+    organization: Helix Technologies Schweiz AG
+    location: Zürich & New York
+    start: 2017-10
+    end: 2019-10
+    tags: [presales, cloud, ai, development]
+    role: "Junior Software Engineer (Master@Helix) · Technical Sales Support"
+    highlights:
+      - de: "Aufbau von Helix Cloud Private on-premise im eigenen Rechenzentrum (VMs, Kubernetes, Docker)"
+        en: "Set up Helix Cloud Private on-premise in Helix's data centre (VMs, Kubernetes, Docker)"
+      - de: "Integration von Watson-KI-Services in einen Pepper-Roboter für einen Kunden bei Helix Research"
+        en: "Implemented Watson AI services on a Pepper robot for a client at Helix Research"
+      - de: "Proof of Concept für eine sichere Access-Management-Lösung (APIs, OAuth 2.0)"
+        en: "Proof of concept for a secure access management solution (APIs, OAuth 2.0)"
+      - de: "Blockchain-basierter Prozess für die Firmengründung in der Schweiz (Hyperledger, digitalswitzerland)"
+        en: "Blockchain-based company-formation process for Switzerland (Hyperledger, digitalswitzerland)"
+      - de: "Forschung zur Texterkennung in komplexen Bildern mit neuronalen Netzen"
+        en: "Research on text recognition in complex images with deep neural networks"
+      - de: "Cloud-Schulungen für das Sales-Team; technischer Experte an Hackathons"
+        en: "Cloud training for sales peers; technical expert at hackathons"
+      - de: "Zusammenarbeit mit dem CTO von Helix Schweiz im Pre-Sales"
+        en: "Worked with the CTO of Helix Switzerland in pre-sales"
+      - de: "Einsatz in New York (08.2018–12.2018)"
+        en: "Assignment in New York (08.2018–12.2018)"
+
+  - id: example-it-services
+    organization: Example IT Services International
+    location: Zürich
+    start: 2013-10
+    end: 2015-04
+    tags: [development]
+    role:
+      de: "Softwareentwickler SAP/ERP (neben dem Studium)"
+      en: "Software Developer SAP/ERP (alongside studies)"
+    highlights:
+      - de: "Entwicklung und Anpassung von SAP-ERP-Lösungen (ABAP) für Kunden in einem agilen Team"
+        en: "Developed and customised SAP ERP solutions (ABAP) for clients in an agile team"
+      - de: "Optimierung von SQL-Abfragen für die Performance der Produktivdatenbank; Projektplanung"
+        en: "Optimised SQL queries for production database performance; project planning"
+
+  - id: bzb
+    organization: Beispiel Zentralbank (BZB)
+    location: Zürich
+    start: 2012-08
+    end: 2013-08
+    tags: [development, banking]
+    role:
+      de: "Softwareentwickler (Praktikum)"
+      en: "Software Developer (Internship)"
+    highlights:
+      - de: "Migration des Zeitreihen-Analysesystems in Zusammenarbeit mit Ökonominnen und Ökonomen (Java, Groovy; Scrum, Kanban)"
+        en: "Migrated the time-series analysis system together with economists (Java, Groovy; Scrum, Kanban)"
+
+education:
+  - id: beispiel-hochschule-msc
+    institution: Beispiel School of Management and Law
+    location: Zürich
+    start: 2017-09
+    end: 2019-07
+    tags: [education, ai]
+    degree:
+      de: MSc Wirtschaftsinformatik
+      en: MSc Business Information Technology
+    summary:
+      de: "Masterarbeit bei Helix Research (Texterkennung, Machine Learning); Austauschsemester Hudson College, New York (08.2018–12.2018)"
+      en: "Master's thesis at Helix Research (text recognition, machine learning); exchange semester at Hudson College, New York (08.2018–12.2018)"
+
+  - id: beispiel-hochschule-bsc
+    institution: Beispiel School of Management and Law
+    location: Winterthur
+    start: 2013-09
+    end: 2017-07
+    tags: [education, architecture]
+    degree:
+      de: BSc Wirtschaftsinformatik
+      en: BSc Business Information Technology
+    summary:
+      de: "Bachelorarbeit in Enterprise Architecture (TOGAF, ArchiMate); Austauschsemester Han River University, Seoul (02.2016–06.2016)"
+      en: "Bachelor's thesis in enterprise architecture (TOGAF, ArchiMate); exchange semester at Han River University, Seoul (02.2016–06.2016)"
+
+  - id: kantonsschule-beispiel
+    institution: Kantonsschule Beispiel
+    location: Zürich
+    start: 2009-08
+    end: 2013-08
+    tags: [education, development]
+    degree:
+      de: "Informatiker EFZ und kaufmännische Berufsmaturität"
+      en: "Swiss Federal VET Diploma in Informatics and Federal Vocational Baccalaureate (commercial)"
+
+# Owner 2026-09-23: list only AZ-305, from 2025 (AZ-104, AZ-900 and AI-900 removed).
+certifications:
+  - id: az-305
+    name: "AZ-305 – Azure Solutions Architect"
+    issuer: Microsoft
+    date: "2025"
+    tags: [cloud, architecture]
+
+# Levels (Granat four-step scale): 1 = Grundkenntnisse, 2 = Erste Erfahrung, 3 = Erfahren,
+# 4 = Spezialist. All levels are proposals (mapped from the earlier three-step proposal:
+# 1 -> 1, 2 -> 3, 3 -> 4) and pending owner review.
+# refs: where a skill comes from (cross references, owner 2026-09-26). Proposed from the role
+# versions' evidence and the entries' own texts; waiting for the owner's approval. Skills without
+# a source in the dataset have no refs yet (Terraform, Linux, Azure OpenAI, Tableau/SPSS/RapidMiner,
+# Python, JavaScript/Node.js).
+skills:
+  - id: skills-cloud
+    name:
+      de: Cloud & Infrastruktur
+      en: Cloud & Infrastructure
+    tags: [cloud]
+    items:
+      - { name: Microsoft Azure IaaS/PaaS, level: 4, level_proposed: true, refs: [bkb, globex, initech, az-305] }
+      - { name: "Azure Networking & Security (VNet, WAF, Firewall, Private Link, ExpressRoute)", level: 4, level_proposed: true, refs: [globex, az-305], tags: [security] }
+      - { name: Azure Migrate / Site Recovery / Backup, level: 4, level_proposed: true, refs: [bkb, globex] }
+      - { name: Entra ID / IAM, level: 3, level_proposed: true, refs: [globex, initech], tags: [security] }
+      - { name: Terraform (IaC), level: 3, level_proposed: true }
+      - { name: Kubernetes / Docker, level: 3, level_proposed: true, refs: [initech, helix], tags: [development] }
+      - { name: "Linux (Ubuntu, RHEL)", level: 3, level_proposed: true }
+  - id: skills-architecture
+    name:
+      de: Architektur & Strategie
+      en: Architecture & Strategy
+    tags: [architecture]
+    items:
+      - { name: Enterprise Architecture, level: 4, level_proposed: true, refs: [bkb, globex, beispiel-hochschule-bsc] }
+      - { name: { de: Cloud-Strategie & Sourcing, en: Cloud strategy & sourcing }, level: 4, level_proposed: true, refs: [bkb, globex], tags: [cloud] }
+      - { name: Business Cases / TCO, level: 4, level_proposed: true, refs: [bkb, globex], tags: [consulting] }
+      - { name: TOGAF / ArchiMate, level: 3, level_proposed: true, refs: [bkb, beispiel-hochschule-bsc] }
+      - { name: { de: Operative Resilienz, en: Operational resilience }, level: 3, level_proposed: true, refs: [bkb] }
+  - id: skills-data-ai
+    name:
+      de: Daten & KI
+      en: Data & AI
+    tags: [data, ai]
+    items:
+      - { name: Azure Data Factory / Synapse, level: 3, level_proposed: true, refs: [initech], tags: [data, cloud] }
+      - { name: Power BI, level: 3, level_proposed: true, refs: [bkb], tags: [data] }
+      - { name: Azure OpenAI / AI Services, level: 3, level_proposed: true, tags: [ai, cloud] }
+      - { name: Helix Watson, level: 3, level_proposed: true, refs: [helix], tags: [ai] }
+      - { name: { de: Machine Learning (Texterkennung), en: Machine Learning (text recognition) }, level: 1, level_proposed: true, refs: [helix, beispiel-hochschule-msc], tags: [ai] }
+      - { name: Tableau / SPSS / RapidMiner, level: 1, level_proposed: true, tags: [data] }
+  - id: skills-security
+    name: Security
+    tags: [security]
+    items:
+      - { name: Defender for Cloud / Sentinel, level: 3, level_proposed: true, refs: [globex], tags: [cloud] }
+      - { name: "API-Security (DataPower, API Connect, OAuth 2.0)", level: 3, level_proposed: true, refs: [initech, helix], tags: [development] }
+  - id: skills-development
+    name:
+      de: Entwicklung
+      en: Development
+    tags: [development]
+    items:
+      - { name: Java, level: 3, level_proposed: true, refs: [initech, bzb] }
+      - { name: SQL, level: 3, level_proposed: true, refs: [initech, example-it-services], tags: [data] }
+      - { name: Python, level: 3, level_proposed: true }
+      - { name: ABAP, level: 3, level_proposed: true, refs: [example-it-services] }
+      - { name: JavaScript / Node.js, level: 1, level_proposed: true }
+      - { name: Groovy, level: 1, level_proposed: true, refs: [bzb] }
+  - id: skills-methods
+    name:
+      de: Methoden
+      en: Methods
+    items:
+      - { name: Scrum / Kanban, level: 4, level_proposed: true, refs: [example-it-services, bzb] }
+      - { name: SAFe, level: 3, level_proposed: true, refs: [bkb] }
+      - { name: { de: Projektmanagement, en: Project management }, level: 4, level_proposed: true, refs: [globex, initech, example-it-services], tags: [leadership] }
+  - id: skills-soft
+    name: Soft Skills
+    items:
+      - { name: { de: Stakeholder- & C-Level-Beratung, en: Stakeholder & C-level advisory }, level: 4, level_proposed: true, refs: [bkb, globex, helix], tags: [consulting] }
+      - { name: { de: Teamführung, en: Team leadership }, level: 3, level_proposed: true, refs: [globex, initech], tags: [leadership] }
+      - { name: { de: Präsentation & Schulung, en: Presenting & training }, level: 4, level_proposed: true, refs: [bkb, globex, helix] }
+      - { name: { de: Analytisches Denken, en: Analytical thinking }, level: 4, level_proposed: true, refs: [bkb, globex, beispiel-hochschule-msc] }
+
+languages:
+  - id: lang-de
+    name: { de: Deutsch, en: German }
+    level: { de: Muttersprache, en: Native }
+    # Owner 2026-09-26: business talks and socialising in German; wording approved the same day.
+    detail: { de: Gewandt in Business-Gesprächen und im persönlichen Austausch, en: Articulate in business talks and in social settings }
+  - id: lang-fa
+    name: { de: Persisch (Farsi), en: Persian (Farsi) }
+    level: { de: Muttersprache, en: Native }
+    # Owner 2026-09-26: Farsi less strong, normal conversation; wording approved the same day.
+    detail: { de: Im Alltag gesprochen, en: Spoken in everyday life }
+  - id: lang-en
+    name: { de: Englisch, en: English }
+    level: { de: Fliessend, en: Fluent }
+    # Owner 2026-09-26: very strong business and above all technical vocabulary, weaker in
+    # literature (Shakespeare); wording approved the same day.
+    detail: { de: Sehr stark im Business- und vor allem im Technik-Wortschatz; literarisch weniger, en: Very strong business and above all technical vocabulary; less so in literature }
+  - id: lang-fr
+    name: { de: Französisch, en: French }
+    level: { de: Grundkenntnisse, en: Basic }
+  - id: lang-ko
+    name: { de: Koreanisch, en: Korean }
+    level: { de: Grundkenntnisse, en: Basic }
+
+activities:
+  - id: beispiel-hochschule-buddy
+    organization: Beispiel-Hochschule
+    start: 2016-08
+    end: 2017-06
+    tags: [education]
+    description:
+      de: Buddy-System und Betreuung von Austauschstudierenden
+      en: Buddy system and guide for exchange students
+  - id: beispiel-student-organisation
+    organization: Kantonsschule Beispiel
+    start: 2009-08
+    end: 2012-06
+    tags: [education]
+    description:
+      de: "Schülerorganisation (Events, Schulwebseite)"
+      en: "Student organisation (events, school website)"

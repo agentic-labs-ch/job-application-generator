@@ -1,0 +1,97 @@
+# Keyword analysis for the role version "Product Manager" (kind: article). Public once merged,
+# unlisted and noindex. Facts about the owner come only from ../cv.yaml. The job ads are
+# summarised without company names. Self-assessment levels are proposals pending owner review.
+
+kind: article
+base: ../cv.yaml
+id: stichwortanalyse-product-manager
+languages: [de]
+title: "Stichwortanalyse: Product Manager"
+lead: >-
+  Grundlage sind sechs aktuelle Inserate aus der Region Zürich für Product Manager, Product
+  Owner und Platform Owner, veröffentlicht zwischen 05.2026 und 09.2026 auf jobs.ch. Sie stammen
+  von IT-Dienstleistern, aus Telekommunikation, Bank, Fintech und öffentlicher Verwaltung; zwei
+  davon vom selben Arbeitgeber. Stand 09.2026.
+
+sections:
+  - heading: "Häufige Anforderungen"
+    blocks:
+      - >-
+        Die Häufigkeit zeigt, in wie vielen der sechs Inserate ein Stichwort vorkommt; ähnliche
+        Begriffe habe ich zusammengefasst. Die Selbsteinschätzung entspricht der Kompetenzliste im
+        Lebenslauf: 1 Grundkenntnisse, 2 Erste Erfahrung, 3 Erfahren, 4 Spezialist. Alle Stufen
+        sind Vorschläge.
+      - table:
+          columns: ["Stichwort", "Häufigkeit", "Nachweis im Lebenslauf", "Selbsteinschätzung"]
+          rows:
+            - ["Stakeholder-Management, bereichsübergreifende Zusammenarbeit", "6/6", "Beratung von ICT-Projekten, Teamleitungen und CIO-Gremien (BKB); Business- und IT-Stakeholder (Globex Consulting); Behörden und Partnerorganisationen (initech)", "Spezialist (4)"]
+            - ["Anforderungen in Lösungen übersetzen", "5/6", "Lösungsvorschläge auf Basis des Azure-Servicekatalogs (BKB); Zielarchitekturen mit Business und IT (Globex Consulting)", "Spezialist (4)"]
+            - ["Roadmap, Produkt- oder Plattformstrategie", "5/6", "Roadmaps und Standards gemäss ICT-Strategie, Mitentwicklung von Cloud-Strategie und Sourcing-Modell (BKB)", "Erfahren (3) für Roadmaps, Spezialist (4) für Cloud-Strategie"]
+            - ["Technisches Verständnis: Cloud, Plattformen, Infrastruktur", "5/6", "Migration von über 1000 Servern in über 50 Ländern auf Azure (Globex Consulting); AZ-305", "Spezialist (4)"]
+            - ["Erfahrung als Product Owner, Product Manager oder in verwandter Rolle", "5/6", "Keine Rolle mit Produkttitel. Verwandt: ICT-Architekt (BKB), Teilprojektleitung (Globex Consulting), Team Lead (initech), Pre-Sales (Helix)", "Lücke beim Titel"]
+            - ["Sprachen (Deutsch, Englisch)", "5/6", "Deutsch Muttersprache, Englisch fliessend", "erfüllt"]
+            - ["Agile Methoden (Scrum, Kanban, SAFe)", "4/6", "SAFe (BKB); Scrum und Kanban (BZB); agiles Team (Swiss IT Services)", "Erfahren (3)"]
+            - ["Backlog, Priorisierung, Release-Planung", "4/6", "Release-Planung (initech); keine eigene Backlog-Verantwortung", "Erste Erfahrung (2)"]
+            - ["Kundenorientierung, Kundenfeedback", "4/6", "Pre-Sales mit dem CTO (Helix); wöchentliche Kundenpräsentationen (Globex Consulting)", "Erfahren (3)"]
+            - ["Kommunikation, Präsentation vor Management", "4/6", "Präsentationen in internen und externen Gremien, Beratung von CIO-Gremien (BKB)", "Spezialist (4)"]
+            - ["Analytisches und konzeptionelles Denken", "4/6", "Business Cases, TCO- und CapEx/OpEx-Analysen (BKB); Konzept und Architektur einer Cloud-Integration (initech)", "Spezialist (4)"]
+            - ["Führung und Coaching", "4/6", "Projektteam mit bis zu 12 Personen (Globex Consulting); Einarbeitung von Mitarbeitenden (initech); Cloud-Schulungen für das Sales-Team (Helix)", "Erfahren (3)"]
+            - ["Service-Management, Managed Services, Betriebsmodell", "3/6", "Azure Services in Betriebsmodellen inkl. RACI (Globex Consulting); Cloud Target Operating Model (BKB)", "Erfahren (3); ITIL: Lücke"]
+            - ["Zertifizierung (Produktmanagement, ITIL, HERMES, Cloud)", "3/6", "AZ-305 (2025); keine Zertifizierung in Produktmanagement oder ITIL", "teilweise erfüllt"]
+            - ["Marktanalyse, Pricing, Go-to-Market", "3/6", "Anbieterevaluation (BKB) und Pre-Sales (Helix); keine eigene Markteinführung", "Erste Erfahrung (2) im Pre-Sales; Pricing und Go-to-Market: Lücke"]
+            - ["Business Case und Wirtschaftlichkeit", "2/6", "Business Cases, TCO und CapEx/OpEx (BKB); Kosten-Nutzen-Vergleiche (Globex Consulting)", "Spezialist (4)"]
+            - ["KPIs, SLAs, OKRs", "2/6", "Kein Nachweis", "Lücke"]
+
+  - heading: "Positionierung"
+    blocks:
+      - >-
+        Am besten passt technisches Produktmanagement für Cloud- und Plattform-Services im B2B-
+        und Enterprise-Umfeld. Kernbotschaft: Ich bringe Kundennutzen, Business Case und
+        technische Machbarkeit zusammen. Zwei Ausprägungen kommen in Frage:
+      - list:
+          - "Platform Owner oder technischer Product Owner einer internen Cloud- oder Infrastrukturplattform, etwa in Bank, Versicherung oder öffentlicher Verwaltung."
+          - "Product Manager für Cloud- und Managed Services bei einem IT-Dienstleister."
+      - >-
+        Begründung: Die häufigsten Anforderungen belege ich direkt, mit dem Value Stream Cloud
+        nach SAFe, Lösungsvorschlägen auf Basis des Azure-Servicekatalogs, Roadmaps gemäss
+        ICT-Strategie, Business Cases mit TCO und CapEx/OpEx, der Beratung von CIO-Gremien, einer
+        Teilprojektleitung mit Termin- und Budgetverantwortung und Pre-Sales bei Helix. Von den
+        zwölf Stichworten, die in mindestens vier Inseraten vorkommen, erfülle ich zehn; offen
+        sind Produkterfahrung im Titel und Backlog-Verantwortung. Für Plattformrollen in
+        Finanzinstituten sprechen zusätzlich die Erfahrung in einer Bank (operative Resilienz,
+        Konformitätsprüfung) sowie API Management und Integration.
+      - >-
+        Drei der fünf Inserate, die Produkterfahrung verlangen, akzeptieren auch verwandte Rollen
+        wie Projekt-, Portfolio- oder Service-Management oder Solution Consulting. Der Lebenslauf
+        stellt deshalb übertragbare Erfahrung in den Vordergrund und nennt keinen Titel, den ich
+        nicht hatte.
+      - >-
+        Weniger passend sind Rollen für digitale Endkundenprodukte, in denen User Research,
+        A/B-Tests und Produktkennzahlen im Zentrum stehen: Dafür fehlen mir die Nachweise.
+
+  - heading: "Lücken und Empfehlungen"
+    blocks:
+      - list:
+          - "Produkterfahrung (5/6): keine Rolle als Product Owner oder Product Manager und keine eigene Backlog-Verantwortung. Empfehlung: Beispiele aus dem Value Stream Cloud, der Release-Planung und der Teilprojektleitung als STAR-Geschichten vorbereiten; eine Zertifizierung wie PSPO oder SAFe POPM prüfen."
+          - "Marktanalyse, Pricing, Go-to-Market (3/6): keine Nachweise. Empfehlung: Grundlagen mit einer kurzen Weiterbildung im Produktmanagement aufbauen; bei IT-Dienstleistern an Business Cases und Pre-Sales anknüpfen."
+          - "KPIs, SLAs, OKRs (2/6): keine Verantwortung für Produktkennzahlen. Empfehlung: ein Kennzahlenset für eine Cloud-Plattform (z. B. Verfügbarkeit, Nutzung, Kosten) als Gesprächsbeispiel vorbereiten und klar als Ansatz, nicht als Erfahrung darstellen."
+          - "ITIL (2/6) und HERMES (1/6): keine Zertifizierung. Empfehlung: ITIL 4 Foundation für servicenahe Rollen prüfen, HERMES nur für Stellen in der öffentlichen Verwaltung."
+          - "Selbsteinschätzung: Die Stufen sind Vorschläge. Empfehlung: vor dem Versand bestätigen, besonders Pre-Sales (2) und Scrum / Kanban (3)."
+
+  - heading: "Links"
+    blocks:
+      - links:
+          - { label: "Lebenslauf Product Manager", page: product-manager }
+          - { label: "Coaching-Übersicht", page: coaching }
+
+note: >-
+  Inserate am 2026-09-23 auf jobs.ch gelesen (veröffentlicht 08.05., 23.07., 03.09. (2),
+  15.09. und 16.09.2026):
+  https://www.jobs.ch/en/vacancies/detail/0c574883-f557-4c59-9204-7c300938ac68/ ,
+  https://www.jobs.ch/en/vacancies/detail/aff6c3f7-3a3d-41af-b770-ce9979518e20/ ,
+  https://www.jobs.ch/en/vacancies/detail/1483ef52-82af-49eb-a631-43e440a97ef8/ ,
+  https://www.jobs.ch/en/vacancies/detail/ab19eac6-9b26-47b5-91d9-3f4918ff8a6d/ ,
+  https://www.jobs.ch/en/vacancies/detail/aac32dee-4c99-473d-bd21-88fc4014986d/ ,
+  https://www.jobs.ch/en/vacancies/detail/4a9a0696-9994-49f1-b2c3-b2ef4662d5c6/ .
+  Zählung manuell aus den Inseratstexten. Ein siebtes Inserat (Product Owner einer
+  Beschaffungsplattform) wurde wegen seines Branchenfokus nicht gezählt.

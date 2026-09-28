@@ -1,0 +1,504 @@
+{
+ "key": "beratung-sales",
+ "lang": "de",
+ "name": "Alex Muster",
+ "target": "Technology Strategy Manager",
+ "headline": "Cloud-Strategie · Transformation · Enterprise-Architektur",
+ "claim": "Strategie und Umsetzung aus einer Hand: vom Business Case im CIO-Gremium bis zur globalen Cloud-Migration.",
+ "profile": "Wirtschaftsinformatiker (MSc Beispiel-Hochschule) mit über sechs Jahren Erfahrung in IT-Beratung und Enterprise-Architektur. Als Kadermitarbeiter der Beispiel Kantonalbank habe ich die Cloud-Strategie und das Sourcing-Modell inkl. Business Cases, TCO- und CapEx/OpEx-Analysen mitentwickelt und CIO-Gremien beraten. Davor habe ich bei Globex Consulting Kunden aus verschiedenen Branchen bei Cloud-Transformationsstrategien beraten und diese umgesetzt, darunter eine globale Azure-Migration mit über 1000 Servern in über 50 Ländern. Deutsch ist meine Muttersprache, Englisch spreche ich fliessend.",
+ "strengths": [
+  {
+   "title": "Cloud-Strategie & Wertbeitrag",
+   "text": "Cloud-Strategie und Sourcing-Modell der BKB (IaaS, PaaS, SaaS, On-Prem) mitentwickelt: Business Cases, TCO- und CapEx/OpEx-Analysen als Entscheidungsgrundlage für CIO-Gremien; Beratung bei Beschaffung und Anbieterevaluation.",
+   "evidence": [
+    "bkb"
+   ]
+  },
+  {
+   "title": "Transformation & Operating Model",
+   "text": "Azure Services mit klaren Verantwortlichkeiten (RACI) in Operating Models integriert; Cloud Target Operating Model mit Portfolio- und Projektmanagement (SAFe); IT-Governance mit den DevOps-Teams, um bei der Azure-Migration technische Schulden abzubauen.",
+   "evidence": [
+    "globex",
+    "bkb"
+   ]
+  },
+  {
+   "title": "Führung & Kundenvertrauen",
+   "text": "Teilprojektleiter eines Teams von bis zu 12 Personen mit Termin- und Budgetverantwortung, Stellvertreter des Delivery Lead; Team Lead in der IT-Transformation eines Bundesamts. Im Kontakt mit Geschäftsleitungen und Vorständen der Kunden.",
+   "evidence": [
+    "globex",
+    "initech"
+   ]
+  }
+ ],
+ "location": "Zürich, Schweiz",
+ "email": "alex.muster@example.com",
+ "linkedin": "https://example.com/alex-muster",
+ "job": {
+  "title": "Technology Strategy Manager (all genders)",
+  "company": "Globex Consulting",
+  "location": "Zürich",
+  "reference": "GX-1042"
+ },
+ "brand": {
+  "paper": "#000000",
+  "ink": "#ffffff",
+  "accent": "#ff9f1c"
+ },
+ "photo": "portrait.jpg",
+ "experience": [
+  {
+   "id": "bkb",
+   "organization": "Beispiel Kantonalbank (BKB)",
+   "location": "Zürich",
+   "start": "2023-12",
+   "end": "2026-02",
+   "role": "ICT-Architekt",
+   "highlights": [
+    "Mitentwicklung der Cloud-Strategie und des Sourcing-Modells (IaaS, PaaS, SaaS, On-Prem) inkl. Business Cases, TCO- und CapEx/OpEx-Analysen",
+    "Beratung von CIO-Gremien, Teamleitungen und ICT-Projekten, u. a. bei Beschaffung und Anbieterevaluation von IT-Produkten und Services",
+    "Entwicklung vorhabenübergreifender Enterprise- und ICT-Architekturen, Standards und Roadmaps gemäss ICT-Strategie; Prüfung der Architekturkonformität von Vorhaben",
+    "Zusammenarbeit mit Portfolio- und Projektmanagement an Migrationsplänen und am Cloud Target Operating Model (SAFe)",
+    "Mitverantwortung für das IT-System-Inventar; Power-BI-Dashboards als Entscheidungsgrundlage für Management-Gremien"
+   ],
+   "summary": "In der Einheit Architektur & Sicherheit Bindeglied zwischen ICT-Strategie, Vorhaben und CIO-Gremien."
+  },
+  {
+   "id": "globex",
+   "organization": "Globex Consulting AG",
+   "location": "Zürich",
+   "start": "2021-07",
+   "end": "2023-11",
+   "role": "Consultant · Teilprojektleiter Cloud-Architektur",
+   "highlights": [
+    "Führung eines Projektteams mit bis zu 12 Personen inkl. Termin- und Budgetverantwortung; Stellvertretung des Delivery Lead",
+    "Globale Cloud-Transformation: Migration von über 1000 Servern in über 50 Ländern auf Azure (Lift & Shift)",
+    "Business Cases und Kosten-Nutzen-Vergleiche (u. a. Azure Hybrid Benefit); wöchentliche Präsentationen beim Kunden",
+    "Entwicklung von Zielarchitekturen für Azure mit Business- und IT-Stakeholdern; Integration der Azure Services in Operating Models inkl. RACI",
+    "Konzeption und Umsetzung von Cloud-Security-Services (WAF, Load Balancer), globale Anbindung von SIEM und Monitoring; Planung der Migration von Active Directory zu Entra ID"
+   ],
+   "summary": "Beratung von Kunden aus verschiedenen Branchen bei Cloud-Transformationsstrategien und deren Umsetzung; Schwerpunkte Cloud-Architektur, Cybersecurity und Projektmanagement."
+  },
+  {
+   "id": "initech",
+   "organization": "Initech Solutions AG",
+   "location": "Zürich & Bern",
+   "start": "2019-10",
+   "end": "2021-02",
+   "role": "Consultant; ab 01.2021 Senior Consultant",
+   "projects": [
+    {
+     "start": "2019-10",
+     "end": "2020-10",
+     "description": "Team Lead IT-Architektur, Engineering und API Management in der IT-Transformation eines Bundesamts, inkl. Budget, Zeitplan und Stakeholder-Management"
+    },
+    {
+     "start": "2020-11",
+     "end": "2021-02",
+     "description": "Azure-Cloud-Integration für eine grosse Krankenversicherung: Koordination zwischen Stakeholdern und Entwicklern für die neue Cloud-Integrationsstrategie (Ansatz Azure Landing Zone); Architektur und Proof of Concept für die Integration einer On-Prem-Oracle-DB in Dynamics 365"
+    }
+   ],
+   "highlights": [
+    "Einarbeitung und Koordination neuer Mitarbeitender"
+   ],
+   "summary": "Beratung in Transformations- und Cloud-Projekten für die öffentliche Hand und eine Krankenversicherung."
+  },
+  {
+   "id": "helix",
+   "organization": "Helix Technologies Schweiz AG",
+   "location": "Zürich & New York",
+   "start": "2017-10",
+   "end": "2019-10",
+   "role": "Junior Software Engineer (Master@Helix) · Technical Sales Support",
+   "highlights": [
+    "Pre-Sales an der Seite des CTO von Helix Schweiz; Cloud-Schulungen für das Sales-Team",
+    "Integration von Watson-KI-Services in einen Pepper-Roboter für einen Kunden bei Helix Research"
+   ]
+  },
+  {
+   "id": "example-it-services",
+   "organization": "Example IT Services International",
+   "location": "Zürich",
+   "start": "2013-10",
+   "end": "2015-04",
+   "role": "Softwareentwickler SAP/ERP (neben dem Studium)",
+   "highlights": [
+    "Entwicklung und Anpassung von SAP-ERP-Lösungen (ABAP) für Kunden in einem agilen Team",
+    "Optimierung von SQL-Abfragen für die Performance der Produktivdatenbank; Projektplanung"
+   ],
+   "compact": true
+  },
+  {
+   "id": "bzb",
+   "organization": "Beispiel Zentralbank (BZB)",
+   "location": "Zürich",
+   "start": "2012-08",
+   "end": "2013-08",
+   "role": "Softwareentwickler (Praktikum)",
+   "highlights": [
+    "Migration des Zeitreihen-Analysesystems in Zusammenarbeit mit Ökonominnen und Ökonomen (Java, Groovy; Scrum, Kanban)"
+   ],
+   "compact": true
+  }
+ ],
+ "education": [
+  {
+   "id": "beispiel-hochschule-msc",
+   "institution": "Beispiel School of Management and Law",
+   "location": "Zürich",
+   "start": "2017-09",
+   "end": "2019-07",
+   "degree": "MSc Wirtschaftsinformatik",
+   "summary": "Masterarbeit bei Helix Research (Texterkennung, Machine Learning); Austauschsemester Hudson College, New York (08.2018–12.2018)"
+  },
+  {
+   "id": "beispiel-hochschule-bsc",
+   "institution": "Beispiel School of Management and Law",
+   "location": "Winterthur",
+   "start": "2013-09",
+   "end": "2017-07",
+   "degree": "BSc Wirtschaftsinformatik",
+   "summary": "Bachelorarbeit in Enterprise Architecture (TOGAF, ArchiMate); Austauschsemester Han River University, Seoul (02.2016–06.2016)"
+  },
+  {
+   "id": "kantonsschule-beispiel",
+   "institution": "Kantonsschule Beispiel",
+   "location": "Zürich",
+   "start": "2009-08",
+   "end": "2013-08",
+   "degree": "Informatiker EFZ und kaufmännische Berufsmaturität"
+  }
+ ],
+ "skills": [
+  {
+   "id": "skills-architecture",
+   "name": "Architektur & Strategie",
+   "items": [
+    {
+     "name": "Enterprise Architecture",
+     "level": 4,
+     "refs": [
+      "bkb",
+      "globex",
+      "beispiel-hochschule-bsc"
+     ]
+    },
+    {
+     "name": "Cloud-Strategie & Sourcing",
+     "level": 4,
+     "refs": [
+      "bkb",
+      "globex"
+     ]
+    },
+    {
+     "name": "Business Cases / TCO",
+     "level": 4,
+     "refs": [
+      "bkb",
+      "globex"
+     ]
+    },
+    {
+     "name": "TOGAF / ArchiMate",
+     "level": 3,
+     "refs": [
+      "bkb",
+      "beispiel-hochschule-bsc"
+     ]
+    },
+    {
+     "name": "Operative Resilienz",
+     "level": 3,
+     "refs": [
+      "bkb"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "skills-cloud",
+   "name": "Cloud & Infrastruktur",
+   "items": [
+    {
+     "name": "Microsoft Azure IaaS/PaaS",
+     "level": 4,
+     "refs": [
+      "bkb",
+      "globex",
+      "initech"
+     ]
+    },
+    {
+     "name": "Azure Networking & Security (VNet, WAF, Firewall, Private Link, ExpressRoute)",
+     "level": 4,
+     "refs": [
+      "globex"
+     ]
+    },
+    {
+     "name": "Azure Migrate / Site Recovery / Backup",
+     "level": 4,
+     "refs": [
+      "bkb",
+      "globex"
+     ]
+    },
+    {
+     "name": "Entra ID / IAM",
+     "level": 3,
+     "refs": [
+      "globex",
+      "initech"
+     ]
+    },
+    {
+     "name": "Terraform (IaC)",
+     "level": 3,
+     "refs": []
+    },
+    {
+     "name": "Kubernetes / Docker",
+     "level": 3,
+     "refs": [
+      "initech",
+      "helix"
+     ]
+    },
+    {
+     "name": "Linux (Ubuntu, RHEL)",
+     "level": 3,
+     "refs": []
+    }
+   ]
+  },
+  {
+   "id": "skills-soft",
+   "name": "Soft Skills",
+   "items": [
+    {
+     "name": "Stakeholder- & C-Level-Beratung",
+     "level": 4,
+     "refs": [
+      "bkb",
+      "globex",
+      "helix"
+     ]
+    },
+    {
+     "name": "Teamführung",
+     "level": 3,
+     "refs": [
+      "globex",
+      "initech"
+     ]
+    },
+    {
+     "name": "Präsentation & Schulung",
+     "level": 4,
+     "refs": [
+      "bkb",
+      "globex",
+      "helix"
+     ]
+    },
+    {
+     "name": "Analytisches Denken",
+     "level": 4,
+     "refs": [
+      "bkb",
+      "globex",
+      "beispiel-hochschule-msc"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "skills-methods",
+   "name": "Methoden",
+   "items": [
+    {
+     "name": "Scrum / Kanban",
+     "level": 4,
+     "refs": [
+      "example-it-services",
+      "bzb"
+     ]
+    },
+    {
+     "name": "SAFe",
+     "level": 3,
+     "refs": [
+      "bkb"
+     ]
+    },
+    {
+     "name": "Projektmanagement",
+     "level": 4,
+     "refs": [
+      "globex",
+      "initech",
+      "example-it-services"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "skills-data-ai",
+   "name": "Daten & KI",
+   "items": [
+    {
+     "name": "Azure Data Factory / Synapse",
+     "level": 3,
+     "refs": [
+      "initech"
+     ]
+    },
+    {
+     "name": "Power BI",
+     "level": 3,
+     "refs": [
+      "bkb"
+     ]
+    },
+    {
+     "name": "Azure OpenAI / AI Services",
+     "level": 3,
+     "refs": []
+    },
+    {
+     "name": "Helix Watson",
+     "level": 3,
+     "refs": [
+      "helix"
+     ]
+    },
+    {
+     "name": "Machine Learning (Texterkennung)",
+     "level": 1,
+     "refs": [
+      "helix",
+      "beispiel-hochschule-msc"
+     ]
+    },
+    {
+     "name": "Tableau / SPSS / RapidMiner",
+     "level": 1,
+     "refs": []
+    }
+   ]
+  }
+ ],
+ "knowledge": [
+  {
+   "name": "Strategie & Architektur",
+   "items": [
+    "Cloud-Strategie & Sourcing",
+    "Business Cases / TCO",
+    "Kostenanalysen (CapEx/OpEx, Azure Hybrid Benefit)",
+    "Cloud Target Operating Model",
+    "Operating Models (RACI)",
+    "Anbieterevaluation",
+    "Enterprise Architecture (TOGAF, ArchiMate)"
+   ],
+   "evidence": [
+    "bkb",
+    "globex",
+    "beispiel-hochschule-bsc"
+   ]
+  },
+  {
+   "name": "Beratung & Führung",
+   "items": [
+    "Stakeholder- & C-Level-Beratung",
+    "Präsentation & Schulung",
+    "Teamführung",
+    "Projektmanagement",
+    "SAFe",
+    "Scrum / Kanban"
+   ],
+   "evidence": [
+    "bkb",
+    "globex",
+    "initech",
+    "helix"
+   ]
+  },
+  {
+   "name": "Technologie",
+   "items": [
+    "Microsoft Azure (IaaS, PaaS)",
+    "Cloud-Security (WAF, SIEM, Entra ID)",
+    "Azure OpenAI / AI Services",
+    "Helix Watson",
+    "Power BI"
+   ],
+   "evidence": [
+    "globex",
+    "bkb",
+    "helix"
+   ]
+  }
+ ],
+ "languages": [
+  {
+   "name": "Deutsch",
+   "level": "Muttersprache",
+   "detail": "Gewandt in Business-Gesprächen und im persönlichen Austausch"
+  },
+  {
+   "name": "Persisch (Farsi)",
+   "level": "Muttersprache",
+   "detail": "Im Alltag gesprochen"
+  },
+  {
+   "name": "Englisch",
+   "level": "Fliessend",
+   "detail": "Sehr stark im Business- und vor allem im Technik-Wortschatz; literarisch weniger"
+  },
+  {
+   "name": "Französisch",
+   "level": "Grundkenntnisse"
+  },
+  {
+   "name": "Koreanisch",
+   "level": "Grundkenntnisse"
+  }
+ ],
+ "interests": "Reisen und Backpacking (Asien, Südamerika, Südafrika), Fussball (7 Jahre FC Beispiel), Fitness, Boxen, Tauchen (PADI Advanced Open Water Diver)",
+ "letter": {
+  "date": "2026-09-24",
+  "place": "Zürich",
+  "recipient": [
+   "Globex Consulting AG",
+   "Recruiting-Team",
+   "Beispielstrasse 16",
+   "8001 Zürich"
+  ],
+  "subject": "Bewerbung als Technology Strategy Manager (Job-Nr. GX-1042)",
+  "salutation": "Sehr geehrtes Recruiting-Team",
+  "attention": [
+   "Mehr als zwei Jahre lang habe ich bei Globex Consulting Kunden bei Cloud-Transformationen beraten und diese umgesetzt. Danach habe ich die andere Seite kennengelernt: Als ICT-Architekt der Beispiel Kantonalbank habe ich CIO-Gremien beraten und gesehen, wie IT-Strategien entschieden, finanziert und gesteuert werden. Beide Perspektiven möchte ich in Ihr Strategy & Transformation Team einbringen."
+  ],
+  "interest": [
+   "Bei Globex Consulting habe ich Kunden aus verschiedenen Branchen durch Cloud-Transformationen begleitet. Im Strategy & Transformation Team möchte ich sie früher abholen: bei der Strategie, bei den Werthebeln und bei der Frage, wo Cloud und generative KI echten Nutzen stiften."
+  ],
+  "desire": [
+   "Was ich mitbringe:",
+   {
+    "points": [
+     "Beratung bis ins CIO-Gremium: Bei der BKB habe ich CIO-Gremien, Teamleitungen und Projekte beraten, fachtechnische Konflikte zwischen Fachbereichen gelöst und in internen und externen Gremien präsentiert.",
+     "Transformation und Führung: Bei Globex Consulting habe ich eine globale Azure-Migration mit über 1000 Servern in über 50 Ländern mitgestaltet. Als Teilprojektleiter führte ich ein Team von bis zu 12 Personen mit Termin- und Budgetverantwortung und vertrat den Delivery Lead.",
+     "Transparenz für Entscheide: Meine Power-BI-Dashboards zum IT-System-Inventar zeigten Management-Gremien, dass gleiche Applikationen in verschiedenen Versionen installiert waren.",
+     "Kaufentscheide von beiden Seiten: im Pre-Sales bei Helix an der Seite des CTO von Helix Schweiz und bei der BKB in Beschaffung und Anbieterevaluation."
+    ]
+   },
+   "Ich denke analytisch, arbeite strukturiert und bereite komplexe Zusammenhänge für Geschäftsleitung und Fachbereiche entscheidungsreif auf."
+  ],
+  "action": [
+   "Gerne erläutere ich Ihnen in einem persönlichen Gespräch, welche Erfahrungen aus Bank und Beratung ich in Ihre Kundenmandate einbringen würde. Ich freue mich auf Ihre Einladung."
+  ],
+  "closing": "Freundliche Grüsse",
+  "enclosures": "Arbeitszeugnisse und Diplome"
+ }
+}

@@ -1,0 +1,80 @@
+# Keyword analysis for the role version "IT Business Service Manager" (kind: article).
+# Public once merged, unlisted and noindex. Facts about the owner come only from ../cv.yaml;
+# self-assessment levels match ../profiles/it-business-service-manager.yaml and are proposals.
+
+kind: article
+base: ../cv.yaml
+id: stichwortanalyse-it-business-service-manager
+languages: [de]
+title: "Stichwortanalyse: IT Business Service Manager"
+lead: >-
+  Auswertung von fünf aktuellen Stelleninseraten aus dem Raum Zürich, publiziert im August und
+  September 2026, aus Automobilhandel, öffentlicher Verwaltung, IT-Dienstleistung und
+  Maschinenbau. Darunter ist das Inserat «IT Business Service Manager 100%» der Beispiel Automobile Schweiz AG in Beispielstadt. Die Analyse zeigt, welche Anforderungen wiederkehren, wo sie im
+  Lebenslauf belegt sind und wo Lücken bestehen. Stand 09.2026.
+
+sections:
+  - heading: "Häufige Anforderungen"
+    blocks:
+      - >-
+        Häufigkeit: in wie vielen der fünf Inserate ein Stichwort als Aufgabe oder Anforderung
+        vorkommt. Selbsteinschätzung in vier Stufen (1 Grundkenntnisse, 2 Erste Erfahrung,
+        3 Erfahren, 4 Spezialist), alle als Vorschlag.
+      - table:
+          columns: ["Stichwort", "Häufigkeit", "Nachweis im Lebenslauf", "Selbsteinschätzung"]
+          rows:
+            - ["Schnittstelle zu Fachbereichen, IT und externen Partnern", "5/5", "CIO-Gremien, Teamleitungen und Projekte beraten (BKB); Zielarchitekturen mit Business- und IT-Stakeholdern (Globex Consulting); Stakeholder-Management mit Behörden (initech)", "4 Spezialist"]
+            - ["Entscheidungsgrundlagen und Reporting für das Management", "5/5", "Business Cases, TCO- und CapEx/OpEx-Analysen (BKB); Kosten-Nutzen-Vergleiche, wöchentliche Kundenpräsentationen (Globex Consulting)", "4 Spezialist; laufendes KPI-Reporting: Lücke"]
+            - ["Deutsch und Englisch", "5/5", "Deutsch Muttersprache, Englisch fliessend", "erfüllt"]
+            - ["ITIL, ITSM-Prozesse (Incident, Problem, Change)", "4/5", "Kein direkter Nachweis, keine Zertifizierung", "Lücke"]
+            - ["IT-Projekte leiten und koordinieren", "4/5", "Projektteam mit bis zu 12 Personen, Termin- und Budgetverantwortung (Globex Consulting); Projektmanagement, Release-Planung (initech)", "4 Spezialist"]
+            - ["Lieferanten- und Anbietermanagement", "4/5", "Beschaffung und Anbieterevaluation von IT-Produkten und Services (BKB)", "3 Erfahren; Verträge, Outsourcing: Lücke"]
+            - ["Studium Informatik oder Wirtschaftsinformatik", "4/5", "MSc und BSc Wirtschaftsinformatik (Beispiel-Hochschule)", "erfüllt"]
+            - ["Service-Betrieb: SLA, KPI, Service Reviews, Betriebsmodelle", "4/5", "Azure Services in Operating Models inkl. RACI, SIEM- und Monitoring-Anbindung (Globex Consulting); Cloud Target Operating Model (BKB)", "Betriebsmodelle 3; SLA, Service Reviews: Lücke"]
+            - ["Anforderungen analysieren, Lösungsoptionen bewerten", "3/5", "Lösungsvorschläge auf Basis des Azure-Servicekatalogs (BKB); Konzept und Proof of Concept (initech)", "4 Spezialist"]
+            - ["Governance, Standards, Roadmaps", "3/5", "Standards und Roadmaps gemäss ICT-Strategie, Prüfung von Vorhaben (BKB)", "3 Erfahren; Portfolio- und Demand-Management: teilweise"]
+            - ["Cloud, Migration, Transformation", "3/5", "Migration von über 1000 Servern in über 50 Ländern auf Azure (Globex Consulting); Cloud-Strategie (BKB); AZ-305", "Azure und Cloud-Migration 4; Migrationsplanung 3"]
+            - ["Automatisierung und KI", "3/5", "Watson-KI-Services für einen Kunden integriert (Helix)", "KI-Services 3; Prozessautomatisierung: Lücke"]
+            - ["Agile und klassische Methoden", "3/5", "SAFe (BKB); Scrum und Kanban (BZB); agiles Team (Swiss IT Services)", "3 Erfahren; HERMES: Lücke"]
+            - ["Schnittstellen, APIs, Datenintegration", "2/5", "Team Lead API Management; Konzept und PoC zur Integration einer Oracle-DB in Dynamics 365 (initech)", "3 Erfahren"]
+
+  - heading: "Positionierung"
+    blocks:
+      - "Der Titel steht in der Schweiz für zwei Ausprägungen:"
+      - list:
+          - "Service-Verantwortung nach ITSM: Servicekatalog, SLA, Service Reviews, Lieferanten, ITIL-Prozesse, Demand- und Business-Relationship-Management."
+          - "Brücke zwischen Business und IT: Anforderungen analysieren, Lösungsoptionen bewerten, Konzepte und Zielarchitekturen erarbeiten, Integrations- und Rollout-Projekte leiten – so im Inserat der Beispiel Automobile Schweiz AG."
+      - >-
+        Die Rollenversion stellt die Brücke zwischen Business und IT nach vorn, weil dort die
+        stärksten Belege liegen: Lösungsbewertung, Business Cases, Projektleitung und
+        Cloud-Migration. Die Service-Seite belegen Betriebsmodelle inkl. RACI,
+        Lifecycle-Management, Anbieterevaluation und die Beratung von CIO-Gremien. So passt eine
+        Version zu beiden Ausprägungen, ohne operative ITSM-Erfahrung zu behaupten.
+      - >-
+        Im Lebenslauf verwendete Stichworte: Stakeholder-Management, Entscheidungsvorlagen,
+        Business Cases, Make-or-Buy, Anbieterevaluation, Betriebsmodelle, RACI, Servicekatalog,
+        Lifecycle-Management, Roadmaps, Projektleitung, Migrationsplanung, API Management,
+        Datenintegration, Azure.
+
+  - heading: "Lücken und Empfehlungen"
+    blocks:
+      - list:
+          - "ITIL und ITSM-Prozesse (4/5): kein Nachweis. Empfehlung: ITIL 4 Foundation; im Gespräch den Bezug über Betriebsmodelle inkl. RACI und die Anbindung von Monitoring-Tools herstellen."
+          - "SLA- und KPI-Steuerung, Service Reviews: nicht belegt. Empfehlung: nicht als eigene Erfahrung darstellen; operative Resilienz und Lifecycle-Management als Brücke nutzen."
+          - "Lieferantenmanagement im Betrieb (Verträge, Outsourcing): belegt sind Anbieterevaluation und Beschaffung. Empfehlung: dazu konkrete Beispiele vorbereiten."
+          - "Portfolio- und Demand-Management: belegt ist die Zusammenarbeit mit dem Portfoliomanagement zu Migrationsplänen (BKB). Empfehlung: diese Beispiele ausformulieren."
+          - "HERMES: nicht belegt, in Inseraten der Verwaltung verlangt. Empfehlung: HERMES Foundation, wenn Stellen bei der öffentlichen Hand in Frage kommen."
+          - "Werkzeuge: Jira/Confluence, ITSM-Werkzeuge, MS SQL Server und Windows Server sind nicht belegt, von der Power Platform nur Power BI; SAP nur als Entwicklung (ABAP, 2013–2015). Empfehlung: nur Belegtes nennen; Grundlagen in Power Automate aufbauen, wenn Prozessautomatisierung gefragt ist."
+          - "Branche: kein Nachweis in Automobil oder Industrie; belegt sind Bank, Beratung und Technologie sowie Projekte für ein Bundesamt und eine Krankenversicherung. Empfehlung: die globale Cloud-Transformation als Enterprise-IT-Erfahrung einordnen."
+
+  - heading: "Links"
+    blocks:
+      - links:
+          - { label: "Lebenslauf IT Business Service Manager", page: it-business-service-manager }
+          - { label: "Bewerbung Beispiel Automobile", page: beispiel-automobile }
+          - { label: "Coaching-Übersicht", page: coaching }
+
+note: >-
+  Stichprobe: fünf Inserate von jobs.ch und jobs.example.com im Raum Zürich, publiziert zwischen
+  11.08.2026 und 21.09.2026, abgerufen am 23.09.2026; Häufigkeiten von Hand gezählt. Die
+  Selbsteinschätzungen entsprechen den Stufen im Profil it-business-service-manager.

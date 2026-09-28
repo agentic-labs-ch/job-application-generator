@@ -1,0 +1,38 @@
+# Fictional stress fixture: very long words, URLs and text to test wrapping.
+meta:
+  languages: [en]
+profile:
+  name: Maximiliane Konstantinopolitanische-Donaudampfschifffahrtsgesellschaftskapitänin
+  headline: Fictional Rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz Specialist
+  location: Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch
+  summary: >-
+    Supercalifragilisticexpialidocious-pneumonoultramicroscopicsilicovolcanoconiosis-antidisestablishmentarianism
+    is a deliberately long fictional token. The following URL is also long:
+    https://example.com/a/very/long/path/that/keeps/going/and/going/without/any/natural/break/points/at/all
+  links:
+    - label: https://example.com/an/extremely/long/link/label/that/should/wrap/instead/of/overflowing/the/viewport
+      url: https://example.com/an/extremely/long/link/label/that/should/wrap/instead/of/overflowing/the/viewport
+experience:
+  - id: long-role
+    organization: The Extraordinarily Long Named Fictional Organisation for Testing Purposes International Holding (fictional)
+    role: Principal-Distinguished-Senior-Staff-Lead-Architect-Engineer-Consultant-Advisor
+    location: Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+    start: 2019-01
+    highlights:
+      - AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+certifications:
+  - id: long-cert
+    name: Certified-Fictional-Ultra-Long-Credential-Name-Without-Spaces-For-Wrapping-Tests-Only
+    issuer: Example Board (fictional)
+    date: 2020-02
+    url: https://example.com/certificates/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+skills:
+  - id: long-skills
+    name: Skills
+    items:
+      - { name: Kubernetes-Operator-Development-And-Custom-Resource-Definition-Lifecycle-Management, level: 3 }
+      - { name: Short, level: 1 }
+languages:
+  - id: long-lang
+    name: Fictional-Constructed-Language-With-An-Unreasonably-Long-Name-For-Testing
+    level: B2

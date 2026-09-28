@@ -1,0 +1,503 @@
+{
+ "key": "tech-produkt",
+ "lang": "en",
+ "name": "Alex Muster",
+ "target": "Customer Success Account Manager",
+ "headline": "Cloud transformation · Stakeholder alignment · Azure",
+ "claim": "Customer outcomes over project milestones: I align stakeholders, keep delivery on track and make the value of the cloud visible.",
+ "profile": "Cloud and enterprise architect with an MSc in Business Information Technology (Beispiel-Hochschule) and over six years in IT consulting and enterprise architecture. I know Azure adoption from both sides: delivering it as a consultant and shaping it as an architect at a Microsoft enterprise customer. At Beispiel Kantonalbank I advised CIO boards, team leads and ICT projects, incl. on procurement and vendor evaluation, and resolved technical conflicts between business units. At Globex Consulting I advised clients in several industries on cloud transformation and was deputy to the delivery lead. Native German speaker, fluent in English.",
+ "strengths": [
+  {
+   "title": "Stakeholder alignment up to the C-level",
+   "text": "Advised CIO boards, team leads and projects at Beispiel Kantonalbank. At Globex Consulting, regular contact with client executives and boards and weekly client presentations.",
+   "evidence": [
+    "bkb",
+    "globex"
+   ]
+  },
+  {
+   "title": "Cloud adoption & value",
+   "text": "Took part in a global Azure migration of 1,000+ servers in 50+ countries; business cases and cost-benefit comparisons incl. Azure Hybrid Benefit; Power BI dashboards that showed management boards where the same applications ran in different versions.",
+   "evidence": [
+    "globex",
+    "bkb"
+   ]
+  },
+  {
+   "title": "Delivery governance & risk",
+   "text": "Sub-project lead of a team of up to 12 with schedule and budget responsibility, deputy to the delivery lead; Azure services integrated into operating models with RACI; the phased migration from Active Directory to Entra ID planned.",
+   "evidence": [
+    "globex"
+   ]
+  }
+ ],
+ "location": "Zurich, Switzerland",
+ "email": "alex.muster@example.com",
+ "linkedin": "https://example.com/alex-muster",
+ "job": {
+  "title": "Customer Success Account Manager",
+  "company": "Nimbus Software",
+  "location": "Zürich",
+  "reference": "NS-2317"
+ },
+ "brand": {
+  "paper": "#ffffff",
+  "ink": "#242424",
+  "accent": "#3b4bc8",
+  "marks": [
+   "#e4572e",
+   "#2a9d8f",
+   "#2b7bb9",
+   "#e9c46a"
+  ]
+ },
+ "photo": "portrait.jpg",
+ "experience": [
+  {
+   "id": "bkb",
+   "organization": "Beispiel Kantonalbank (BKB)",
+   "location": "Zürich",
+   "start": "2023-12",
+   "end": "2026-02",
+   "role": "ICT Architect",
+   "highlights": [
+    "Advised ICT projects, team leads and CIO boards, incl. procurement and vendor evaluation of IT products and services",
+    "Co-developed the cloud strategy and sourcing model (IaaS, PaaS, SaaS, on-prem) incl. business cases, TCO and CapEx/OpEx analyses",
+    "Advised the cloud value stream: architecture compliance and solution proposals based on the Microsoft Azure service catalogue",
+    "Co-owned the IT system inventory; Power BI dashboards as a basis for decisions in management boards",
+    "Created training material and presented at internal and external boards"
+   ],
+   "summary": "Architect at a Microsoft enterprise customer: cloud recommendations, standards and roadmaps for projects and CIO boards."
+  },
+  {
+   "id": "globex",
+   "organization": "Globex Consulting AG",
+   "location": "Zürich",
+   "start": "2021-07",
+   "end": "2023-11",
+   "role": "Consultant · Sub-project Lead, Cloud Architecture",
+   "highlights": [
+    "Led a project team of up to 12 incl. schedule and budget responsibility; deputy to the delivery lead",
+    "Global cloud transformation: migrated 1,000+ servers across 50+ countries to Azure (lift & shift)",
+    "Weekly client presentations; business cases and cost-benefit comparisons (incl. Azure Hybrid Benefit)",
+    "Integrated Azure services into operating models incl. RACI; planned the phased migration from Active Directory to Entra ID",
+    "Designed and implemented cloud security services (WAF, load balancer); connected SIEM and monitoring tools globally"
+   ],
+   "summary": "Advised clients in several industries on cloud transformation strategies and delivered them, with a focus on cloud architecture, cybersecurity and project management."
+  },
+  {
+   "id": "initech",
+   "organization": "Initech Solutions AG",
+   "location": "Zürich & Bern",
+   "start": "2019-10",
+   "end": "2021-02",
+   "role": "Consultant; Senior Consultant from 01.2021",
+   "projects": [
+    {
+     "start": "2019-10",
+     "end": "2020-10",
+     "description": "Team lead for IT architecture, engineering and API management in a federal office's IT transformation, incl. budget, schedule and stakeholder management with public-sector and partner organisations"
+    },
+    {
+     "start": "2020-11",
+     "end": "2021-02",
+     "description": "Azure cloud integration for a major health insurer: coordinated stakeholders and developers on the new cloud integration strategy (Azure landing zone approach); proof of concept to integrate an on-prem Oracle DB into Dynamics 365"
+    }
+   ],
+   "highlights": [
+    "Onboarded and coordinated new team members"
+   ],
+   "summary": "Consulting in public-sector and insurance projects."
+  },
+  {
+   "id": "helix",
+   "organization": "Helix Technologies Schweiz AG",
+   "location": "Zürich & New York",
+   "start": "2017-10",
+   "end": "2019-10",
+   "role": "Junior Software Engineer (Master@Helix) · Technical Sales Support",
+   "highlights": [
+    "Worked with the CTO of Helix Switzerland in pre-sales; cloud training for sales peers",
+    "Implemented Watson AI services on a Pepper robot for a client at Helix Research"
+   ]
+  },
+  {
+   "id": "example-it-services",
+   "organization": "Example IT Services International",
+   "location": "Zürich",
+   "start": "2013-10",
+   "end": "2015-04",
+   "role": "Software Developer SAP/ERP (alongside studies)",
+   "highlights": [
+    "Developed and customised SAP ERP solutions (ABAP) for clients in an agile team",
+    "Optimised SQL queries for production database performance; project planning"
+   ],
+   "compact": true
+  },
+  {
+   "id": "bzb",
+   "organization": "Beispiel Zentralbank (BZB)",
+   "location": "Zürich",
+   "start": "2012-08",
+   "end": "2013-08",
+   "role": "Software Developer (Internship)",
+   "highlights": [
+    "Migrated the time-series analysis system together with economists (Java, Groovy; Scrum, Kanban)"
+   ],
+   "compact": true
+  }
+ ],
+ "education": [
+  {
+   "id": "beispiel-hochschule-msc",
+   "institution": "Beispiel School of Management and Law",
+   "location": "Zürich",
+   "start": "2017-09",
+   "end": "2019-07",
+   "degree": "MSc Business Information Technology",
+   "summary": "Master's thesis at Helix Research (text recognition, machine learning); exchange semester at Hudson College, New York (08.2018–12.2018)"
+  },
+  {
+   "id": "beispiel-hochschule-bsc",
+   "institution": "Beispiel School of Management and Law",
+   "location": "Winterthur",
+   "start": "2013-09",
+   "end": "2017-07",
+   "degree": "BSc Business Information Technology",
+   "summary": "Bachelor's thesis in enterprise architecture (TOGAF, ArchiMate); exchange semester at Han River University, Seoul (02.2016–06.2016)"
+  },
+  {
+   "id": "kantonsschule-beispiel",
+   "institution": "Kantonsschule Beispiel",
+   "location": "Zürich",
+   "start": "2009-08",
+   "end": "2013-08",
+   "degree": "Swiss Federal VET Diploma in Informatics and Federal Vocational Baccalaureate (commercial)"
+  }
+ ],
+ "skills": [
+  {
+   "id": "skills-cloud",
+   "name": "Cloud & Infrastructure",
+   "items": [
+    {
+     "name": "Microsoft Azure IaaS/PaaS",
+     "level": 4,
+     "refs": [
+      "bkb",
+      "globex",
+      "initech"
+     ]
+    },
+    {
+     "name": "Azure Networking & Security (VNet, WAF, Firewall, Private Link, ExpressRoute)",
+     "level": 4,
+     "refs": [
+      "globex"
+     ]
+    },
+    {
+     "name": "Azure Migrate / Site Recovery / Backup",
+     "level": 4,
+     "refs": [
+      "bkb",
+      "globex"
+     ]
+    },
+    {
+     "name": "Entra ID / IAM",
+     "level": 3,
+     "refs": [
+      "globex",
+      "initech"
+     ]
+    },
+    {
+     "name": "Terraform (IaC)",
+     "level": 3,
+     "refs": []
+    },
+    {
+     "name": "Kubernetes / Docker",
+     "level": 3,
+     "refs": [
+      "initech",
+      "helix"
+     ]
+    },
+    {
+     "name": "Linux (Ubuntu, RHEL)",
+     "level": 3,
+     "refs": []
+    }
+   ]
+  },
+  {
+   "id": "skills-data-ai",
+   "name": "Data & AI",
+   "items": [
+    {
+     "name": "Azure Data Factory / Synapse",
+     "level": 3,
+     "refs": [
+      "initech"
+     ]
+    },
+    {
+     "name": "Power BI",
+     "level": 3,
+     "refs": [
+      "bkb"
+     ]
+    },
+    {
+     "name": "Azure OpenAI / AI Services",
+     "level": 3,
+     "refs": []
+    },
+    {
+     "name": "Helix Watson",
+     "level": 3,
+     "refs": [
+      "helix"
+     ]
+    },
+    {
+     "name": "Machine Learning (text recognition)",
+     "level": 1,
+     "refs": [
+      "helix",
+      "beispiel-hochschule-msc"
+     ]
+    },
+    {
+     "name": "Tableau / SPSS / RapidMiner",
+     "level": 1,
+     "refs": []
+    }
+   ]
+  },
+  {
+   "id": "skills-architecture",
+   "name": "Architecture & Strategy",
+   "items": [
+    {
+     "name": "Enterprise Architecture",
+     "level": 4,
+     "refs": [
+      "bkb",
+      "globex",
+      "beispiel-hochschule-bsc"
+     ]
+    },
+    {
+     "name": "Cloud strategy & sourcing",
+     "level": 4,
+     "refs": [
+      "bkb",
+      "globex"
+     ]
+    },
+    {
+     "name": "Business Cases / TCO",
+     "level": 4,
+     "refs": [
+      "bkb",
+      "globex"
+     ]
+    },
+    {
+     "name": "TOGAF / ArchiMate",
+     "level": 3,
+     "refs": [
+      "bkb",
+      "beispiel-hochschule-bsc"
+     ]
+    },
+    {
+     "name": "Operational resilience",
+     "level": 3,
+     "refs": [
+      "bkb"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "skills-soft",
+   "name": "Soft Skills",
+   "items": [
+    {
+     "name": "Stakeholder & C-level advisory",
+     "level": 4,
+     "refs": [
+      "bkb",
+      "globex",
+      "helix"
+     ]
+    },
+    {
+     "name": "Team leadership",
+     "level": 3,
+     "refs": [
+      "globex",
+      "initech"
+     ]
+    },
+    {
+     "name": "Presenting & training",
+     "level": 4,
+     "refs": [
+      "bkb",
+      "globex",
+      "helix"
+     ]
+    },
+    {
+     "name": "Analytical thinking",
+     "level": 4,
+     "refs": [
+      "bkb",
+      "globex",
+      "beispiel-hochschule-msc"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "skills-methods",
+   "name": "Methods",
+   "items": [
+    {
+     "name": "Scrum / Kanban",
+     "level": 4,
+     "refs": [
+      "example-it-services",
+      "bzb"
+     ]
+    },
+    {
+     "name": "SAFe",
+     "level": 3,
+     "refs": [
+      "bkb"
+     ]
+    },
+    {
+     "name": "Project management",
+     "level": 4,
+     "refs": [
+      "globex",
+      "initech",
+      "example-it-services"
+     ]
+    }
+   ]
+  }
+ ],
+ "knowledge": [
+  {
+   "name": "Customer & stakeholder",
+   "items": [
+    "Stakeholder & C-level advisory",
+    "Presenting & training",
+    "Vendor evaluation",
+    "Business cases / TCO"
+   ],
+   "evidence": [
+    "bkb",
+    "globex",
+    "helix"
+   ]
+  },
+  {
+   "name": "Nimbus cloud & AI",
+   "items": [
+    "Microsoft Azure (IaaS, PaaS)",
+    "Entra ID",
+    "Azure OpenAI / AI Services",
+    "Power BI"
+   ],
+   "evidence": [
+    "globex",
+    "bkb"
+   ]
+  },
+  {
+   "name": "Delivery & governance",
+   "items": [
+    "Project management",
+    "SAFe",
+    "Scrum / Kanban",
+    "Operating models (RACI)",
+    "Enterprise architecture (TOGAF, ArchiMate)"
+   ],
+   "evidence": [
+    "globex",
+    "initech",
+    "bkb",
+    "beispiel-hochschule-bsc"
+   ]
+  }
+ ],
+ "languages": [
+  {
+   "name": "German",
+   "level": "Native",
+   "detail": "Articulate in business talks and in social settings"
+  },
+  {
+   "name": "Persian (Farsi)",
+   "level": "Native",
+   "detail": "Spoken in everyday life"
+  },
+  {
+   "name": "English",
+   "level": "Fluent",
+   "detail": "Very strong business and above all technical vocabulary; less so in literature"
+  },
+  {
+   "name": "French",
+   "level": "Basic"
+  },
+  {
+   "name": "Korean",
+   "level": "Basic"
+  }
+ ],
+ "interests": "Travel and backpacking (Asia, South America, South Africa), football (7 years FC Beispiel), fitness, boxing, diving (PADI Advanced Open Water Diver)",
+ "letter": {
+  "date": "2026-09-24",
+  "place": "Zürich",
+  "recipient": [
+   "Nimbus Software Schweiz GmbH",
+   "Talent Acquisition",
+   "Beispielplatz 2",
+   "8000 Zürich"
+  ],
+  "subject": "Application: Customer Success Account Manager (job number NS-2317)",
+  "salutation": "Dear Hiring Team",
+  "attention": [
+   "I have seen Azure adoption from both sides of the table. At Globex Consulting I helped deliver a global migration of more than 1,000 servers to Azure; at Beispiel Kantonalbank, as an ICT architect, I advised the CIO boards that decided, funded and governed the move to the cloud. As a Customer Success Account Manager, I want to bring both perspectives to your customers."
+  ],
+  "interest": [
+   "Swiss enterprises in regulated industries decide on Azure the way Beispiel Kantonalbank did: through architecture reviews, business cases and CIO boards. I know that path from the inside, and I would like to help Nimbus Software's customers go down it faster, from cloud adoption to AI."
+  ],
+  "desire": [
+   "What I bring:",
+   {
+    "points": [
+     "Trusted advice at board level: I have advised CIO boards and know what they weigh, from business priorities to procurement. I would use this to tie each customer's technology investments to the goals their leadership has set.",
+     "Success plans with measurable value: as an architect I backed cloud decisions with business cases and dashboards. I would build Customer Success Plans the same way, with shared objectives and success measures that the customer's governance can track.",
+     "Risks and dependencies: Azure migrations at Globex Consulting showed me where adoption stalls, from identity to operating models. I would raise these risks early and agree with the customer and the account team on who owns them.",
+     "Nimbus depth: the Azure Solutions Architect certification (AZ-305), and I know the Azure service catalogue from the customer's point of view."
+    ]
+   }
+  ],
+  "action": [
+   "I would welcome the opportunity to discuss how I would lead Customer Success Planning for your customers in Switzerland."
+  ],
+  "closing": "Kind regards",
+  "enclosures": "References and diplomas"
+ }
+}

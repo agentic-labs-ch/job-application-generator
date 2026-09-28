@@ -1,0 +1,230 @@
+# Role version "ICT-Architekt / ICT Architect" of the CV, based on ../cv.yaml (facts only from
+# there). Public once merged into main (unlisted, noindex, shared as a direct link); `evidence`
+# and `note` are never rendered, but they are not confidential either.
+# All skill levels are self-assessment proposals (level_proposed: true) pending owner review.
+# Keyword analysis behind this version: ../pages/stichwortanalyse-ict-architect.yaml
+
+kind: profile
+base: ../cv.yaml
+id: ict-architect
+languages: [de, en]
+target: { de: ICT-Architekt, en: ICT Architect }
+
+omit: [certifications]   # owner 2026-09-23: no certificates on application pages
+photo:   # owner 2026-09-23: this role version uses the photo in the white shirt
+  src: portrait-2.jpg
+  alt:
+    de: Porträt von Alex Muster
+    en: Portrait of Alex Muster
+  width: 480
+  height: 600
+headline:
+  de: "ICT-Architekt · Enterprise-Architektur, Governance & Cloud"
+  en: "ICT Architect · Enterprise architecture, governance & cloud"
+
+claim:
+  de: >-
+    Umsetzbare Zielarchitekturen und Cloud-Strategien: Ich verbinde Standards und Roadmaps
+    gemäss ICT-Strategie mit Umsetzungserfahrung, etwa aus der Migration von über 1000 Servern
+    auf Azure.
+  en: >-
+    Implementable target architectures and cloud strategies: I combine standards and roadmaps
+    aligned with the ICT strategy with delivery experience, including migrating 1000+ servers
+    to Azure.
+
+summary:
+  de: >-
+    ICT-Architekt mit Erfahrung in Bank und Beratung sowie in Projekten für ein Bundesamt und
+    eine Krankenversicherung. Bei der Beispiel Kantonalbank habe ich vorhabenübergreifende
+    Enterprise- und ICT-Architekturen mit Standards und Roadmaps gemäss ICT-Strategie
+    entwickelt, Vorhaben auf Architekturkonformität geprüft und CIO-Gremien beraten, u. a. bei
+    Beschaffung und Anbieterevaluation. Bei Globex Consulting habe ich Azure-Zielarchitekturen mit
+    Business und IT entworfen, ein Projektteam mit bis zu 12 Personen geführt und an einer
+    globalen Migration von über 1000 Servern gearbeitet. Mein Fundament: Informatiker EFZ, MSc
+    Wirtschaftsinformatik und eine Bachelorarbeit in Enterprise Architecture (TOGAF, ArchiMate).
+    Ich übersetze Technik in klare Entscheidungen für Business und IT.
+  en: >-
+    ICT architect with experience in banking and consulting, including projects for a federal
+    office and a health insurer. At Beispiel Kantonalbank I developed cross-project enterprise
+    and ICT architectures with standards and roadmaps aligned with the ICT strategy, reviewed
+    initiatives for architecture compliance and advised CIO boards, incl. on procurement and
+    vendor evaluation. At Globex Consulting I designed Azure target architectures with business and IT,
+    led a project team of up to 12 people and worked on a global migration of 1000+ servers.
+    My foundation: Swiss Federal VET Diploma in Informatics, MSc in Business Information
+    Technology and a bachelor's thesis in enterprise architecture (TOGAF, ArchiMate). I turn
+    technology into clear decisions for business and IT.
+
+usp:
+  - title: { de: Wofür ich stehe, en: What I stand for }
+    text:
+      de: >-
+        Architektur, die Business und IT verbindet: Standards, Roadmaps und Zielarchitekturen,
+        die sich an der ICT-Strategie ausrichten und mit Business Case, TCO und
+        Sourcing-Optionen nachvollziehbar begründet sind.
+      en: >-
+        Architecture that connects business and IT: standards, roadmaps and target architectures
+        that follow the ICT strategy and are clearly justified with business cases, TCO and
+        sourcing options.
+  - title: { de: Zusammenarbeit mit mir, en: Working with me }
+    text:
+      de: >-
+        Ich arbeite eng mit ICT-Projekten, Teamleitungen sowie Portfolio- und Projektmanagement
+        zusammen. Ich prüfe Vorhaben auf Architekturrelevanz und Konformität, mache konkrete
+        Lösungsvorschläge und erkläre Architekturentscheide verständlich, vom Projektteam bis
+        zum CIO-Gremium.
+      en: >-
+        I work closely with ICT projects, team leads and portfolio and project management. I
+        review initiatives for architecture relevance and compliance, make concrete solution
+        proposals and explain architecture decisions clearly, from project teams to CIO boards.
+  - title: { de: Was Sie erwarten können, en: What you can expect }
+    text:
+      de: >-
+        Ergebnisse, auf denen Teams aufbauen können: Zielarchitekturen, Roadmaps, Business Cases,
+        Migrationspläne, Betriebsmodelle mit RACI und Trainingsmaterial. Dazu ein technisches
+        Fundament vom Informatiker EFZ über Java und SAP bis zu Kubernetes und Azure.
+      en: >-
+        Deliverables teams can build on: target architectures, roadmaps, business cases,
+        migration plans, operating models with RACI and training material. Plus a technical
+        foundation that ranges from a Federal VET Diploma in Informatics through Java and SAP to
+        Kubernetes and Azure.
+
+experience:
+  - id: bkb
+    summary:
+      de: "Architektur auf Unternehmensebene: Standards, Roadmaps und Architektur-Governance für ICT-Vorhaben, mit Schwerpunkt Cloud und Infrastruktur."
+      en: "Enterprise-level architecture: standards, roadmaps and architecture governance for ICT initiatives, with a focus on cloud and infrastructure."
+    highlights:
+      - de: "Entwicklung und Pflege vorhabenübergreifender Enterprise- und ICT-Architekturen inkl. Standards und Roadmaps gemäss ICT-Strategie"
+        en: "Developed and maintained cross-project enterprise and ICT architectures incl. standards and roadmaps aligned with the ICT strategy"
+      - de: "Architektur-Governance: Prüfung von Vorhaben auf Architekturrelevanz und Konformität; Betreuung des Value Stream Cloud mit Lösungsvorschlägen auf Basis des Microsoft-Azure-Servicekatalogs"
+        en: "Architecture governance: reviewed initiatives for architecture relevance and compliance; supported the Cloud value stream with solution proposals based on the Microsoft Azure service catalogue"
+      - de: "Mitentwicklung der Cloud-Strategie und des Sourcing-Modells (IaaS, PaaS, SaaS, On-Prem) inkl. Business Cases, TCO- und CapEx/OpEx-Analysen"
+        en: "Co-developed the cloud strategy and sourcing model (IaaS, PaaS, SaaS, on-prem) incl. business cases, TCO and CapEx/OpEx analyses"
+      - de: "Beratung von ICT-Projekten, Teamleitungen und CIO-Gremien, u. a. bei Beschaffung und Anbieterevaluation von IT-Produkten und Services"
+        en: "Advised ICT projects, team leads and CIO boards, incl. procurement and vendor evaluation of IT products and services"
+      - de: "Architektur für operative Resilienz, Cloud-Backup und Lifecycle-Management der IT-Infrastruktur"
+        en: "Architecture for operational resilience, cloud backup and IT infrastructure lifecycle management"
+      - de: "Zusammenarbeit mit Portfolio- und Projektmanagement zu Migrationsplänen und dem Cloud Target Operating Model (SAFe); Trainingsmaterial und Präsentationen für interne und externe Gremien"
+        en: "Worked with portfolio and project management on migration plans and the cloud target operating model (SAFe); training material and presentations for internal and external boards"
+
+  - id: globex
+    summary:
+      de: "Cloud-Architektur auf Azure und Teilprojektleitung: von Zielarchitekturen über Security-Services bis zu Betriebsmodellen und Business Cases."
+      en: "Azure cloud architecture and sub-project lead: from target architectures and security services to operating models and business cases."
+    highlights:
+      - de: "Entwicklung von Zielarchitekturen für Azure mit Business- und IT-Stakeholdern"
+        en: "Designed Azure target architectures with business and IT stakeholders"
+      - de: "Globale Cloud-Transformation: Migration von über 1000 Servern in über 50 Ländern auf Azure (Lift & Shift)"
+        en: "Global cloud transformation: migrated 1000+ servers across 50+ countries to Azure (lift & shift)"
+      - de: "Führung eines Projektteams mit bis zu 12 Personen inkl. Termin- und Budgetverantwortung; Stellvertretung des Delivery Lead"
+        en: "Led a project team of up to 12 people incl. schedule and budget responsibility; deputy to the delivery lead"
+      - de: "Design und Implementierung von Cloud-Security-Services (WAF, Load Balancer) sowie globale Anbindung von SIEM- und Monitoring-Tools"
+        en: "Designed and implemented cloud security services (WAF, load balancer) and connected SIEM and monitoring tools globally"
+      - de: "Integration von Azure Services in Betriebsmodelle inkl. RACI; Planung der schrittweisen Migration von Active Directory zu Entra ID"
+        en: "Integrated Azure services into operating models incl. RACI; planned the phased migration from Active Directory to Entra ID"
+      - de: "Business Cases und Kosten-Nutzen-Vergleiche (u. a. Azure Hybrid Benefit); wöchentliche Kundenpräsentationen"
+        en: "Business cases and cost-benefit comparisons (incl. Azure Hybrid Benefit); weekly client presentations"
+
+  - id: initech
+    summary:
+      de: "Architektur- und Integrationsberatung für ein Bundesamt und eine grosse Krankenversicherung."
+      en: "Architecture and integration consulting for a federal office and a major health insurer."
+    projects:
+      - start: 2019-10
+        end: 2020-10
+        description:
+          de: "Team Lead IT-Architektur, Engineering und API Management für die IT-Transformation eines Bundesamts: Projektmanagement inkl. Budget und Zeitplan, Release-Planung, Stakeholder-Management mit Behörden- und Partnerorganisationen, Einarbeitung von Mitarbeitenden"
+          en: "Team lead for IT architecture, engineering and API management in a federal office's IT transformation: project management incl. budget and schedule, release planning, stakeholder management with public-sector and partner organisations, onboarding team members"
+      - start: 2020-11
+        end: 2021-02
+        description:
+          de: "Azure-Cloud-Integration bei einer grossen Krankenversicherung: Integrationskonzept und Architektur für die Anbindung einer On-Prem-Oracle-DB an Dynamics 365 (Azure Data Factory, Azure SQL, Landing Zone) inkl. Proof of Concept"
+          en: "Azure cloud integration for a major health insurer: integration concept and architecture to connect an on-prem Oracle DB to Dynamics 365 (Azure Data Factory, Azure SQL, landing zone) incl. proof of concept"
+    highlights:
+      - de: "Technologien: API Management, IAM, Webservices, Java, Docker, Azure"
+        en: "Technologies: API management, IAM, web services, Java, Docker, Azure"
+
+  - id: helix
+    highlights:
+      - de: "Aufbau von Helix Cloud Private on-premise im eigenen Rechenzentrum (VMs, Kubernetes, Docker)"
+        en: "Set up Helix Cloud Private on-premise in Helix's data centre (VMs, Kubernetes, Docker)"
+      - de: "Proof of Concept für eine sichere Access-Management-Lösung (APIs, OAuth 2.0)"
+        en: "Proof of concept for a secure access management solution (APIs, OAuth 2.0)"
+      - de: "Pre-Sales in Zusammenarbeit mit dem CTO von Helix Schweiz; Cloud-Schulungen für das Sales-Team"
+        en: "Pre-sales together with the CTO of Helix Switzerland; cloud training for sales peers"
+
+  - id: example-it-services
+    highlights:
+      - de: "Entwicklung und Anpassung von SAP-ERP-Lösungen (ABAP) für Kunden in einem agilen Team; Optimierung von SQL-Abfragen für die Performance der Produktivdatenbank"
+        en: "Developed and customised SAP ERP solutions (ABAP) for clients in an agile team; optimised SQL queries for production database performance"
+
+  - id: bzb
+    highlights:
+      - de: "Migration des Zeitreihen-Analysesystems in Zusammenarbeit mit Ökonominnen und Ökonomen (Java, Groovy; Scrum, Kanban)"
+        en: "Migrated the time-series analysis system together with economists (Java, Groovy; Scrum, Kanban)"
+
+# Levels: 1 Grundkenntnisse, 2 Erste Erfahrung, 3 Erfahren, 4 Spezialist (self-assessment
+# proposals). Items that exist in ../cv.yaml keep their level; see `note` for the one change.
+skills:
+  - id: ict-architecture
+    area: domain
+    name: { de: "Architektur & ICT-Strategie", en: "Architecture & ICT strategy" }
+    items:
+      - { name: Enterprise Architecture, level: 4, level_proposed: true, key: true, evidence: [bkb, beispiel-hochschule-bsc] }
+      - { name: { de: "Ziel- und Lösungsarchitekturen", en: "Target and solution architectures" }, level: 4, level_proposed: true, key: true, evidence: [globex, bkb, initech] }
+      - { name: { de: "Cloud-Strategie & Sourcing (IaaS, PaaS, SaaS, On-Prem)", en: "Cloud strategy & sourcing (IaaS, PaaS, SaaS, on-prem)" }, level: 4, level_proposed: true, key: true, evidence: [bkb, globex] }
+      - { name: { de: "ICT-Standards & Roadmaps", en: "ICT standards & roadmaps" }, level: 3, level_proposed: true, key: true, evidence: [bkb] }
+      - { name: { de: "Architektur-Governance & Konformitätsprüfung", en: "Architecture governance & compliance reviews" }, level: 3, level_proposed: true, key: true, evidence: [bkb] }
+      - { name: { de: "Operative Resilienz & Lifecycle-Management", en: "Operational resilience & lifecycle management" }, level: 3, level_proposed: true, evidence: [bkb] }
+      - { name: { de: Datenarchitektur, en: Data architecture }, level: 2, level_proposed: true, evidence: [initech] }
+
+  - id: ict-cloud-infrastructure
+    area: technology
+    name: { de: "Cloud, Infrastruktur & Security", en: "Cloud, infrastructure & security" }
+    items:
+      - { name: Microsoft Azure IaaS/PaaS, level: 4, level_proposed: true, key: true, evidence: [globex, bkb, az-305] }
+      - { name: "Azure Networking & Security (VNet, WAF, Firewall, Private Link, ExpressRoute)", level: 4, level_proposed: true, evidence: [globex, az-305] }
+      - { name: { de: "Cloud-Migration (Azure Migrate, Site Recovery, Backup)", en: "Cloud migration (Azure Migrate, Site Recovery, Backup)" }, level: 4, level_proposed: true, evidence: [globex, bkb] }
+      - { name: { de: "Private & Hybrid Cloud", en: "Private & hybrid cloud" }, level: 3, level_proposed: true, evidence: [helix, initech, bkb] }
+      - { name: "Entra ID / IAM", level: 3, level_proposed: true, evidence: [globex, initech] }
+      - { name: "Defender for Cloud / Sentinel (SIEM)", level: 3, level_proposed: true, evidence: [globex] }
+      - { name: "Kubernetes / Docker", level: 3, level_proposed: true, evidence: [helix, initech] }
+
+  - id: ict-integration
+    area: technology
+    name: { de: "Integration & Entwicklung", en: "Integration & development" }
+    items:
+      - { name: { de: "Integrationsarchitektur (APIs, Webservices, Azure Data Factory)", en: "Integration architecture (APIs, web services, Azure Data Factory)" }, level: 3, level_proposed: true, evidence: [initech, helix] }
+      - { name: { de: "API Management & API-Security (OAuth 2.0, API Connect, DataPower)", en: "API management & API security (OAuth 2.0, API Connect, DataPower)" }, level: 3, level_proposed: true, evidence: [initech, helix] }
+      - { name: { de: "ERP- und CRM-Systeme (SAP ERP, Dynamics 365)", en: "ERP and CRM systems (SAP ERP, Dynamics 365)" }, level: 2, level_proposed: true, evidence: [example-it-services, initech] }
+      - { name: { de: "Softwareentwicklung (Java, SQL, ABAP)", en: "Software development (Java, SQL, ABAP)" }, level: 3, level_proposed: true, evidence: [bzb, example-it-services, initech, kantonsschule-beispiel] }
+
+  - id: ict-methods
+    area: method
+    name: { de: "Methoden & Vorgehen", en: "Methods & approach" }
+    items:
+      - { name: "TOGAF / ArchiMate", level: 3, level_proposed: true, key: true, evidence: [beispiel-hochschule-bsc, bkb] }
+      - { name: { de: "Business Cases, TCO & CapEx/OpEx", en: "Business cases, TCO & CapEx/OpEx" }, level: 4, level_proposed: true, key: true, evidence: [bkb, globex] }
+      - { name: { de: "Technologie- und Anbieterevaluation, Proofs of Concept", en: "Technology and vendor evaluation, proofs of concept" }, level: 3, level_proposed: true, key: true, evidence: [bkb, initech, helix] }
+      - { name: { de: "Betriebsmodelle & RACI (Target Operating Model)", en: "Operating models & RACI (target operating model)" }, level: 3, level_proposed: true, evidence: [globex, bkb] }
+      - { name: { de: "Projektmanagement (Budget, Termine, Release-Planung)", en: "Project management (budget, schedule, release planning)" }, level: 4, level_proposed: true, evidence: [globex, initech] }
+      - { name: { de: "Agile Methoden (SAFe, Scrum, Kanban)", en: "Agile methods (SAFe, Scrum, Kanban)" }, level: 3, level_proposed: true, evidence: [bkb, bzb, example-it-services] }
+
+  - id: ict-personal
+    area: personal
+    name: { de: "Persönliche & soziale Kompetenzen", en: "Personal & social skills" }
+    items:
+      - { name: { de: "Stakeholder-Management & C-Level-Beratung", en: "Stakeholder management & C-level advisory" }, level: 4, level_proposed: true, key: true, evidence: [bkb, globex, initech] }
+      - { name: { de: "Präsentation & Schulung", en: "Presenting & training" }, level: 4, level_proposed: true, evidence: [bkb, globex, helix] }
+      - { name: { de: Analytisches Denken, en: Analytical thinking }, level: 4, level_proposed: true, evidence: [bkb, globex, beispiel-hochschule-msc] }
+      - { name: { de: Teamführung, en: Team leadership }, level: 3, level_proposed: true, evidence: [globex, initech] }
+      - { name: { de: Kundenorientierung, en: Client focus }, level: 3, level_proposed: true, evidence: [globex, initech, helix] }
+      - { name: { de: Interdisziplinäre Zusammenarbeit, en: Cross-functional collaboration }, level: 3, level_proposed: true, evidence: [bkb, bzb, globex] }
+
+note: >-
+  Alle Stufen sind Vorschläge zur Selbsteinschätzung. Einträge aus dem Gesamtprofil behalten
+  ihre Stufe (teils umbenannt). Einzige Abweichung: Scrum/Kanban steht dort auf 4 und ist hier
+  mit SAFe (3) zu «Agile Methoden» auf Stufe 3 zusammengefasst, weil die Stationen die
+  Anwendung agiler Methoden belegen, aber keine Leitung oder Schulung. Nicht übernommen, weil
+  für die Rolle nachrangig oder ohne Beleg in den Stationen: Terraform, Linux, Python,
+  JavaScript, Groovy und die Gruppe Daten & KI.

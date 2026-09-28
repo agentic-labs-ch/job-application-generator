@@ -1,0 +1,483 @@
+{
+ "key": "mensch-kreativ",
+ "lang": "de",
+ "name": "Alex Muster",
+ "target": "Product Owner HR-Plattform",
+ "headline": "Technisches Produktmanagement · Cloud- und Plattform-Services",
+ "claim": "Ich bringe Kundennutzen, Business Case und technische Machbarkeit zusammen – für Cloud- und Plattform-Services mit klarer Roadmap und tragfähigem Betriebsmodell.",
+ "profile": "Enterprise- und Cloud-Architekt mit Erfahrung in Bank, Beratung und Technologie. Bei der Beispiel Kantonalbank betreute ich den Value Stream Cloud nach SAFe mit Lösungsvorschlägen auf Basis des Azure-Servicekatalogs, entwickelte Roadmaps gemäss ICT-Strategie, wirkte an Cloud-Strategie und Sourcing-Modell inklusive Business Cases und TCO-Analysen mit und beriet Projekte, Teamleitungen und CIO-Gremien. Bei Globex Consulting führte ich als Teilprojektleiter ein Team mit bis zu 12 Personen in einer globalen Cloud-Migration, mit Termin- und Budgetverantwortung; bei Helix arbeitete ich im Pre-Sales mit dem CTO von Helix Schweiz zusammen. Diese Erfahrung bringe ich ins technische Produktmanagement ein: für Cloud- und Plattform-Services, die Kundennutzen, Wirtschaftlichkeit und Betrieb verbinden.",
+ "strengths": [
+  {
+   "title": "Wofür ich stehe",
+   "text": "Nachvollziehbare Entscheidungen: Ich mache Nutzen, Kosten und Varianten transparent, mit Business Cases, TCO- und CapEx/OpEx-Analysen und einem Sourcing-Modell für IaaS, PaaS, SaaS und On-Prem."
+  },
+  {
+   "title": "Zusammenarbeit mit mir",
+   "text": "Strukturiert und im Dialog: Ich bringe Fachbereiche, IT, Anbieter und Betrieb zusammen, übersetze zwischen Business- und Techniksprache und halte Ergebnisse in Roadmaps, Standards und Präsentationen fest."
+  },
+  {
+   "title": "Was Sie erwarten können",
+   "text": "Technische Tiefe für Produktentscheide: Mit Architektur- und Cloud-Erfahrung spreche ich mit Engineering auf Augenhöhe, prüfe die Machbarkeit früh, wenn nötig mit einem Proof of Concept, und denke Sicherheit und Betrieb von Anfang an mit."
+  }
+ ],
+ "location": "Zürich, Schweiz",
+ "email": "alex.muster@example.com",
+ "linkedin": "https://example.com/alex-muster",
+ "job": {
+  "title": "Product Owner HR-Plattform 80–100 %",
+  "company": "Kolibri People AG",
+  "location": "Winterthur"
+ },
+ "brand": {
+  "paper": "#fbf7f1",
+  "ink": "#2b211b",
+  "accent": "#b4462a",
+  "marks": [
+   "#e07a5f",
+   "#f2cc8f",
+   "#81b29a"
+  ]
+ },
+ "photo": "portrait.jpg",
+ "experience": [
+  {
+   "id": "bkb",
+   "organization": "Beispiel Kantonalbank (BKB)",
+   "location": "Zürich",
+   "start": "2023-12",
+   "end": "2026-02",
+   "role": "ICT-Architekt",
+   "highlights": [
+    "Betreuung des Value Stream Cloud nach SAFe: Lösungsvorschläge auf Basis des Microsoft-Azure-Servicekatalogs und Prüfung der Architekturkonformität von Vorhaben",
+    "Mitentwicklung der Cloud-Strategie und des Sourcing-Modells (IaaS, PaaS, SaaS, On-Prem) inkl. Business Cases, TCO- und CapEx/OpEx-Analysen",
+    "Entwicklung und Pflege von Roadmaps und Standards gemäss ICT-Strategie für vorhabenübergreifende Enterprise- und ICT-Architekturen",
+    "Beratung von ICT-Projekten, Teamleitungen und CIO-Gremien, u. a. bei Beschaffung und Anbieterevaluation von IT-Produkten und Services; Präsentationen in internen und externen Gremien",
+    "Zusammenarbeit mit Portfolio- und Projektmanagement zu Migrationsplänen und dem Cloud Target Operating Model",
+    "Architektur für operative Resilienz, Cloud-Backup und Lifecycle-Management der IT-Infrastruktur"
+   ],
+   "summary": "Bindeglied zwischen ICT-Strategie, Azure-Servicekatalog und Projekten in einer Organisation nach SAFe."
+  },
+  {
+   "id": "globex",
+   "organization": "Globex Consulting AG",
+   "location": "Zürich",
+   "start": "2021-07",
+   "end": "2023-11",
+   "role": "Consultant · Teilprojektleiter Cloud-Architektur",
+   "highlights": [
+    "Führung eines Projektteams mit bis zu 12 Personen inkl. Termin- und Budgetverantwortung; Stellvertretung des Delivery Lead",
+    "Globale Cloud-Transformation: Migration von über 1000 Servern in über 50 Ländern auf Azure (Lift & Shift)",
+    "Business Cases und Kosten-Nutzen-Vergleiche (u. a. Azure Hybrid Benefit) als Entscheidungsgrundlage; wöchentliche Kundenpräsentationen",
+    "Entwicklung von Zielarchitekturen für Azure gemeinsam mit Business- und IT-Stakeholdern",
+    "Integration von Azure Services in Betriebsmodelle inkl. RACI",
+    "Planung der schrittweisen Migration von Active Directory zu Entra ID"
+   ],
+   "summary": "Teilprojektleitung in einer globalen Cloud-Transformation, verantwortlich für Team, Termine und Budget."
+  },
+  {
+   "id": "initech",
+   "organization": "Initech Solutions AG",
+   "location": "Zürich & Bern",
+   "start": "2019-10",
+   "end": "2021-02",
+   "role": "Consultant; ab 01.2021 Senior Consultant",
+   "projects": [
+    {
+     "start": "2019-10",
+     "end": "2020-10",
+     "description": "Team Lead IT-Architektur, Engineering und API Management für die IT-Transformation eines Bundesamts: Release-Planung, Projektmanagement inkl. Budget und Zeitplan, Stakeholder-Management mit Behörden- und Partnerorganisationen, Einarbeitung von Mitarbeitenden"
+    },
+    {
+     "start": "2020-11",
+     "end": "2021-02",
+     "description": "Azure-Cloud-Integration bei einer grossen Krankenversicherung: Konzept, Architektur und Proof of Concept zur Integration einer On-Prem-Oracle-DB in Dynamics 365 (Azure Data Factory, Azure SQL, Landing Zone)"
+    }
+   ],
+   "highlights": [
+    "Technologien: API Management, IAM, Azure, Docker, Java, Webservices"
+   ],
+   "summary": "Beratung in zwei Kundenprojekten mit Schwerpunkt Release-Planung, Stakeholder-Management und Cloud-Integration."
+  },
+  {
+   "id": "helix",
+   "organization": "Helix Technologies Schweiz AG",
+   "location": "Zürich & New York",
+   "start": "2017-10",
+   "end": "2019-10",
+   "role": "Junior Software Engineer (Master@Helix) · Technical Sales Support",
+   "highlights": [
+    "Zusammenarbeit mit dem CTO von Helix Schweiz im Pre-Sales",
+    "Cloud-Schulungen für das Sales-Team; technischer Experte an Hackathons",
+    "Proof of Concept für eine sichere Access-Management-Lösung (APIs, OAuth 2.0)",
+    "Integration von Watson-KI-Services in einen Pepper-Roboter für einen Kunden bei Helix Research",
+    "Aufbau von Helix Cloud Private on-premise im eigenen Rechenzentrum (VMs, Kubernetes, Docker)"
+   ],
+   "summary": "Kundennahe Rolle zwischen Technik und Vertrieb."
+  },
+  {
+   "id": "example-it-services",
+   "organization": "Example IT Services International",
+   "location": "Zürich",
+   "start": "2013-10",
+   "end": "2015-04",
+   "role": "Softwareentwickler SAP/ERP (neben dem Studium)",
+   "highlights": [
+    "Entwicklung und Anpassung von SAP-ERP-Lösungen (ABAP) für Kunden in einem agilen Team, inkl. Projektplanung",
+    "Optimierung von SQL-Abfragen für die Performance der Produktivdatenbank"
+   ]
+  },
+  {
+   "id": "bzb",
+   "organization": "Beispiel Zentralbank (BZB)",
+   "location": "Zürich",
+   "start": "2012-08",
+   "end": "2013-08",
+   "role": "Softwareentwickler (Praktikum)",
+   "highlights": [
+    "Migration des Zeitreihen-Analysesystems in Zusammenarbeit mit Ökonominnen und Ökonomen; Arbeit nach Scrum und Kanban (Java, Groovy)"
+   ]
+  }
+ ],
+ "education": [
+  {
+   "id": "beispiel-hochschule-msc",
+   "institution": "Beispiel School of Management and Law",
+   "location": "Zürich",
+   "start": "2017-09",
+   "end": "2019-07",
+   "degree": "MSc Wirtschaftsinformatik",
+   "summary": "Masterarbeit bei Helix Research (Texterkennung, Machine Learning); Austauschsemester Hudson College, New York (08.2018–12.2018)"
+  },
+  {
+   "id": "beispiel-hochschule-bsc",
+   "institution": "Beispiel School of Management and Law",
+   "location": "Winterthur",
+   "start": "2013-09",
+   "end": "2017-07",
+   "degree": "BSc Wirtschaftsinformatik",
+   "summary": "Bachelorarbeit in Enterprise Architecture (TOGAF, ArchiMate); Austauschsemester Han River University, Seoul (02.2016–06.2016)"
+  },
+  {
+   "id": "kantonsschule-beispiel",
+   "institution": "Kantonsschule Beispiel",
+   "location": "Zürich",
+   "start": "2009-08",
+   "end": "2013-08",
+   "degree": "Informatiker EFZ und kaufmännische Berufsmaturität"
+  }
+ ],
+ "skills": [
+  {
+   "id": "pm-strategy",
+   "name": "Strategie, Services & Wirtschaftlichkeit",
+   "items": [
+    {
+     "name": "Cloud-Strategie & Sourcing-Modell (IaaS, PaaS, SaaS, On-Prem)",
+     "level": 4,
+     "key": true,
+     "refs": [
+      "bkb"
+     ]
+    },
+    {
+     "name": "Business Cases, TCO & CapEx/OpEx",
+     "level": 4,
+     "key": true,
+     "refs": [
+      "bkb",
+      "globex"
+     ]
+    },
+    {
+     "name": "Enterprise Architecture",
+     "level": 4,
+     "key": false,
+     "refs": [
+      "bkb",
+      "globex",
+      "beispiel-hochschule-bsc"
+     ]
+    },
+    {
+     "name": "Servicekatalog & Lösungsvorschläge (Azure)",
+     "level": 3,
+     "key": true,
+     "refs": [
+      "bkb"
+     ]
+    },
+    {
+     "name": "Anbieterevaluation & Beschaffung",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "bkb"
+     ]
+    },
+    {
+     "name": "Betriebsmodelle (Target Operating Model, RACI)",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "globex",
+      "bkb"
+     ]
+    },
+    {
+     "name": "Operative Resilienz & Lifecycle-Management",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "bkb"
+     ]
+    },
+    {
+     "name": "Pre-Sales & Sales Enablement",
+     "level": 2,
+     "key": false,
+     "refs": [
+      "helix"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pm-methods",
+   "name": "Planung, Delivery & agile Methoden",
+   "items": [
+    {
+     "name": "Anforderungsanalyse & Lösungsdesign",
+     "level": 4,
+     "key": true,
+     "refs": [
+      "bkb",
+      "globex",
+      "initech"
+     ]
+    },
+    {
+     "name": "Projektmanagement (Budget, Termine)",
+     "level": 4,
+     "key": false,
+     "refs": [
+      "globex",
+      "initech",
+      "example-it-services"
+     ]
+    },
+    {
+     "name": "Roadmap-Planung",
+     "level": 3,
+     "key": true,
+     "refs": [
+      "bkb",
+      "globex"
+     ]
+    },
+    {
+     "name": "SAFe",
+     "level": 3,
+     "key": true,
+     "refs": [
+      "bkb"
+     ]
+    },
+    {
+     "name": "Scrum / Kanban",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "bzb",
+      "example-it-services"
+     ]
+    },
+    {
+     "name": "Proof of Concept",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "helix",
+      "initech"
+     ]
+    },
+    {
+     "name": "Release-Planung",
+     "level": 2,
+     "key": false,
+     "refs": [
+      "initech"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pm-cloud",
+   "name": "Cloud & Plattformen",
+   "items": [
+    {
+     "name": "Public Cloud: Microsoft Azure (IaaS, PaaS)",
+     "level": 4,
+     "key": true,
+     "refs": [
+      "globex",
+      "bkb",
+      "initech"
+     ]
+    },
+    {
+     "name": "Cloud-Migration (Azure Migrate, Site Recovery, Backup)",
+     "level": 4,
+     "key": false,
+     "refs": [
+      "globex",
+      "bkb"
+     ]
+    },
+    {
+     "name": "Identity & Access Management (Entra ID)",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "globex",
+      "initech",
+      "helix"
+     ]
+    },
+    {
+     "name": "Kubernetes / Docker",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "helix",
+      "initech"
+     ]
+    },
+    {
+     "name": "API-Management & Integration",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "initech",
+      "helix"
+     ]
+    },
+    {
+     "name": "Private & Hybrid Cloud",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "helix",
+      "bkb",
+      "initech"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pm-personal",
+   "name": "Persönliche & soziale Kompetenzen",
+   "items": [
+    {
+     "name": "Stakeholder-Management bis C-Level",
+     "level": 4,
+     "key": true,
+     "refs": [
+      "bkb",
+      "globex",
+      "initech",
+      "helix"
+     ]
+    },
+    {
+     "name": "Präsentation & Schulung",
+     "level": 4,
+     "key": true,
+     "refs": [
+      "bkb",
+      "globex",
+      "helix"
+     ]
+    },
+    {
+     "name": "Analytisches & konzeptionelles Denken",
+     "level": 4,
+     "key": false,
+     "refs": [
+      "bkb",
+      "globex",
+      "initech",
+      "beispiel-hochschule-msc"
+     ]
+    },
+    {
+     "name": "Teamführung",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "globex",
+      "initech"
+     ]
+    },
+    {
+     "name": "Kundenorientierung",
+     "level": 3,
+     "key": true,
+     "refs": [
+      "globex",
+      "helix",
+      "initech"
+     ]
+    },
+    {
+     "name": "Selbstständige & strukturierte Arbeitsweise",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "bkb",
+      "globex",
+      "initech"
+     ]
+    },
+    {
+     "name": "Interkulturelle Zusammenarbeit",
+     "level": 3,
+     "key": false,
+     "refs": [
+      "globex",
+      "beispiel-hochschule-msc",
+      "beispiel-hochschule-bsc",
+      "beispiel-hochschule-buddy"
+     ]
+    }
+   ]
+  }
+ ],
+ "knowledge": null,
+ "languages": [
+  {
+   "name": "Deutsch",
+   "level": "Muttersprache",
+   "detail": "Gewandt in Business-Gesprächen und im persönlichen Austausch"
+  },
+  {
+   "name": "Persisch (Farsi)",
+   "level": "Muttersprache",
+   "detail": "Im Alltag gesprochen"
+  },
+  {
+   "name": "Englisch",
+   "level": "Fliessend",
+   "detail": "Sehr stark im Business- und vor allem im Technik-Wortschatz; literarisch weniger"
+  },
+  {
+   "name": "Französisch",
+   "level": "Grundkenntnisse"
+  },
+  {
+   "name": "Koreanisch",
+   "level": "Grundkenntnisse"
+  }
+ ],
+ "interests": "Technologie, Politik, Reisen & Backpacking (Asien, Südamerika, Südafrika), Fussball (7 Jahre FC Beispiel), Fitness, Motorrad, Boxen; PADI Advanced Open Water Diver",
+ "letter": null
+}

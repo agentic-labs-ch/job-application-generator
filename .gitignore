@@ -1,0 +1,24 @@
+# Build output
+dist/
+dist-example/
+
+# Dependencies and tooling
+node_modules/
+test-results/
+playwright-report/
+.cache/
+
+# Accident prevention for private inputs (not a security boundary)
+private/
+sources/
+*.pdf
+*.doc
+*.docx
+# The CV guide's course material is tracked on purpose (owner, 2026-09-24; docs/cv-guide/README.md)
+!docs/cv-guide/*.pdf
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
