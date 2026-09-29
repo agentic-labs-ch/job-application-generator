@@ -27,10 +27,22 @@ Free to use, change and share, for any purpose, with no attribution needed: [CC0
 - **Checks** (`tests/`): unit tests and browser checks (Playwright: phone and desktop widths,
   no horizontal scroll, touch targets, axe accessibility rules, 200 % zoom, print page counts).
 
+## Demo
+
+All CVs and applications of the sample person, with a short explanation of how the generator
+works: <https://agentic-labs-ch.github.io/job-application-generator/uebersicht/>
+
 ## Make your own
 
-1. Click **Use this template** on GitHub (or fork), then clone your copy.
-2. Install Node 22+ and run `npm ci`.
+**[SETUP.md](SETUP.md)** explains every step (German summary included): download the code,
+push it to your own repository, install, replace the sample data, publish with GitHub Pages.
+It also has a prompt you can give your coding agent to do it with you.
+
+In short:
+
+1. Download the code (**Code → Download ZIP**, or `git clone --depth 1`), create an empty
+   repository on GitHub and push the code there with a fresh history.
+2. Install Node 22+ and run `npm ci`, then `npx playwright install --with-deps chromium webkit`.
 3. Replace the sample data in `data/` with your own: `data/cv.yaml` first (format in the schema
    `schema/cv.schema.json` and in `docs/profiles.md`, `docs/applications.md`). Replace
    `data/portrait.jpg` with your photo, or remove the `photo` block.

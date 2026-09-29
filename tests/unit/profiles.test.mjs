@@ -231,6 +231,8 @@ test('real role versions and pages are valid and build with working links', asyn
     data: 'data/cv.yaml',
     profiles: 'data/profiles',
     pages: 'data/pages',
+    // Text pages may link to applications (the public demo's overview), as in the real build.
+    applications: 'data/applications',
     out: '.cache/test-build/cv-all',
   });
   assert.ok(files.includes('index.html') && files.includes('en/index.html'));

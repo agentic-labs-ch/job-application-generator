@@ -1,0 +1,111 @@
+# Overview page of the public demo (kind: article, public repo only; owner 2026-09-28: "eine
+# Übersicht, wo man zwischen allen CVs auswählen kann, mit einer einfachen Erklärung und wie der
+# Generator funktioniert"). Every person and company here is fictional sample data. The main CV
+# links here through `set` in public/export.yaml (profile.links).
+
+kind: article
+base: ../cv.yaml
+id: uebersicht
+languages: [de, en]
+title:
+  de: "Alle Lebensläufe und Bewerbungen"
+  en: "All CVs and applications"
+lead:
+  de: >-
+    Diese Demo zeigt, was der Generator aus einem einzigen Datensatz macht: einen Lebenslauf,
+    Versionen für verschiedene Rollen und Bewerbungen für einzelne Inserate, jede in den Farben
+    der Firma. Alex Muster und alle Firmen sind erfunden.
+  en: >-
+    This demo shows what the generator makes from a single dataset: a CV, versions for
+    different roles and applications for single job ads, each in the company's colours. Alex
+    Muster and all companies are fictional.
+
+sections:
+  - heading: { de: "Lebensläufe", en: "CVs" }
+    blocks:
+      - de: >-
+          Der Haupt-Lebenslauf zeigt das ganze Profil. Die Rollenversionen zeigen dieselben
+          Stationen, stellen aber andere Erfahrungen und Kompetenzen nach vorne.
+        en: >-
+          The main CV shows the whole profile. The role versions show the same positions but put
+          other experience and skills first.
+      - links:
+          - { label: { de: "Lebenslauf (Gesamtprofil)", en: "CV (whole profile)" }, page: cv }
+          - { label: { de: "Rollenversion ICT-Architekt", en: "Role version ICT Architect" }, page: ict-architect }
+          - { label: { de: "Rollenversion Product Manager", en: "Role version Product Manager" }, page: product-manager }
+          - { label: { de: "Rollenversion IT Business Service Manager", en: "Role version IT Business Service Manager" }, page: it-business-service-manager }
+
+  - heading: { de: "Bewerbungen", en: "Applications" }
+    blocks:
+      - de: >-
+          Jede Bewerbung gehört zu einem Stelleninserat: Lebenslauf und Motivationsschreiben auf
+          einer Seite, in den Farben der Firma und in der Schrift ihrer Branche. Die Sprache ist
+          die Sprache des Inserats.
+        en: >-
+          Each application belongs to one job ad: CV and motivation letter on one page, in the
+          company's colours and the typeface of its industry. The language is the language of
+          the ad.
+      - links:
+          - { label: { de: "Beispielbank Karten AG · Senior Cloud Architect (Finanz, englisch)", en: "Beispielbank Karten AG · Senior Cloud Architect (finance, English)" }, page: beispielbank-senior-cloud-architect }
+          - { label: { de: "Globex Consulting · Technology Strategy Manager (Beratung)", en: "Globex Consulting · Technology Strategy Manager (consulting, German)" }, page: globex-technology-strategy-manager }
+          - { label: { de: "Nimbus Software · Customer Success Account Manager (Tech, englisch)", en: "Nimbus Software · Customer Success Account Manager (tech, English)" }, page: nimbus-customer-success-account-manager }
+          - { label: { de: "Kolibri People AG · Product Owner HR-Plattform (Mensch & Kreativ)", en: "Kolibri People AG · Product Owner HR platform (people & creative, German)" }, page: kolibri-people-product-owner }
+          - { label: { de: "Beispiel Automobile · IT Business Service Manager: Lebenslauf", en: "Beispiel Automobile · IT Business Service Manager: CV (German)" }, page: beispiel-automobile }
+          - { label: { de: "Beispiel Automobile · IT Business Service Manager: Anschreiben", en: "Beispiel Automobile · IT Business Service Manager: cover letter (German)" }, page: beispiel-automobile/letter }
+
+  - heading: { de: "So funktioniert der Generator", en: "How the generator works" }
+    blocks:
+      - de: >-
+          Man schreibt seinen Lebenslauf einmal, als Textdatei. Alles andere entsteht daraus
+          automatisch.
+        en: >-
+          You write your CV once, as a text file. Everything else is made from it automatically.
+      - steps:
+          - de: >-
+              Daten: Eine YAML-Datei (data/cv.yaml) hält das ganze Profil: Stationen, Ausbildung,
+              Kompetenzen mit Stufe, Sprachen, auf Deutsch und Englisch.
+            en: >-
+              Data: one YAML file (data/cv.yaml) holds the whole profile: positions, education,
+              skills with a level and languages, in German and English.
+          - de: >-
+              Rollenversionen: Eine kleine Datei pro Zielrolle ändert nur Texte (Titel,
+              Kurzprofil, Schwerpunkte). Die Fakten kommen immer aus dem Gesamtprofil.
+            en: >-
+              Role versions: one small file per target role changes texts only (title, summary,
+              focus). The facts always come from the whole profile.
+          - de: >-
+              Bewerbungen: Eine Datei pro Inserat bringt Motivationsschreiben, Kernkompetenzen,
+              die Farben der Firma und die Branche, die Schrift und Stil bestimmt.
+            en: >-
+              Applications: one file per job ad adds the motivation letter, key strengths, the
+              company's colours and the industry, which sets typeface and style.
+          - de: >-
+              Bauen: npm run build prüft alle Dateien gegen ein Schema und erzeugt daraus
+              statische HTML-Seiten. Es gibt keinen Server, kein Tracking und keine externen
+              Anfragen.
+            en: >-
+              Build: npm run build checks every file against a schema and renders static HTML
+              pages. There is no server, no tracking and no external request.
+          - de: >-
+              Prüfen: Automatische Tests öffnen jede Seite im Browser, auf dem Handy und am
+              Desktop: kein seitliches Scrollen, Text mindestens 16 px, Klickflächen mindestens
+              44 px, Barrierefreiheit, Druck auf A4.
+            en: >-
+              Check: automatic tests open every page in a browser, on the phone and on the
+              desktop: no sideways scrolling, text at least 16 px, touch targets at least 44 px,
+              accessibility, A4 print.
+          - de: >-
+              Veröffentlichen: Jeder Push auf main veröffentlicht die Seiten mit GitHub Pages und
+              druckt die PDFs zum Herunterladen.
+            en: >-
+              Publish: every push to main publishes the pages with GitHub Pages and prints the
+              PDFs for download.
+      - de: >-
+          Wer den Generator selbst nutzen will, ersetzt die Beispieldaten durch die eigenen. Die
+          Anleitung steht in SETUP.md, mit einem Prompt für Coding-Agents.
+        en: >-
+          To use the generator yourself, replace the sample data with your own. SETUP.md
+          explains how, with a prompt for coding agents.
+      - links:
+          - { label: { de: "Anleitung: eigene Kopie einrichten (SETUP.md)", en: "Guide: set up your own copy (SETUP.md)" }, url: "https://github.com/agentic-labs-ch/job-application-generator/blob/main/SETUP.md" }
+          - { label: { de: "Repository auf GitHub", en: "Repository on GitHub" }, url: "https://github.com/agentic-labs-ch/job-application-generator" }

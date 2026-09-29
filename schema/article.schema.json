@@ -101,7 +101,7 @@
             "properties": {
               "label": { "$ref": "cv.schema.json#/definitions/text" },
               "page": {
-                "description": "cv, a profile id, <profile id>/letter or an article id.",
+                "description": "cv, a profile id, <profile id>/letter, an article id or an application id.",
                 "type": "string",
                 "pattern": "^[a-z0-9]+(-[a-z0-9]+)*(/letter)?$"
               },

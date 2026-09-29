@@ -135,4 +135,4 @@ sections:
 note: "…"
 ```
 
-`page` values: `cv` (main CV), a profile id, `<profile id>/letter`, or an article id.
+`page` values: `cv` (main CV), a profile id, `<profile id>/letter`, an article id, or an application id.

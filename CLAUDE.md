@@ -24,6 +24,7 @@ static website with role versions, cover letters, applications and A4 PDFs.
 
 | Path | Purpose |
 |---|---|
+| `SETUP.md` | Own copy: download, own repository, install, publish; prompt for a coding agent |
 | `data/cv.yaml` | Main CV dataset (sample person Alex Muster) |
 | `data/profiles/`, `data/pages/`, `data/applications/` | Role versions (+ cover letter), text pages, applications (formats in `docs/profiles.md`, `docs/applications.md`) |
 | `data/cv.example.yaml`, `tests/fixtures/` | Small fictional dataset (Robin Muster) for tests and design samples |
