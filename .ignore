@@ -1,0 +1,6 @@
+# Ripgrep/Claude Code search: skip the pages that embed images and fonts as base64 (lines of
+# 15 000 to 184 000 characters flood an agent's context). Read them on purpose with Read or
+# `rg --no-ignore`. docs/architecture.md, section 4. Decided 2026-10-04 (owner).
+static/**/*.html
+design/handoff/**/referenz/**/*.html
+design/handoff/**/preview.html
